@@ -1,0 +1,4 @@
+temp_fuzz_work/
+fuzzer_state.json
+bugs/
+reductions/
