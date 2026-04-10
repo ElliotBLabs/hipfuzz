@@ -9,30 +9,27 @@ import concurrent.futures
 
 # --- Directory Mapping Based on Project Structure ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BUG_DIR = os.path.dirname(SCRIPT_DIR) 
+BUG_DIR = os.path.dirname(SCRIPT_DIR) # Goes up one level to 'bug01'
 
 ORIG_DIR = os.getcwd()
 LOG_FILE = os.path.join(SCRIPT_DIR, "interestingness.log")
 ORIG_SOURCE = os.path.join(BUG_DIR, "HIPProg.hip")
+PROJECT_INCLUDE = os.path.join(BUG_DIR, "include")
 
 HIP_CPU_DIR = os.path.join(SCRIPT_DIR, "hip-cpu")
 HIP_CPU_INCLUDE = os.path.join(HIP_CPU_DIR, "include")
 MSAN_IGNORE_LIST = os.path.join(SCRIPT_DIR, "msan_ignore_list.txt")
-PROJECT_INCLUDE = os.path.join(BUG_DIR, "include")
 
-# --- Timeouts & Injected Compilation Flags ---
+# --- Timeouts & Compilation Flags ---
 COMPILE_TIMEOUT = 25
 RUN_TIMEOUT = 10
+BUG_FLAG = "-O2"
+REF_FLAG = "-O0"
 
-# SINGLE braces here because we are injecting these from the parent script
-BUG_FLAG = "{bad_flag}"
-REF_FLAG = "{good_flag}"
-
-# DOUBLE braces in C++ code so they stay as single braces in the final output
 EXPECTED_DRIVER = r'''// ------------------------------------------------------------------
 // Host Main
 // ------------------------------------------------------------------
-int main(int argc, const char* argv[]) {{
+int main(int argc, const char* argv[]) {
     // Config
     const unsigned int num_threads = 4;
     const unsigned int block_size = 4;
@@ -65,7 +62,7 @@ int main(int argc, const char* argv[]) {{
     for (size_t i = 0; i < h_results.size(); ++i)
     printf("Thread %zu CRC: %lu\n", i, h_results[i]);
     return 0;
-}}'''
+}'''
 
 REQUIRED_ANYWHERE_LINES = [
     "uint64_t crc64_context = 0xFFFFFFFFFFFFFFFFUL;",
@@ -75,12 +72,11 @@ REQUIRED_ANYWHERE_LINES = [
 
 def log_decision(status, reason):
     with open(LOG_FILE, "a") as f:
-        # DOUBLE braces here so the final script gets proper f-strings
-        f.write(f"[{{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}}] {{status}} | {{reason}}\n")
-    print(f"\n>>> FINAL RESULT: {{status}} | {{reason}} <<<\n")
+        f.write(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {status} | {reason}\n")
+    print(f"\n>>> FINAL RESULT: {status} | {reason} <<<\n")
 
 def print_step(msg):
-    print(f"[*] {{msg}}")
+    print(f"[*] {msg}")
 
 def run_cmd(cmd, env=None, timeout=15):
     return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=env)
@@ -89,13 +85,13 @@ def compile_and_run(step_name, compile_cmd, bin_path, run_env=None):
     # 1. Compile
     c_res = run_cmd(compile_cmd, timeout=COMPILE_TIMEOUT)
     if c_res.returncode != 0:
-        print(f"\n[!] Compiler Error ({{step_name}}):\n{{c_res.stderr}}\n")
-        return False, f"{{step_name}} Compile Fail", None
+        print(f"\n[!] Compiler Error ({step_name}):\n{c_res.stderr}\n")
+        return False, f"{step_name} Compile Fail", None
         
     # Check if compilation actually produced a file
     if not os.path.exists(bin_path):
-        print(f"\n[!] Silent Compiler Failure ({{step_name}}): Binary not created.\n")
-        return False, f"{{step_name}} Binary Missing", None
+        print(f"\n[!] Silent Compiler Failure ({step_name}): Binary not created.\n")
+        return False, f"{step_name} Binary Missing", None
 
     # 2. Run
     r_res = run_cmd([bin_path], env=run_env, timeout=RUN_TIMEOUT)
@@ -105,8 +101,8 @@ def compile_and_run(step_name, compile_cmd, bin_path, run_env=None):
     has_ub = any(keyword in out_err for keyword in ["sanitizer:", "runtime error", "memorysanitizer"])
     
     if r_res.returncode != 0 or has_ub:
-        print(f"\n[!] Runtime Error/UB ({{step_name}}):\n{{r_res.stderr}}\n{{r_res.stdout}}\n")
-        return False, f"{{step_name}} Runtime Fail/UB", None
+        print(f"\n[!] Runtime Error/UB ({step_name}):\n{r_res.stderr}\n{r_res.stdout}\n")
+        return False, f"{step_name} Runtime Fail/UB", None
         
     return True, "Success", r_res
 
@@ -123,15 +119,15 @@ def validate_crcs(vals):
 
 def main():
     if not os.path.exists(ORIG_SOURCE):
-        log_decision("REJECTED", f"Source file missing: {{ORIG_SOURCE}}")
+        log_decision("REJECTED", f"Source file missing: {ORIG_SOURCE}")
         sys.exit(1)
 
     if not os.path.exists(PROJECT_INCLUDE):
-        log_decision("REJECTED", f"Include folder missing: {{PROJECT_INCLUDE}}")
+        log_decision("REJECTED", f"Include folder missing: {PROJECT_INCLUDE}")
         sys.exit(1)
 
     with tempfile.TemporaryDirectory() as temp_dir:
-        print_step(f"Created temporary sandbox: {{temp_dir}}")
+        print_step(f"Created temporary sandbox: {temp_dir}")
         os.chdir(temp_dir) 
 
         try:
@@ -146,6 +142,7 @@ def main():
             TEST_BIN_REF = os.path.join(temp_dir, "test_bin_ref")
             TEST_BIN_BUG = os.path.join(temp_dir, "test_bin_bug")
 
+            # Notice the added "-I PROJECT_INCLUDE"
             CMD_BASE = [
                 "hipcc", "-x", "hip", SOURCE, "-I", PROJECT_INCLUDE, 
                 "-Werror=uninitialized", "-Werror=missing-field-initializers", 
@@ -184,7 +181,7 @@ def main():
             spaceless_actual = [line.replace(" ", "") for line in actual_lines]
             for req_line in REQUIRED_ANYWHERE_LINES:
                 if req_line.replace(" ", "") not in spaceless_actual:
-                    log_decision("REJECTED", f"Missing required standalone line: {{req_line}}")
+                    log_decision("REJECTED", f"Missing required standalone line: {req_line}")
                     sys.exit(1)
 
             # ==========================================
@@ -193,15 +190,15 @@ def main():
             print_step("PHASE 1: Fast GPU Syntax & Run Check")
             
             # Compile & Run Bug
-            print_step(f"  -> Testing Bug ({{BUG_FLAG}})...")
-            success, reason, r_bug = compile_and_run(f"Bug {{BUG_FLAG}}", CMD_BASE + [BUG_FLAG, "-o", TEST_BIN_BUG], TEST_BIN_BUG)
+            print_step(f"  -> Testing Bug ({BUG_FLAG})...")
+            success, reason, r_bug = compile_and_run(f"Bug {BUG_FLAG}", CMD_BASE + [BUG_FLAG, "-o", TEST_BIN_BUG], TEST_BIN_BUG)
             if not success:
                 log_decision("REJECTED", reason)
                 sys.exit(1)
 
             # Compile & Run Ref
-            print_step(f"  -> Testing Ref ({{REF_FLAG}})...")
-            success, reason, r_ref = compile_and_run(f"Ref {{REF_FLAG}}", CMD_BASE + [REF_FLAG, "-o", TEST_BIN_REF], TEST_BIN_REF)
+            print_step(f"  -> Testing Ref ({REF_FLAG})...")
+            success, reason, r_ref = compile_and_run(f"Ref {REF_FLAG}", CMD_BASE + [REF_FLAG, "-o", TEST_BIN_REF], TEST_BIN_REF)
             if not success:
                 log_decision("REJECTED", reason)
                 sys.exit(1)
@@ -212,16 +209,16 @@ def main():
             crc_ref = get_checksum(r_ref.stdout)
             
             if not validate_crcs(crc_bug) or not validate_crcs(crc_ref):
-                print(f"\n[!] Invalid CRCs detected.\nBug CRCs: {{crc_bug}}\nRef CRCs: {{crc_ref}}\n")
+                print(f"\n[!] Invalid CRCs detected.\nBug CRCs: {crc_bug}\nRef CRCs: {crc_ref}\n")
                 log_decision("REJECTED", "Invalid CRCs")
                 sys.exit(1)
                 
             if crc_bug == crc_ref:
-                print(f"\n[!] CRCs match. No bug present.\nCRCs: {{crc_bug}}\n")
+                print(f"\n[!] CRCs match. No bug present.\nCRCs: {crc_bug}\n")
                 log_decision("REJECTED", "Bug lost (CRCs match)")
                 sys.exit(1)
 
-            print(f"\n[+] Valid Mismatch Found!\n    Bug ({{BUG_FLAG}}): {{crc_bug}}\n    Ref ({{REF_FLAG}}): {{crc_ref}}\n")
+            print(f"\n[+] Valid Mismatch Found!\n    Bug ({BUG_FLAG}): {crc_bug}\n    Ref ({REF_FLAG}): {crc_ref}\n")
 
             # ==========================================
             # PHASE 2: HEAVY SANITIZERS & CPU REF (PARALLEL)
@@ -230,17 +227,16 @@ def main():
             
             # Define tasks for the thread pool
             def task_asan():
-                # DOUBLE braces required around dictionary construction in templates
-                env = {{**os.environ, "ASAN_OPTIONS": "halt_on_error=1:detect_leaks=0"}}
+                env = {**os.environ, "ASAN_OPTIONS": "halt_on_error=1:detect_leaks=0"}
                 return compile_and_run("ASAN", CPU_BASE + ["-fsanitize=address", "-o", TEST_BIN_ASAN], TEST_BIN_ASAN, env)
 
             def task_ubsan():
-                env = {{**os.environ, "UBSAN_OPTIONS": "halt_on_error=1"}}
+                env = {**os.environ, "UBSAN_OPTIONS": "halt_on_error=1"}
                 return compile_and_run("UBSAN", CPU_BASE + ["-fsanitize=undefined", "-o", TEST_BIN_UBSAN], TEST_BIN_UBSAN, env)
 
             def task_msan():
-                env = {{**os.environ, "MSAN_OPTIONS": "halt_on_error=1"}}
-                return compile_and_run("MSAN", CPU_BASE + ["-fsanitize=memory", f"-fsanitize-ignorelist={{MSAN_IGNORE_LIST}}", "-o", TEST_BIN_MSAN], TEST_BIN_MSAN, env)
+                env = {**os.environ, "MSAN_OPTIONS": "halt_on_error=1"}
+                return compile_and_run("MSAN", CPU_BASE + ["-fsanitize=memory", f"-fsanitize-ignorelist={MSAN_IGNORE_LIST}", "-o", TEST_BIN_MSAN], TEST_BIN_MSAN, env)
 
             def task_cpu_ref():
                 success, reason, r_cpu = compile_and_run("CPU Ref", CPU_BASE + ["-o", TEST_BIN_CPU_REF], TEST_BIN_CPU_REF)
@@ -249,7 +245,7 @@ def main():
                 
                 crc_cpu = get_checksum(r_cpu.stdout)
                 if crc_cpu != crc_ref:
-                    print(f"\n[!] Architecture Drift Detected.\nCPU CRCs: {{crc_cpu}}\nGPU Ref CRCs: {{crc_ref}}\n")
+                    print(f"\n[!] Architecture Drift Detected.\nCPU CRCs: {crc_cpu}\nGPU Ref CRCs: {crc_ref}\n")
                     return False, "Arch Drift (CPU != GPU Ref)", None
                 return True, "CPU Ref Clean", None
 
@@ -265,6 +261,8 @@ def main():
                     success, reason, _ = future.result()
                     
                     if not success:
+                        # If ANY task fails, we reject and exit immediately. 
+                        # The executor will clean up background threads.
                         log_decision("REJECTED", reason)
                         sys.exit(1)
 
@@ -273,12 +271,12 @@ def main():
             sys.exit(0)
 
         except subprocess.TimeoutExpired as e:
-            print(f"\n[!] Process Timed Out: {{str(e)}}\n")
+            print(f"\n[!] Process Timed Out: {str(e)}\n")
             log_decision("REJECTED", "Timeout")
             sys.exit(1)
         except Exception as e:
-            print(f"\n[!] Script Exception: {{str(e)}}\n")
-            log_decision("REJECTED", f"Exception: {{str(e)}}")
+            print(f"\n[!] Script Exception: {str(e)}\n")
+            log_decision("REJECTED", f"Exception: {str(e)}")
             sys.exit(1)
         finally:
             # Ensure we safely return to original directory to allow tempfile to delete

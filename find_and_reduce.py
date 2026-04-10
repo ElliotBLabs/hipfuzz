@@ -8,6 +8,7 @@ import re
 import glob
 import stat
 import multiprocessing
+import traceback
 from datetime import datetime
 
 TEST_SCRIPT = "hip_test.py"
@@ -22,6 +23,9 @@ MAX_CONCURRENT_FUZZERS = 6
 MAX_CONCURRENT_REDUCTIONS = 3
 CREDUCE_THREADS = 4
 MAX_BACKLOG = MAX_CONCURRENT_FUZZERS 
+
+# SCRIPT_DIR is your root directory (/hipfuzz/)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 REQUIRED_FUZZING_FILES = [
     TEST_SCRIPT,
@@ -113,16 +117,6 @@ def setup_isolated_env(run_id):
             shutil.copy(filename, work_dir)
     return work_dir
 
-def archive_work_dir(work_dir, target_base, suffix):
-    folder_name = f"{os.path.basename(work_dir)}_{suffix}"
-    target_path = os.path.join(target_base, folder_name)
-    if os.path.exists(target_path): safe_cleanup(target_path)
-    try: shutil.move(work_dir, target_path)
-    except OSError:
-        shutil.copytree(work_dir, target_path)
-        safe_cleanup(work_dir)
-    return target_path
-
 def parse_mismatch_details(output):
     fail_match = re.search(r"HIP\s+(-O\d|-Os|-Oz)\s+\|\s+MISMATCH", output)
     pass_match = re.search(r"HIP\s+(-O\d|-Os|-Oz)\s+\|\s+PASS", output)
@@ -171,13 +165,18 @@ def run_fuzz_cycle(run_id):
 
 # --- REDUCER GENERATOR & WORKER ---
 def generate_interestingness_test(work_dir, good_flag, bad_flag):
-    script_path = os.path.join(work_dir, "interesting.py")
-    headers_dir = os.path.abspath(work_dir)
+    # Ensure it writes into the 'interestingness' subfolder of the work_dir
+    script_path = os.path.join(work_dir, "interestingness", "interesting.py")
     
-    # Define where your template file lives (assumes it's in the same folder as this script)
-    template_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template_interesting.py")
+    # Just in case the copy step missed the folder, make sure it exists
+    os.makedirs(os.path.dirname(script_path), exist_ok=True)
     
-    # Read the template and inject the variables
+    # Point headers_dir to the include folder inside the reduction directory
+    headers_dir = os.path.join(os.path.abspath(work_dir), "include")
+    
+    # Read the template from your root directory (hipfuzz)
+    template_path = os.path.join(SCRIPT_DIR, "template_interesting.py")
+    
     with open(template_path, "r", encoding="utf-8") as f:
         template_content = f.read()
         
@@ -187,7 +186,6 @@ def generate_interestingness_test(work_dir, good_flag, bad_flag):
         bad_flag=bad_flag
     )
     
-    # Write the generated script and make it executable
     with open(script_path, "w", encoding="utf-8") as f: 
         f.write(content)
         
@@ -195,7 +193,6 @@ def generate_interestingness_test(work_dir, good_flag, bad_flag):
     os.chmod(script_path, st.st_mode | stat.S_IEXEC)
     
     return script_path
-
 
 
 def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
@@ -207,13 +204,40 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
 
     with open(log_file, "a") as log_f:
         try:
-            for f in ["csmith.h", "safe_math_macros.h", "HIPSmith.h"]:
-                src, dest = os.path.abspath(f), os.path.join(abs_work_dir, f)
-                if not os.path.exists(dest) and os.path.exists(src): shutil.copy(src, dest)
+            # 1. FORCE refresh the 'include' folder from the root
+            root_include_dir = os.path.join(SCRIPT_DIR, "include")
+            work_include_dir = os.path.join(abs_work_dir, "include")
+            
+            if os.path.exists(root_include_dir):
+                # If an old, stale include folder exists, wipe it out
+                if os.path.exists(work_include_dir):
+                    shutil.rmtree(work_include_dir)
+                
+                # Copy the fresh, fixed headers into the workspace
+                shutil.copytree(root_include_dir, work_include_dir)
 
+            # 2. FORCE refresh the 'interestingness' folder from reduce-scripts
+            # (Adding this for safety so your template_interesting is always fresh)
+            reduce_scripts_dir = os.path.join(SCRIPT_DIR, "reduce-scripts")
+            if os.path.exists(reduce_scripts_dir):
+                for item in os.listdir(reduce_scripts_dir):
+                    s = os.path.join(reduce_scripts_dir, item)
+                    d = os.path.join(abs_work_dir, item)
+                    # Use shutil.rmtree if d is a directory to ensure it's clean
+                    if os.path.exists(d):
+                        if os.path.isdir(d): shutil.rmtree(d)
+                        else: os.remove(d)
+                    
+                    if os.path.isdir(s):
+                        shutil.copytree(s, d)
+                    else:
+                        shutil.copy2(s, d)
+
+            # 3. Now generate the script...
             generate_interestingness_test(abs_work_dir, good_flag, bad_flag)
 
-            sanity = subprocess.run(["./interesting.py"], cwd=abs_work_dir, capture_output=True, text=True)
+            # 4. Sanity check: Call the script from its new path
+            sanity = subprocess.run(["./interestingness/interesting.py"], cwd=abs_work_dir, capture_output=True, text=True)
             if sanity.returncode != 0:
                 reason = "Sanity Failed"
                 for line in sanity.stdout.splitlines():
@@ -224,14 +248,17 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
                 return {"task_type": "reduce", "job_name": job_name, "success": False}
 
             status_dict[job_name] = {**status_dict[job_name], "status": "Reducing..."}
-            cmd = ["cvise", "-n", str(CREDUCE_THREADS), "./interesting.py", "HIPProg.hip"]
+            
+            # 5. C-Reduce: Point to the script in the interestingness folder
+            cmd = ["cvise", "-n", str(CREDUCE_THREADS), "./interestingness/interesting.py", "HIPProg.hip"]
             
             proc = subprocess.run(cmd, cwd=abs_work_dir, stdout=log_f, stderr=log_f)
 
             if proc.returncode == 0:
-                subprocess.run(["clang-format", "-i", "HIPProg.hip"], cwd=abs_work_dir)
-                with open(os.path.join(abs_work_dir, "REDUCTION_COMPLETE"), "w") as f: 
-                    f.write("Done")
+                # this destroys interestness checks 
+                # subprocess.run(["clang-format", "-i", "HIPProg.hip"], cwd=abs_work_dir)
+                # with open(os.path.join(abs_work_dir, "REDUCTION_COMPLETE"), "w") as f: 
+                #     f.write("Done")
                 
                 # MOVE COMPLETED BUG TO ./bugs DIRECTORY
                 target_bug_dir = os.path.abspath(os.path.join(BUGS_DIR, job_name))
@@ -248,6 +275,11 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
                 return {"task_type": "reduce", "job_name": job_name, "success": False}
 
         except Exception as e:
+            log_f.write("\n=========================================\n")
+            log_f.write(f"[!] FATAL PYTHON EXCEPTION IN REDUCTION:\n")
+            log_f.write(traceback.format_exc())
+            log_f.write("=========================================\n")
+            
             status_dict[job_name] = {**status_dict[job_name], "status": "Exception Occurred"}
             return {"task_type": "reduce", "job_name": job_name, "success": False}
 
@@ -311,7 +343,6 @@ def print_dashboard(active_fuzzers, active_reducers, reduction_queue, status_dic
 
     out.append("==========================================================================================")
     
-    # \033[H Move cursor top left, \033[J Clear to end of screen
     full_output = "\033[H\033[J" + "\n".join(out)
     
     sys.stdout.write(full_output + "\n")
@@ -373,21 +404,27 @@ def main():
                         st = data["status"]
                         if st == "mismatch":
                             state["mismatches"] += 1
-                            saved_dir = archive_work_dir(data["work_dir"], REDUCTION_DIR, f"mismatch_{data['run_id']}")
                             
-                            job_name = os.path.basename(saved_dir)
+                            # 1. Create a fresh, clean directory for the mismatch
+                            job_name = f"job_{data['run_id']}_{int(time.time()*1000)}_mismatch"
+                            saved_dir = os.path.join(REDUCTION_DIR, job_name)
+                            os.makedirs(saved_dir, exist_ok=True)
+                            
+                            # 2. Only copy the essential artifacts from the fuzzer
+                            shutil.copy2(os.path.join(data["work_dir"], "HIPProg.hip"), saved_dir)
+                            if os.path.exists(os.path.join(data["work_dir"], "original_output.txt")):
+                                shutil.copy2(os.path.join(data["work_dir"], "original_output.txt"), saved_dir)
+                            
+                            # 3. Write metadata
                             meta_info = {
                                 "run_id": data["run_id"], "bad_flag": data["bad_flag"],
                                 "good_flag": data["good_flag"], "archived_at": time.time()
                             }
                             with open(os.path.join(saved_dir, "metadata.json"), "w") as f:
                                 json.dump(meta_info, f, indent=4)
-                            
-                            reduction_queue.append((job_name, saved_dir, data["bad_flag"], data["good_flag"]))
-                            reducer_status[job_name] = {
-                                "status": "Queued", "start_time": None, "orig_size": get_file_size(os.path.join(saved_dir, "HIPProg.hip")),
-                                "curr_size": 0, "percent": 0.0
-                            }
+                                
+                            # 4. Clean up the messy fuzzer work directory
+                            safe_cleanup(data["work_dir"])
 
                         elif st == "match": state["matches"] += 1; safe_cleanup(data["work_dir"])
                         elif st == "timeout": state["timeouts"] += 1; safe_cleanup(data["work_dir"])
@@ -424,7 +461,6 @@ def main():
                 active_reduce_tasks.append(res)
 
             # --- LAUNCH NEW FUZZERS (WITH BACKLOG LIMITER) ---
-            # Do not launch new fuzzers if the queue has reached the limit
             while len(active_fuzz_tasks) < MAX_CONCURRENT_FUZZERS and len(reduction_queue) < MAX_BACKLOG:
                 state["runs"] += 1
                 res = pool.apply_async(run_fuzz_cycle, (state["runs"],))
