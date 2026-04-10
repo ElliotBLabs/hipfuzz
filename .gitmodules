@@ -1,3 +1,0 @@
-[submodule "hip-cpu"]
-	path = hip-cpu
-	url = https://github.com/ROCm/HIP-CPU
