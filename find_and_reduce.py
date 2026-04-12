@@ -19,9 +19,17 @@ STATE_FILE = "fuzzer_state.json"
 REDUCTION_DIR = "reductions"  
 BUGS_DIR = "bugs"            
 
-MAX_CONCURRENT_FUZZERS = 6
-MAX_CONCURRENT_REDUCTIONS = 3
+
+# set up number of processes and how many threads to run
+TOTAL_CORES = multiprocessing.cpu_count()
 CREDUCE_THREADS = 4
+# at most 3 reducers and scale based on machine core count
+MAX_CONCURRENT_REDUCTIONS = min(3, max(1, TOTAL_CORES // CREDUCE_THREADS))
+
+# at least 1 fuzzer, but if more left use them
+RESERVED_FOR_REDUCERS = MAX_CONCURRENT_REDUCTIONS * CREDUCE_THREADS
+MAX_CONCURRENT_FUZZERS = max(1, TOTAL_CORES - RESERVED_FOR_REDUCERS)
+
 MAX_BACKLOG = MAX_CONCURRENT_FUZZERS 
 
 # SCRIPT_DIR is your root directory (/hipfuzz/)
@@ -254,12 +262,7 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
             
             proc = subprocess.run(cmd, cwd=abs_work_dir, stdout=log_f, stderr=log_f)
 
-            if proc.returncode == 0:
-                # this destroys interestness checks 
-                # subprocess.run(["clang-format", "-i", "HIPProg.hip"], cwd=abs_work_dir)
-                # with open(os.path.join(abs_work_dir, "REDUCTION_COMPLETE"), "w") as f: 
-                #     f.write("Done")
-                
+            if proc.returncode == 0:         
                 # MOVE COMPLETED BUG TO ./bugs DIRECTORY
                 target_bug_dir = os.path.abspath(os.path.join(BUGS_DIR, job_name))
                 if os.path.exists(target_bug_dir): 
