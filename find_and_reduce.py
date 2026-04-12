@@ -139,7 +139,7 @@ def run_fuzz_cycle(run_id):
     }
 
     try:
-        res = subprocess.run([sys.executable, TEST_SCRIPT], cwd=work_dir, capture_output=True, text=True)
+        res = subprocess.run([sys.executable, TEST_SCRIPT], cwd=work_dir, capture_output=True, text=True, timeout=60)
         output = res.stdout + res.stderr
         result["output"] = output
 
