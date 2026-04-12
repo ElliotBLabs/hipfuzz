@@ -1,0 +1,17 @@
+--- Compiling (GCC Fast, GCC UBSan, HIP variants) ---
+--- Running Reference (GCC Fast) ---
+>> GCC Reference Value: 14794253895024986816
+--- Running Variants (-O0, -O1, -O2, -O3) ---
+
+>> Potentially interesting result found. checking UBSan...
+>> UBSan Clean. The mismatch is REAL.
+
+============================================================
+VARIANT         | STATUS       | DETAILS
+------------------------------------------------------------
+HIP -O0         | PASS         | 
+HIP -O1         | MISMATCH     | Diff: T0:17265869675358014144, T1:17265869675358014144, T2:17265869675358014144...
+HIP -O2         | MISMATCH     | Diff: T0:17265869675358014144, T1:17265869675358014144, T2:17265869675358014144...
+HIP -O3         | MISMATCH     | Diff: T0:17265869675358014144, T1:17265869675358014144, T2:17265869675358014144...
+============================================================
+>> RESULT: MISMATCH
