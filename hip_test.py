@@ -3,45 +3,30 @@ import os
 import sys
 
 RESULTS_FILE = "results.txt"
-
 CMD_GENERATE = ["./HIPSmith"]
-CMD_COMPILE_HIP = [
-    "hipcc",
-    "-x",
-    "hip",
-    "HIPProg.hip",
-    "-Wno-c++11-narrowing",
-    "-Wno-unused-value",
-    "--offload-arch=native",
-    "-o",
-    "HIPProg",
-]
-CMD_COMPILE_GCC = [
-    "g++",
-    "-std=c++11",
-    "-Werror",
-    "-Wno-narrowing",
-    "-Wno-overflow",
-    "-o",
-    "HIP-CCProg",
-    "HIP-CCProg.cc",
-]
-CMD_RUN_HIP = ["./HIPProg"]
-CMD_RUN_GCC = ["./HIP-CCProg"]
+BASE_SRC_HIP = "HIPProg.hip"
 
+OPT_LEVELS = ["-O0", "-O1", "-O2", "-O3"]
+BASELINE_OPT = "-O0"
 
-def run_command(command, step_name):
-    """Runs a command and returns the stdout string."""
-    print(f"[{step_name}] Running...")
+def get_compile_cmd_hip(opt_level):
+    exe_name = f"HIPProg{opt_level}"
+    cmd = [
+        "hipcc", opt_level, "-x", "hip", BASE_SRC_HIP,
+        "-Wno-c++11-narrowing", "-Wno-unused-value", 
+        "--offload-arch=native", "-o", exe_name
+    ]
+    return cmd, exe_name
+
+def run_command(command):
+    """Runs a command and returns (stdout, stderr, returncode)."""
     try:
         result = subprocess.run(command, capture_output=True, text=True, check=True)
-        print(f"[{step_name}] Success.")
-        return result.stdout.strip()
+        return result.stdout.strip(), result.stderr.strip(), result.returncode
     except subprocess.CalledProcessError as e:
-        print(f"[{step_name}] FAILED!")
+        print(f"FAILED COMMAND: {' '.join(command)}")
         print(f"Error Output:\n{e.stderr}")
         sys.exit(1)
-
 
 def parse_hip_output(output_str):
     """Extracts CRC values from lines like 'Thread 0 CRC: 12345'."""
@@ -49,78 +34,98 @@ def parse_hip_output(output_str):
     for line in output_str.split("\n"):
         line = line.strip()
         if line.startswith("Thread") and "CRC:" in line:
-            # Split by ':' and take the last part (the number)
             parts = line.split(":")
             if len(parts) > 1:
                 values.append(parts[-1].strip())
     return values
 
-
 def main():
-    # 1. Run Generator & Compilers
-    run_command(CMD_GENERATE, "Generator")
-    run_command(CMD_COMPILE_HIP, "Compile HIP")
-    run_command(CMD_COMPILE_GCC, "Compile GCC")
+    # Keep track of formatted output lines to write to file/console
+    log_lines = []
+    def log(text=""):
+        log_lines.append(text)
 
-    # 2. Run Executables
-    hip_raw = run_command(CMD_RUN_HIP, "Run HIP Executable")
-    gcc_raw = run_command(CMD_RUN_GCC, "Run GCC Executable")
+    # 1. GENERATE
+    run_command(CMD_GENERATE)
 
-    # 3. Parse Data for Smart Comparison
-    # GCC output is just one raw number (e.g. "18446744073275960199")
-    gcc_val = gcc_raw.strip()
+    # 2. COMPILE
+    log("--- Compiling (HIP variants) ---")
+    
+    hip_executables = {}
+    for opt in OPT_LEVELS:
+        cmd, exe = get_compile_cmd_hip(opt)
+        run_command(cmd)
+        hip_executables[opt] = exe
 
-    # HIP output is multiple lines (e.g. "Thread 0 CRC: 18446744073275960199")
-    hip_vals = parse_hip_output(hip_raw)
+    # 3. RUN HIP VARIANTS
+    log(f"--- Running Reference ({BASELINE_OPT}) & Variants ---")
+    
+    parsed_outputs = {}
+    for opt in OPT_LEVELS:
+        stdout, _, _ = run_command([f"./{hip_executables[opt]}"])
+        parsed_outputs[opt] = parse_hip_output(stdout)
 
-    # 4. Compare
-    match_status = "MATCH"
-    mismatch_details = []
-
-    if not hip_vals:
-        match_status = "ERROR"
-        mismatch_details.append(
-            "Could not find any 'Thread X CRC:' lines in HIP output."
-        )
+    baseline_vals = parsed_outputs[BASELINE_OPT]
+    if baseline_vals:
+        log(f">> {BASELINE_OPT} Reference Value (T0): {baseline_vals[0]}")
+        log(f">> {len(baseline_vals)} threads parsed in total.\n")
     else:
-        for i, val in enumerate(hip_vals):
-            if val != gcc_val:
-                match_status = "MISMATCH"
-                mismatch_details.append(
-                    f"Thread {i} diff: HIP({val}) vs GCC({gcc_val})"
-                )
+        log(f">> ERROR: No thread output parsed for {BASELINE_OPT}!\n")
 
-    # 5. Write Results
-    print(f"[Summary] Writing to {RESULTS_FILE}...")
-    with open(RESULTS_FILE, "w") as f:
-        f.write("========================================\n")
-        f.write("         TEST RUN SUMMARY\n")
-        f.write("========================================\n\n")
+    # 4. CHECK MATCHES
+    mismatch_found = False
+    table_data = []
 
-        f.write("--- HIP Executable Output (Raw) ---\n")
-        f.write(hip_raw + "\n\n")
+    for opt in OPT_LEVELS:
+        vals = parsed_outputs[opt]
+        status = "PASS"
+        details = ""
 
-        f.write("--- GCC Executable Output (Raw) ---\n")
-        f.write(gcc_raw + "\n\n")
-
-        f.write("========================================\n")
-        f.write(f"RESULT: {match_status}\n")
-
-        if match_status == "MATCH":
-            f.write(f"All {len(hip_vals)} threads matched the GCC value.\n")
-        elif mismatch_details:
-            f.write("Details:\n")
-            for detail in mismatch_details:
-                f.write(f"  - {detail}\n")
-        if match_status == "MATCH":
-            print(
-                f"\n>> RESULT: MATCH (All {len(hip_vals)} threads verified against GCC)"
-            )
+        if not vals:
+            status = "ERROR"
+            details = "No Thread CRC output found."
+            if opt != BASELINE_OPT: mismatch_found = True
+        elif opt == BASELINE_OPT:
+            status = "PASS"
+            details = "Reference Baseline"
         else:
-            print(
-                f"\n>> RESULT: MISMATCH ({len(mismatch_details)} failure(s) detected - see {RESULTS_FILE})"
-            )
+            diffs = []
+            max_len = max(len(baseline_vals), len(vals))
+            for i in range(max_len):
+                b_val = baseline_vals[i] if i < len(baseline_vals) else "MISSING"
+                v_val = vals[i] if i < len(vals) else "MISSING"
+                
+                if b_val != v_val:
+                    diffs.append(f"T{i}:{v_val}")
+                    if len(diffs) >= 3:
+                        diffs[-1] += "..."
+                        break
+            
+            if diffs:
+                status = "MISMATCH"
+                details = "Diff: " + ", ".join(diffs)
+                mismatch_found = True
+        
+        table_data.append((f"HIP {opt}", status, details))
 
+    # 5. FORMAT TABLE
+    log("============================================================")
+    log(f"{'VARIANT':<15} | {'STATUS':<12} | DETAILS")
+    log("------------------------------------------------------------")
+    for variant, status, details in table_data:
+        log(f"{variant:<15} | {status:<12} | {details}")
+    log("============================================================")
+
+    final_result = "MISMATCH" if mismatch_found else "MATCH"
+    log(f">> RESULT: {final_result}")
+
+    # 6. OUTPUT
+    final_output = "\n".join(log_lines)
+    
+    print(final_output)
+    
+    with open(RESULTS_FILE, "w") as f:
+        f.write(final_output + "\n")
 
 if __name__ == "__main__":
     main()

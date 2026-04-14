@@ -21,16 +21,14 @@ BUGS_DIR = "bugs"
 
 
 # set up number of processes and how many threads to run
-TOTAL_CORES = multiprocessing.cpu_count()
+TOTAL_CORES = 16
 CREDUCE_THREADS = 4
-# at most 3 reducers and scale based on machine core count
+# at most 3 reducers and scale based on machine count
 MAX_CONCURRENT_REDUCTIONS = min(3, max(1, TOTAL_CORES // CREDUCE_THREADS))
 
-# at least 1 fuzzer, but if more left use them
-RESERVED_FOR_REDUCERS = MAX_CONCURRENT_REDUCTIONS * CREDUCE_THREADS
-MAX_CONCURRENT_FUZZERS = max(1, TOTAL_CORES - RESERVED_FOR_REDUCERS)
-
-MAX_BACKLOG = MAX_CONCURRENT_FUZZERS 
+# Calculate a static backlog limit based on the absolute minimum fuzzers you'd have
+MIN_FUZZERS = max(1, TOTAL_CORES - (MAX_CONCURRENT_REDUCTIONS * CREDUCE_THREADS))
+MAX_BACKLOG = MIN_FUZZERS
 
 # SCRIPT_DIR is your root directory (/hipfuzz/)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -164,6 +162,11 @@ def run_fuzz_cycle(run_id):
         elif "TIMEOUT" in output: result["status"] = "timeout"
         elif "PASS" in output or "MATCH" in output: result["status"] = "match"
         else: result["status"] = "err_other"
+
+    except subprocess.TimeoutExpired as e:
+        result["output"] += f"\n[!] Process killed after 60 seconds: {str(e)}"
+        result["status"] = "timeout"
+
     except Exception as e:
         result["output"] += str(e)
         result["status"] = "err_other"
@@ -274,7 +277,7 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
                 
                 return {"task_type": "reduce", "job_name": job_name, "success": True}
             else:
-                status_dict[job_name] = {**status_dict[job_name], "status": "C-Reduce Error"}
+                status_dict[job_name] = {**status_dict[job_name], "status": "C-Vise Error"}
                 return {"task_type": "reduce", "job_name": job_name, "success": False}
 
         except Exception as e:
@@ -289,13 +292,13 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
 
 # --- DASHBOARD ---
 
-def print_dashboard(active_fuzzers, active_reducers, reduction_queue, status_dict):
+def print_dashboard(active_fuzzers, active_reducers, reduction_queue, status_dict, current_max_fuzzers):
     current_session = time.time() - start_time
     total_elapsed = state["total_time"] + current_session
     speed = state['runs'] / total_elapsed if total_elapsed > 1 else 0.0
 
     # Format the Fuzzer Status String
-    fuzz_status = f"{active_fuzzers} / {MAX_CONCURRENT_FUZZERS}"
+    fuzz_status = f"{active_fuzzers} / {current_max_fuzzers}"
     if len(reduction_queue) >= MAX_BACKLOG:
         fuzz_status += f" {C_YELLOW}[PAUSED: Backlog Full]{C_RESET}"
 
@@ -369,13 +372,13 @@ def main():
     manager = multiprocessing.Manager()
     reducer_status = manager.dict()
     
-    pool = multiprocessing.Pool(processes=MAX_CONCURRENT_FUZZERS + MAX_CONCURRENT_REDUCTIONS)
+    pool = multiprocessing.Pool(processes=TOTAL_CORES)
 
     active_fuzz_tasks = []
     active_reduce_tasks = []
     reduction_queue = []
 
-    candidates = glob.glob(os.path.join(REDUCTION_DIR, "*mismatch_*"))
+    candidates = glob.glob(os.path.join(REDUCTION_DIR, "*mismatch*"))
     for d in candidates:
         if not os.path.isdir(d): continue
         if not os.path.exists(os.path.join(d, "REDUCTION_COMPLETE")):
@@ -384,7 +387,7 @@ def main():
             if os.path.exists(meta):
                 try:
                     with open(meta) as f: data = json.load(f)
-                    bad_flag, good_flag = data.get("bad_flag", "-O2"), data.get("good_flag", "-O0")
+                    bad_flag, good_flag = data.get("bad_flag", "error"), data.get("good_flag", "error")
                 except: pass
             
             job_name = os.path.basename(d)
@@ -425,7 +428,14 @@ def main():
                             }
                             with open(os.path.join(saved_dir, "metadata.json"), "w") as f:
                                 json.dump(meta_info, f, indent=4)
-                                
+                            reduction_queue.append((job_name, saved_dir, data["bad_flag"], data["good_flag"]))
+                            reducer_status[job_name] = {
+                                "status": "Queued", 
+                                "start_time": None, 
+                                "orig_size": get_file_size(os.path.join(saved_dir, "HIPProg.hip")),
+                                "curr_size": 0, 
+                                "percent": 0.0
+                            }
                             # 4. Clean up the messy fuzzer work directory
                             safe_cleanup(data["work_dir"])
 
@@ -463,14 +473,18 @@ def main():
                 res = pool.apply_async(run_reduction_task, (job_name, work_dir, bad_flag, good_flag, reducer_status))
                 active_reduce_tasks.append(res)
 
+            cores_used = len(active_reduce_tasks) * CREDUCE_THREADS
+            # seem to be suffering from avg load if we let all cores be used so half this to decrease this
+            current_max_fuzzers = max(1, min(TOTAL_CORES/2, TOTAL_CORES - cores_used))
+
             # --- LAUNCH NEW FUZZERS (WITH BACKLOG LIMITER) ---
-            while len(active_fuzz_tasks) < MAX_CONCURRENT_FUZZERS and len(reduction_queue) < MAX_BACKLOG:
+            while len(active_fuzz_tasks) < current_max_fuzzers and len(reduction_queue) < MAX_BACKLOG:
                 state["runs"] += 1
                 res = pool.apply_async(run_fuzz_cycle, (state["runs"],))
                 active_fuzz_tasks.append(res)
 
             # --- UPDATE DASHBOARD ---
-            print_dashboard(len(active_fuzz_tasks), len(active_reduce_tasks), reduction_queue, reducer_status)
+            print_dashboard(len(active_fuzz_tasks), len(active_reduce_tasks), reduction_queue, reducer_status, current_max_fuzzers)
             time.sleep(0.5)
 
     except KeyboardInterrupt:

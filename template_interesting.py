@@ -58,8 +58,9 @@ int main(int argc, const char* argv[]) {{
     HIP_CHECK(hipFree(d_results));
 
     // Output
-    for (size_t i = 0; i < h_results.size(); ++i)
-    printf("Thread %zu CRC: %lu\n", i, h_results[i]);
+    for (size_t i = 0; i < h_results.size(); ++i) {{
+        printf("Thread %zu CRC: %lu\n", i, h_results[i]);
+    }}
     return 0;
 }}'''
 
