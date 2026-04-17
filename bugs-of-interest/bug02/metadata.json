@@ -1,6 +1,0 @@
-{
-    "run_id": 42447,
-    "work_dir": "reductions/job_42447_1770775645590_mismatch_42447",
-    "bad_flag": "-O1",
-    "good_flag": "-O0"
-}

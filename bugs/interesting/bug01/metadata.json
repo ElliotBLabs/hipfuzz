@@ -1,0 +1,6 @@
+{
+    "run_id": 11166,
+    "work_dir": "reductions/job_11166_1770733614500_mismatch_11166",
+    "bad_flag": "-O2",
+    "good_flag": "-O0"
+}

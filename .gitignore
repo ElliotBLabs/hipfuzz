@@ -1,4 +1,4 @@
 temp_fuzz_work/
 fuzzer_state.json
-bugs/
+temp_bugs/
 reductions/

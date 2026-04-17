@@ -1,0 +1,6 @@
+{
+    "run_id": 0,
+    "work_dir": "unknown",
+    "bad_flag": "-O2",
+    "good_flag": "-O0"
+}
