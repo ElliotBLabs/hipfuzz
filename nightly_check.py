@@ -8,7 +8,7 @@ from pathlib import Path
 VENV_PATH = "/vol/bitbucket/eb522/rocm-nightly"
 VENV_PYTHON = f"{VENV_PATH}/bin/python"
 INDEX_URL = "https://rocm.nightlies.amd.com/v2/gfx110X-all/"
-BUGS_DIR_NAME = "bugs-of-interest"
+BUGS_DIR_NAME = "bugs/interesting"
 LIB_DIR = f"{VENV_PATH}/lib/python3.12/site-packages/_rocm_sdk_core/lib"
 
 # ANSI Colors

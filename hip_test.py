@@ -21,7 +21,7 @@ def get_compile_cmd_hip(opt_level):
 def run_command(command):
     """Runs a command and returns (stdout, stderr, returncode)."""
     try:
-        result = subprocess.run(command, capture_output=True, text=True, check=True)
+        result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=10)
         return result.stdout.strip(), result.stderr.strip(), result.returncode
     except subprocess.CalledProcessError as e:
         print(f"FAILED COMMAND: {' '.join(command)}")

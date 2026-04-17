@@ -17,18 +17,13 @@ TEMP_WORK_DIR = "temp_fuzz_work"
 STATE_FILE = "fuzzer_state.json"
 
 REDUCTION_DIR = "reductions"  
-BUGS_DIR = "bugs"            
+BUGS_DIR = "temp_bugs"            
 
-
-# set up number of processes and how many threads to run
 TOTAL_CORES = 16
 CREDUCE_THREADS = 4
-# at most 3 reducers and scale based on machine count
-MAX_CONCURRENT_REDUCTIONS = min(3, max(1, TOTAL_CORES // CREDUCE_THREADS))
+MAX_CONCURRENT_REDUCTIONS = 5
 
-# Calculate a static backlog limit based on the absolute minimum fuzzers you'd have
-MIN_FUZZERS = max(1, TOTAL_CORES - (MAX_CONCURRENT_REDUCTIONS * CREDUCE_THREADS))
-MAX_BACKLOG = MIN_FUZZERS
+MAX_CONCURRENT_FUZZERS = 0
 
 # SCRIPT_DIR is your root directory (/hipfuzz/)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -164,7 +159,7 @@ def run_fuzz_cycle(run_id):
         else: result["status"] = "err_other"
 
     except subprocess.TimeoutExpired as e:
-        result["output"] += f"\n[!] Process killed after 60 seconds: {str(e)}"
+        result["output"] += f"\n[!] Process killed after 10 seconds: {str(e)}"
         result["status"] = "timeout"
 
     except Exception as e:
@@ -273,7 +268,7 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
                 shutil.move(abs_work_dir, target_bug_dir)
 
                 final_size = get_file_size(os.path.join(target_bug_dir, "HIPProg.hip"))
-                status_dict[job_name] = {**status_dict[job_name], "status": "Done (Saved to ./bugs)", "end_time": time.time(), "curr_size": final_size}
+                status_dict[job_name] = {**status_dict[job_name], "status": "Done (Saved to ./temp_bugs)", "end_time": time.time(), "curr_size": final_size}
                 
                 return {"task_type": "reduce", "job_name": job_name, "success": True}
             else:
@@ -292,15 +287,13 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
 
 # --- DASHBOARD ---
 
-def print_dashboard(active_fuzzers, active_reducers, reduction_queue, status_dict, current_max_fuzzers):
+def print_dashboard(active_fuzzers, active_reducers, reduction_queue, status_dict):
     current_session = time.time() - start_time
     total_elapsed = state["total_time"] + current_session
     speed = state['runs'] / total_elapsed if total_elapsed > 1 else 0.0
 
     # Format the Fuzzer Status String
-    fuzz_status = f"{active_fuzzers} / {current_max_fuzzers}"
-    if len(reduction_queue) >= MAX_BACKLOG:
-        fuzz_status += f" {C_YELLOW}[PAUSED: Backlog Full]{C_RESET}"
+    fuzz_status = f"{active_fuzzers} / {MAX_CONCURRENT_FUZZERS}"
 
     out = []
     
@@ -382,7 +375,7 @@ def main():
     for d in candidates:
         if not os.path.isdir(d): continue
         if not os.path.exists(os.path.join(d, "REDUCTION_COMPLETE")):
-            bad_flag, good_flag = "-O2", "-O0"
+            bad_flag, good_flag = "unknown", "unknown"
             meta = os.path.join(d, "metadata.json")
             if os.path.exists(meta):
                 try:
@@ -473,18 +466,14 @@ def main():
                 res = pool.apply_async(run_reduction_task, (job_name, work_dir, bad_flag, good_flag, reducer_status))
                 active_reduce_tasks.append(res)
 
-            cores_used = len(active_reduce_tasks) * CREDUCE_THREADS
-            # seem to be suffering from avg load if we let all cores be used so half this to decrease this
-            current_max_fuzzers = max(1, min(TOTAL_CORES/2, TOTAL_CORES - cores_used))
-
             # --- LAUNCH NEW FUZZERS (WITH BACKLOG LIMITER) ---
-            while len(active_fuzz_tasks) < current_max_fuzzers and len(reduction_queue) < MAX_BACKLOG:
+            while len(active_fuzz_tasks) < MAX_CONCURRENT_FUZZERS:
                 state["runs"] += 1
                 res = pool.apply_async(run_fuzz_cycle, (state["runs"],))
                 active_fuzz_tasks.append(res)
 
             # --- UPDATE DASHBOARD ---
-            print_dashboard(len(active_fuzz_tasks), len(active_reduce_tasks), reduction_queue, reducer_status, current_max_fuzzers)
+            print_dashboard(len(active_fuzz_tasks), len(active_reduce_tasks), reduction_queue, reducer_status)
             time.sleep(0.5)
 
     except KeyboardInterrupt:

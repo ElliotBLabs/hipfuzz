@@ -251,8 +251,9 @@ def main():
             
             crc_cpu = get_checksum(r_cpu.stdout)
             if crc_cpu != crc_ref:
-                print(f"\n[!] Architecture Drift Detected.\nCPU CRCs: {{crc_cpu}}\nGPU Ref CRCs: {{crc_ref}}\n")
-                return False, "Arch Drift (CPU != GPU Ref)", None
+                # we do not penalise this but we note it
+                print(f"\n[?] Warning (will continue): Architecture Drift Detected.\nCPU CRCs: {{crc_cpu}}\nGPU Ref CRCs: {{crc_ref}}\n")
+                return True, "Arch Drift (CPU != GPU Ref)", None
             return True, "CPU Ref Clean", None
 
         # Execute tasks simultaneously
