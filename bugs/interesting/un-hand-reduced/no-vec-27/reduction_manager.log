@@ -1,0 +1,2027 @@
+00:00:00 ERROR Prereqs not found for pass UnIfDefPass
+00:00:00 ERROR Prereqs not found for pass IfPass
+00:00:00 ERROR Prereqs not found for pass UnIfDefPass
+00:00:13 INFO ===< 1256404 >===
+00:00:13 INFO running 4 interestingness tests in parallel
+00:00:13 INFO (0.0%, 151624 bytes, 1861 lines)
+00:00:13 INFO INITIAL PASSES (interleaving)
+00:00:13 INFO ===<  >===
+00:09:59 INFO (89.5%, 15947 bytes, 417 lines, via BalancedPass::curly-inside + ClangHintsPass::remove-unused-function + LinesPass::3 + CommentsPass + BalancedPass::curly3 + LinesPass::4 + ClangHintsPass::callexpr-to-value + LinesPass::0 + TreeSitterPass::remove-function + BlankPass)
+00:17:41 INFO (93.2%, 10354 bytes, 318 lines, via LinesPass::0 + BalancedPass::curly3 + LinesPass::1 + BalancedPass::curly2 + LinesPass::2 + ClangHintsPass::callexpr-to-value + LinesPass::3 + CommentsPass + BalancedPass::curly-inside + BalancedPass::curly + BlankPass)
+00:23:09 INFO (94.2%, 8858 bytes, 299 lines, via LinesPass::3 + BalancedPass::curly2 + BalancedPass::curly-inside + LinesPass::0 + BlankPass + ClexHintsPass::rm-toks-1-to-4)
+00:29:22 INFO (95.2%, 7304 bytes, 252 lines, via LinesPass::None + LinesPass::1 + BalancedPass::parens-to-zero + LinesPass::3 + BalancedPass::curly-inside + LinesPass::2 + BalancedPass::square + BalancedPass::curly-only + BalancedPass::curly)
+00:34:05 INFO (95.4%, 6927 bytes, 244 lines, via LinesPass::1 + BalancedPass::parens-to-zero + BalancedPass::parens-only + BalancedPass::square)
+00:40:13 INFO (95.7%, 6490 bytes, 236 lines, via LinesPass::None + BalancedPass::parens-only + LinesPass::1 + BalancedPass::square + BlankPass + BalancedPass::parens-to-zero)
+00:42:52 INFO (95.8%, 6442 bytes, 235 lines, via LinesPass::2 + ClexHintsPass::rm-toks-1-to-4)
+00:46:28 INFO (95.9%, 6172 bytes, 227 lines, via LinesPass::1 + ClexHintsPass::rm-toks-1-to-4)
+00:50:00 INFO (96.0%, 6030 bytes, 226 lines, via LinesPass::None + ClexHintsPass::rm-toks-1-to-4)
+00:53:25 INFO (96.1%, 5949 bytes, 223 lines, via LinesPass::None + BalancedPass::parens-to-zero + ClexHintsPass::rm-toks-1-to-4)
+00:57:09 INFO (96.1%, 5918 bytes, 223 lines, via ClexHintsPass::rm-toks-1-to-4 + BalancedPass::square)
+01:00:05 INFO (96.1%, 5905 bytes, 223 lines, via ClexHintsPass::rm-toks-1-to-4 + BalancedPass::parens-only)
+01:03:00 INFO (96.1%, 5875 bytes, 221 lines, via ClexHintsPass::rm-toks-1-to-4 + BalancedPass::curly-only)
+01:06:33 INFO (96.2%, 5776 bytes, 220 lines, via ClexHintsPass::rm-toks-1-to-4 + ClexHintsPass::rm-toks-9-to-12 + LinesPass::1)
+01:10:07 INFO (96.2%, 5750 bytes, 220 lines, via ClexHintsPass::rm-toks-1-to-4 + BlankPass)
+01:13:03 INFO (96.2%, 5748 bytes, 220 lines, via ClexHintsPass::rm-toks-1-to-4)
+01:15:45 INFO (96.2%, 5742 bytes, 220 lines, via BalancedPass::square)
+01:18:46 INFO (96.2%, 5734 bytes, 220 lines, via BalancedPass::parens-only)
+01:23:10 INFO (96.2%, 5727 bytes, 219 lines, via ClexHintsPass::rm-toks-1-to-4)
+01:25:21 INFO (96.2%, 5689 bytes, 219 lines, via ClexHintsPass::rm-toks-1-to-4 + BalancedPass::square)
+01:32:00 INFO (96.3%, 5685 bytes, 219 lines, via ClexHintsPass::rm-toks-1-to-4)
+01:34:41 INFO (96.3%, 5672 bytes, 219 lines, via ClexHintsPass::rm-toks-1-to-4)
+01:37:58 INFO (96.3%, 5618 bytes, 219 lines, via ClexHintsPass::rm-toks-1-to-4)
+01:40:48 INFO (96.4%, 5490 bytes, 215 lines, via LinesPass::1)
+01:43:18 INFO (96.4%, 5488 bytes, 215 lines, via BalancedPass::parens-only)
+01:58:12 INFO (96.4%, 5484 bytes, 215 lines, via ClexHintsPass::rm-toks-1-to-4)
+02:01:06 INFO (96.4%, 5465 bytes, 215 lines, via ClexHintsPass::rm-toks-1-to-4)
+02:41:42 INFO (96.4%, 5448 bytes, 215 lines, via ClexHintsPass::rm-toks-1-to-4)
+02:59:00 INFO INITIAL PASSES
+02:59:00 ERROR Skipping pass UnIfDefPass
+02:59:00 ERROR Skipping pass IfPass
+02:59:00 INFO ===< BalancedPass::angles, BalancedPass::angles-inside, BalancedPass::angles-only, BalancedPass::curly, BalancedPass::curly-inside, BalancedPass::curly-only, BalancedPass::curly2, BalancedPass::curly3, BalancedPass::parens, BalancedPass::parens-inside, BalancedPass::parens-only, BalancedPass::parens-to-zero, BalancedPass::square, BalancedPass::square-inside, BalancedPass::square-only, BlankPass, ClangHintsPass::callexpr-to-value, ClangHintsPass::remove-unused-function, ClangHintsPass::replace-dependent-typedef, ClangHintsPass::replace-function-def-with-decl, ClangIncludeGraphPass, ClangModuleMapPass, ClexHintsPass::rm-toks-1-to-4, ClexHintsPass::rm-toks-13-to-16, ClexHintsPass::rm-toks-5-to-8, ClexHintsPass::rm-toks-9-to-12, CommentsPass, InlineIncludesPass, LineMarkersPass, LinesPass::0, LinesPass::1, LinesPass::10, LinesPass::2, LinesPass::3, LinesPass::4, LinesPass::6, LinesPass::8, LinesPass::None, MakefilePass, RmUnusedFilesPass, TreeSitterPass::erase-namespace, TreeSitterPass::remove-function, TreeSitterPass::replace-function-def-with-decl >===
+02:59:02 INFO ===< IncludesPass >===
+02:59:02 INFO ===< CommentsPass >===
+02:59:02 INFO ===< LineMarkersPass >===
+02:59:05 INFO ===< BlankPass >===
+02:59:05 INFO ===< ClangHintsPass::replace-function-def-with-decl (30 T) >===
+02:59:05 INFO ===< ClangHintsPass::remove-unused-function (30 T) >===
+02:59:05 INFO cache hit for HIPProg.hip
+02:59:05 INFO ===< ClangHintsPass::replace-function-def-with-decl (30 T) >===
+02:59:05 INFO cache hit for HIPProg.hip
+02:59:05 INFO ===< ClangHintsPass::remove-unused-function (30 T) >===
+02:59:06 INFO ===< ClangHintsPass::replace-function-def-with-decl >===
+02:59:06 INFO ===< ClangHintsPass::remove-unused-function >===
+02:59:10 INFO ===< LinesPass::0 >===
+03:00:13 INFO ===< LinesPass::1 >===
+03:00:24 INFO ===< LinesPass::2 >===
+03:00:24 INFO ===< LinesPass::3 >===
+03:00:24 INFO ===< LinesPass::4 >===
+03:00:24 INFO ===< LinesPass::6 >===
+03:00:24 INFO ===< LinesPass::8 >===
+03:00:24 INFO ===< LinesPass::10 >===
+03:00:24 INFO cache hit for HIPProg.hip
+03:00:24 INFO ===< ClangHintsPass::replace-function-def-with-decl >===
+03:00:24 INFO cache hit for HIPProg.hip
+03:00:24 INFO ===< ClangHintsPass::remove-unused-function >===
+03:00:24 INFO cache hit for HIPProg.hip
+03:00:24 INFO ===< ClangHintsPass::remove-unused-function >===
+03:00:40 INFO ===< BalancedPass::curly >===
+03:00:55 INFO ===< BalancedPass::curly2 >===
+03:00:55 INFO ===< BalancedPass::curly3 >===
+03:01:06 INFO ===< BalancedPass::parens-to-zero >===
+03:01:08 INFO ===< ClangHintsPass::callexpr-to-value >===
+03:01:08 INFO ===< ClangPass::replace-callexpr >===
+03:01:09 INFO ===< ClangPass::simplify-callexpr >===
+03:01:09 INFO using C++ standard: c++2b with 0 transformation opportunities
+03:01:09 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+03:01:09 INFO ===< ClangPass::remove-enum-member-value >===
+03:01:09 INFO using C++ standard: c++2b with 6 transformation opportunities
+03:01:11 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+03:01:12 INFO ===< SpecialPass::a >===
+03:01:12 INFO ===< SpecialPass::b >===
+03:01:12 INFO INTERLEAVING PASSES
+03:01:12 INFO ===< SpecialPass::c >===
+03:05:38 INFO (96.4%, 5441 bytes, 215 lines, via ClexHintsPass::rm-toks-1-to-4)
+03:15:10 INFO (96.4%, 5415 bytes, 215 lines, via ClexHintsPass::rm-toks-1-to-4)
+03:17:35 INFO (96.4%, 5383 bytes, 215 lines, via ClexHintsPass::rm-toks-1-to-4)
+03:26:42 INFO (96.5%, 5379 bytes, 215 lines, via BalancedPass::parens-only)
+03:44:01 INFO (96.5%, 5364 bytes, 215 lines, via ClexHintsPass::rm-toks-5-to-8)
+03:49:54 INFO (96.5%, 5326 bytes, 214 lines, via LinesPass::1)
+04:12:24 INFO (96.5%, 5319 bytes, 214 lines, via ClexHintsPass::rm-toks-1-to-4)
+04:15:29 INFO (96.5%, 5311 bytes, 214 lines, via ClexHintsPass::rm-toks-1-to-4)
+04:29:50 INFO (96.5%, 5309 bytes, 214 lines, via BalancedPass::parens-only)
+05:21:19 INFO Termination check: size was 5448; now 5309
+05:21:19 INFO ===< BalancedPass::angles, BalancedPass::angles-inside, BalancedPass::angles-only, BalancedPass::curly, BalancedPass::curly-inside, BalancedPass::curly-only, BalancedPass::curly2, BalancedPass::curly3, BalancedPass::parens, BalancedPass::parens-inside, BalancedPass::parens-only, BalancedPass::parens-to-zero, BalancedPass::square, BalancedPass::square-inside, BalancedPass::square-only, BlankPass, ClangHintsPass::callexpr-to-value, ClangHintsPass::remove-unused-function, ClangHintsPass::replace-dependent-typedef, ClangHintsPass::replace-function-def-with-decl, ClangIncludeGraphPass, ClangModuleMapPass, ClexHintsPass::rm-toks-1-to-4, ClexHintsPass::rm-toks-13-to-16, ClexHintsPass::rm-toks-5-to-8, ClexHintsPass::rm-toks-9-to-12, CommentsPass, InlineIncludesPass, LineMarkersPass, LinesPass::0, LinesPass::1, LinesPass::10, LinesPass::2, LinesPass::3, LinesPass::4, LinesPass::6, LinesPass::8, LinesPass::None, MakefilePass, RmUnusedFilesPass, TreeSitterPass::erase-namespace, TreeSitterPass::remove-function, TreeSitterPass::replace-function-def-with-decl >===
+07:03:49 INFO Termination check: size was 5309; now 5309
+07:03:49 INFO MAIN PASSES
+07:03:49 ERROR Skipping pass UnIfDefPass
+07:03:49 INFO ===< BalancedPass::angles, BalancedPass::angles-inside, BalancedPass::angles-only, BalancedPass::curly, BalancedPass::curly-inside, BalancedPass::curly-only, BalancedPass::curly2, BalancedPass::curly3, BalancedPass::parens, BalancedPass::parens-inside, BalancedPass::parens-only, BalancedPass::parens-to-zero, BalancedPass::square, BalancedPass::square-inside, BalancedPass::square-only, BlankPass, ClangHintsPass::callexpr-to-value, ClangHintsPass::remove-unused-function, ClangHintsPass::replace-dependent-typedef, ClangHintsPass::replace-function-def-with-decl, ClangIncludeGraphPass, ClangModuleMapPass, ClexHintsPass::rm-toks-1-to-4, ClexHintsPass::rm-toks-13-to-16, ClexHintsPass::rm-toks-5-to-8, ClexHintsPass::rm-toks-9-to-12, CommentsPass, InlineIncludesPass, LineMarkersPass, LinesPass::0, LinesPass::1, LinesPass::10, LinesPass::2, LinesPass::3, LinesPass::4, LinesPass::6, LinesPass::8, LinesPass::None, MakefilePass, RmUnusedFilesPass, TreeSitterPass::erase-namespace, TreeSitterPass::remove-function, TreeSitterPass::replace-function-def-with-decl >===
+07:03:49 INFO ===< IncludeIncludesPass >===
+07:03:49 INFO ===< TernaryPass::b >===
+07:03:49 INFO ===< TernaryPass::c >===
+07:04:04 INFO ===< BalancedPass::curly >===
+07:04:20 INFO ===< BalancedPass::curly2 >===
+07:04:20 INFO ===< BalancedPass::curly3 >===
+07:04:30 INFO ===< BalancedPass::parens >===
+07:04:32 INFO ===< BalancedPass::angles >===
+07:04:56 INFO ===< BalancedPass::square >===
+07:05:10 INFO ===< BalancedPass::curly-inside >===
+07:05:15 INFO ===< BalancedPass::parens-inside >===
+07:05:17 INFO ===< BalancedPass::angles-inside >===
+07:05:41 INFO ===< BalancedPass::square-inside >===
+07:05:53 INFO ===< BalancedPass::curly-only >===
+07:05:54 INFO ===< BalancedPass::angles-only >===
+07:06:19 INFO ===< BalancedPass::square-only >===
+07:06:19 INFO ===< ClangPass::remove-namespace >===
+07:06:37 INFO (96.5%, 5326 bytes, 215 lines)
+07:06:51 INFO (96.5%, 5343 bytes, 216 lines)
+07:07:00 INFO (96.5%, 5360 bytes, 217 lines)
+07:07:00 INFO ===< ClangPass::aggregate-to-scalar >===
+07:07:00 INFO ===< ClangPass::param-to-global >===
+07:07:02 INFO ===< ClangPass::param-to-local >===
+07:07:02 INFO ===< ClangPass::remove-nested-function >===
+07:07:02 INFO ===< ClangPass::union-to-struct >===
+07:07:03 INFO ===< ClangPass::return-void >===
+07:07:03 INFO ===< ClangPass::simple-inliner >===
+07:07:25 INFO (96.5%, 5359 bytes, 217 lines)
+07:07:42 INFO (96.5%, 5358 bytes, 217 lines)
+07:07:53 INFO (96.5%, 5357 bytes, 217 lines)
+07:07:58 INFO ===< ClangPass::reduce-pointer-level >===
+07:07:58 INFO ===< ClangPass::lift-assignment-expr >===
+07:07:58 INFO ===< ClangPass::copy-propagation >===
+07:08:00 INFO ===< ClangHintsPass::callexpr-to-value >===
+07:08:00 INFO ===< ClangPass::replace-callexpr >===
+07:08:01 INFO ===< ClangPass::simplify-callexpr >===
+07:08:01 INFO ===< ClangHintsPass::remove-unused-function >===
+07:08:01 INFO using C++ standard: c++2b with 0 transformation opportunities
+07:08:01 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+07:08:02 INFO ===< ClangPass::remove-enum-member-value >===
+07:08:01 INFO using C++ standard: c++2b with 6 transformation opportunities
+07:08:03 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+07:08:03 INFO ===< ClangPass::simplify-if >===
+07:08:03 INFO ===< ClangPass::reduce-array-dim >===
+07:08:03 INFO ===< ClangPass::reduce-array-size >===
+07:08:03 INFO ===< ClangPass::move-definition-to-declaration >===
+07:08:03 INFO ===< ClangPass::simplify-comma-expr >===
+07:08:03 INFO ===< ClangPass::simplify-dependent-typedef >===
+07:08:03 INFO ===< ClangPass::replace-simple-typedef >===
+07:08:04 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+07:08:04 INFO ===< ClangPass::replace-one-level-typedef-type >===
+07:08:28 INFO (96.5%, 5338 bytes, 216 lines)
+07:08:45 INFO (96.5%, 5319 bytes, 215 lines)
+07:09:07 INFO (96.5%, 5296 bytes, 213 lines)
+07:09:27 INFO (96.5%, 5277 bytes, 212 lines)
+07:09:48 INFO (96.5%, 5247 bytes, 210 lines)
+07:10:08 INFO ===< ClangPass::remove-unused-field >===
+07:10:09 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+07:10:09 INFO ===< ClangPass::instantiate-template-param >===
+07:10:09 INFO ===< ClangPass::template-arg-to-int >===
+07:10:09 INFO ===< ClangPass::template-non-type-arg-to-int >===
+07:10:09 INFO ===< ClangPass::reduce-class-template-param >===
+07:10:09 INFO ===< ClangPass::remove-trivial-base-template >===
+07:10:09 INFO ===< ClangPass::class-template-to-class >===
+07:10:09 INFO ===< ClangPass::merge-base-class >===
+07:10:09 INFO ===< ClangPass::remove-base-class >===
+07:10:09 INFO ===< ClangPass::replace-derived-class >===
+07:10:09 INFO ===< ClangPass::remove-unresolved-base >===
+07:10:09 INFO ===< ClangPass::remove-ctor-initializer >===
+07:10:09 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+07:10:09 INFO ===< ClangPass::simplify-nested-class >===
+07:10:09 INFO ===< ClangPass::remove-unused-outer-class >===
+07:10:10 INFO ===< ClangPass::empty-struct-to-int >===
+07:10:10 INFO ===< ClangPass::remove-pointer >===
+07:10:10 INFO ===< ClangPass::reduce-pointer-pairs >===
+07:10:10 INFO ===< ClangPass::remove-array >===
+07:10:10 INFO ===< ClangPass::remove-addr-taken >===
+07:10:10 INFO ===< ClangPass::simplify-struct >===
+07:10:10 INFO ===< ClangPass::replace-undefined-function >===
+07:10:10 INFO ===< ClangPass::replace-array-index-var >===
+07:10:10 INFO ===< ClangPass::replace-array-access-with-index >===
+07:10:10 INFO ===< ClangPass::replace-dependent-name >===
+07:10:10 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+07:10:10 INFO ===< ClangPass::vector-to-array >===
+07:10:10 INFO ===< ClangPass::remove-try-catch >===
+07:10:11 INFO ===< ClangPass::class-to-struct >===
+07:10:35 INFO ===< ClangPass::member-to-global >===
+07:10:39 INFO ===< LinesPass::0 >===
+07:11:42 INFO ===< LinesPass::1 >===
+07:11:52 INFO ===< LinesPass::2 >===
+07:11:52 INFO ===< LinesPass::3 >===
+07:11:52 INFO ===< LinesPass::4 >===
+07:11:52 INFO ===< LinesPass::6 >===
+07:11:52 INFO ===< LinesPass::8 >===
+07:11:52 INFO ===< LinesPass::10 >===
+07:11:53 INFO ===< CommentsPass >===
+07:11:53 INFO ===< SpecialPass::b >===
+07:11:53 INFO ===< SpecialPass::c >===
+07:11:53 INFO ===< IndentPass::regular >===
+07:12:00 INFO ===< BalancedPass::parens-to-zero >===
+07:17:50 INFO (96.5%, 5245 bytes, 210 lines)
+07:23:19 INFO (96.5%, 5241 bytes, 210 lines)
+07:50:22 INFO (96.6%, 5186 bytes, 207 lines)
+08:28:43 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+08:32:37 INFO (96.6%, 5184 bytes, 207 lines)
+09:10:58 INFO ===< ClexPass::rm-tok-pattern-4 >===
+09:11:00 INFO ===< ClangPass::local-to-global >===
+09:11:18 INFO ===< PeepPass::c >===
+09:11:41 INFO (96.6%, 5183 bytes, 207 lines)
+09:12:04 INFO (96.6%, 5182 bytes, 207 lines)
+09:12:21 INFO (96.6%, 5181 bytes, 207 lines)
+09:12:47 INFO (96.6%, 5180 bytes, 207 lines)
+09:13:03 INFO (96.6%, 5179 bytes, 207 lines)
+09:13:22 INFO (96.6%, 5178 bytes, 207 lines)
+09:13:41 INFO (96.6%, 5177 bytes, 207 lines)
+09:14:04 INFO (96.6%, 5176 bytes, 207 lines)
+09:14:21 INFO (96.6%, 5175 bytes, 207 lines)
+09:14:44 INFO (96.6%, 5174 bytes, 207 lines)
+09:15:06 INFO (96.6%, 5173 bytes, 207 lines)
+09:15:26 INFO (96.6%, 5172 bytes, 207 lines)
+09:15:49 INFO (96.6%, 5171 bytes, 207 lines)
+09:16:13 INFO (96.6%, 5170 bytes, 207 lines)
+09:16:38 INFO (96.6%, 5169 bytes, 207 lines)
+09:16:56 INFO (96.6%, 5168 bytes, 207 lines)
+09:17:18 INFO (96.6%, 5167 bytes, 207 lines)
+09:17:44 INFO (96.6%, 5166 bytes, 207 lines)
+09:18:04 INFO (96.6%, 5165 bytes, 207 lines)
+09:18:29 INFO (96.6%, 5164 bytes, 207 lines)
+09:18:53 INFO (96.6%, 5163 bytes, 207 lines)
+09:19:17 INFO (96.6%, 5162 bytes, 207 lines)
+09:19:39 INFO (96.6%, 5161 bytes, 207 lines)
+09:20:05 INFO (96.6%, 5160 bytes, 207 lines)
+09:20:26 INFO (96.6%, 5159 bytes, 207 lines)
+09:20:46 INFO (96.6%, 5158 bytes, 207 lines)
+09:21:11 INFO (96.6%, 5157 bytes, 207 lines)
+09:21:37 INFO (96.6%, 5156 bytes, 207 lines)
+09:21:59 INFO (96.6%, 5155 bytes, 207 lines)
+09:22:21 INFO (96.6%, 5154 bytes, 207 lines)
+09:22:38 INFO (96.6%, 5153 bytes, 207 lines)
+09:23:01 INFO (96.6%, 5152 bytes, 207 lines)
+09:23:24 INFO (96.6%, 5151 bytes, 207 lines)
+09:23:41 INFO (96.6%, 5150 bytes, 207 lines)
+09:24:05 INFO (96.6%, 5149 bytes, 207 lines)
+09:24:21 INFO (96.6%, 5148 bytes, 207 lines)
+09:24:40 INFO (96.6%, 5147 bytes, 207 lines)
+09:25:00 INFO (96.6%, 5146 bytes, 207 lines)
+09:25:21 INFO (96.6%, 5145 bytes, 207 lines)
+09:25:39 INFO (96.6%, 5144 bytes, 207 lines)
+09:26:01 INFO (96.6%, 5143 bytes, 207 lines)
+09:26:22 INFO (96.6%, 5142 bytes, 207 lines)
+09:26:45 INFO (96.6%, 5141 bytes, 207 lines)
+09:27:05 INFO (96.6%, 5140 bytes, 207 lines)
+09:27:21 INFO (96.6%, 5139 bytes, 207 lines)
+09:27:38 INFO (96.6%, 5138 bytes, 207 lines)
+09:28:01 INFO (96.6%, 5137 bytes, 207 lines)
+09:28:27 INFO (96.6%, 5136 bytes, 207 lines)
+09:28:49 INFO (96.6%, 5135 bytes, 207 lines)
+09:29:12 INFO (96.6%, 5134 bytes, 207 lines)
+09:29:34 INFO (96.6%, 5133 bytes, 207 lines)
+09:29:57 INFO (96.6%, 5132 bytes, 207 lines)
+09:30:17 INFO (96.6%, 5131 bytes, 207 lines)
+09:30:35 INFO (96.6%, 5130 bytes, 207 lines)
+09:30:52 INFO (96.6%, 5129 bytes, 207 lines)
+09:31:12 INFO (96.6%, 5128 bytes, 207 lines)
+09:31:37 INFO (96.6%, 5127 bytes, 207 lines)
+09:32:01 INFO (96.6%, 5126 bytes, 207 lines)
+09:32:21 INFO (96.6%, 5125 bytes, 207 lines)
+09:32:45 INFO (96.6%, 5124 bytes, 207 lines)
+09:33:06 INFO (96.6%, 5123 bytes, 207 lines)
+09:33:22 INFO (96.6%, 5122 bytes, 207 lines)
+09:33:47 INFO (96.6%, 5121 bytes, 207 lines)
+09:34:07 INFO (96.6%, 5120 bytes, 207 lines)
+09:34:28 INFO (96.6%, 5119 bytes, 207 lines)
+09:34:53 INFO (96.6%, 5118 bytes, 207 lines)
+09:35:14 INFO (96.6%, 5117 bytes, 207 lines)
+09:35:30 INFO (96.6%, 5116 bytes, 207 lines)
+09:35:55 INFO (96.6%, 5115 bytes, 207 lines)
+09:36:15 INFO (96.6%, 5114 bytes, 207 lines)
+09:36:38 INFO (96.6%, 5113 bytes, 207 lines)
+09:36:53 INFO (96.6%, 5112 bytes, 207 lines)
+09:37:16 INFO (96.6%, 5111 bytes, 207 lines)
+09:37:40 INFO (96.6%, 5110 bytes, 207 lines)
+09:37:57 INFO (96.6%, 5109 bytes, 207 lines)
+09:38:22 INFO (96.6%, 5108 bytes, 207 lines)
+09:38:43 INFO (96.6%, 5107 bytes, 207 lines)
+09:39:06 INFO (96.6%, 5106 bytes, 207 lines)
+09:39:25 INFO (96.6%, 5105 bytes, 207 lines)
+09:39:43 INFO (96.6%, 5104 bytes, 207 lines)
+09:40:02 INFO (96.6%, 5103 bytes, 207 lines)
+09:40:28 INFO (96.6%, 5102 bytes, 207 lines)
+09:40:53 INFO (96.6%, 5101 bytes, 207 lines)
+09:41:16 INFO (96.6%, 5100 bytes, 207 lines)
+09:41:37 INFO (96.6%, 5099 bytes, 207 lines)
+09:41:59 INFO (96.6%, 5098 bytes, 207 lines)
+09:42:23 INFO (96.6%, 5097 bytes, 207 lines)
+09:42:43 INFO (96.6%, 5096 bytes, 207 lines)
+09:42:57 INFO (96.6%, 5095 bytes, 207 lines)
+09:43:24 INFO (96.6%, 5094 bytes, 207 lines)
+09:43:46 INFO (96.6%, 5093 bytes, 207 lines)
+09:44:05 INFO (96.6%, 5092 bytes, 207 lines)
+09:44:28 INFO (96.6%, 5091 bytes, 207 lines)
+09:44:50 INFO (96.6%, 5090 bytes, 207 lines)
+09:45:07 INFO (96.6%, 5089 bytes, 207 lines)
+09:45:33 INFO (96.6%, 5088 bytes, 207 lines)
+09:45:55 INFO (96.6%, 5087 bytes, 207 lines)
+09:46:16 INFO (96.6%, 5086 bytes, 207 lines)
+09:46:31 INFO (96.6%, 5085 bytes, 207 lines)
+09:46:50 INFO (96.6%, 5084 bytes, 207 lines)
+09:47:12 INFO (96.6%, 5083 bytes, 207 lines)
+09:47:30 INFO (96.6%, 5082 bytes, 207 lines)
+09:47:48 INFO (96.6%, 5081 bytes, 207 lines)
+09:48:06 INFO (96.6%, 5080 bytes, 207 lines)
+09:48:24 INFO (96.7%, 5079 bytes, 207 lines)
+09:48:42 INFO (96.7%, 5078 bytes, 207 lines)
+09:49:00 INFO (96.7%, 5077 bytes, 207 lines)
+09:49:17 INFO (96.7%, 5076 bytes, 207 lines)
+09:49:31 INFO (96.7%, 5075 bytes, 207 lines)
+09:49:45 INFO (96.7%, 5074 bytes, 207 lines)
+09:49:54 INFO (96.7%, 5073 bytes, 207 lines)
+09:50:00 INFO ===< IntsPass::a >===
+09:50:22 INFO (96.7%, 5071 bytes, 207 lines)
+09:50:47 INFO (96.7%, 5069 bytes, 207 lines)
+09:51:10 INFO (96.7%, 5067 bytes, 207 lines)
+09:51:27 INFO (96.7%, 5065 bytes, 207 lines)
+09:51:45 INFO (96.7%, 5063 bytes, 207 lines)
+09:51:56 INFO (96.7%, 5061 bytes, 207 lines)
+09:52:01 INFO ===< IntsPass::b >===
+09:52:21 INFO (96.7%, 5060 bytes, 207 lines)
+09:52:37 INFO (96.7%, 5058 bytes, 207 lines)
+09:53:02 INFO (96.7%, 5057 bytes, 207 lines)
+09:53:25 INFO (96.7%, 5055 bytes, 207 lines)
+09:53:45 INFO (96.7%, 5053 bytes, 207 lines)
+09:54:07 INFO (96.7%, 5052 bytes, 207 lines)
+09:54:27 INFO (96.7%, 5050 bytes, 207 lines)
+09:55:17 INFO (96.7%, 5048 bytes, 207 lines)
+09:55:41 INFO (96.7%, 5047 bytes, 207 lines)
+09:56:04 INFO (96.7%, 5046 bytes, 207 lines)
+09:56:20 INFO (96.7%, 5044 bytes, 207 lines)
+09:56:38 INFO (96.7%, 5042 bytes, 207 lines)
+09:57:00 INFO (96.7%, 5040 bytes, 207 lines)
+09:57:21 INFO (96.7%, 5039 bytes, 207 lines)
+09:57:42 INFO (96.7%, 5038 bytes, 207 lines)
+09:58:07 INFO (96.7%, 5037 bytes, 207 lines)
+09:58:24 INFO (96.7%, 5036 bytes, 207 lines)
+09:58:46 INFO (96.7%, 5035 bytes, 207 lines)
+09:59:08 INFO (96.7%, 5033 bytes, 207 lines)
+09:59:25 INFO (96.7%, 5032 bytes, 207 lines)
+09:59:37 INFO (96.7%, 5030 bytes, 207 lines)
+09:59:37 INFO ===< IntsPass::c >===
+09:59:53 INFO (96.7%, 5029 bytes, 207 lines)
+10:00:10 INFO (96.7%, 5028 bytes, 207 lines)
+10:00:32 INFO (96.7%, 5027 bytes, 207 lines)
+10:00:44 INFO (96.7%, 5026 bytes, 207 lines)
+10:00:53 INFO (96.7%, 5025 bytes, 207 lines)
+10:00:53 INFO ===< IntsPass::d >===
+10:00:53 INFO ===< IntsPass::c >===
+10:01:03 INFO ===< BalancedPass::parens-only >===
+10:01:04 INFO ===< ClexPass::delete-string >===
+10:01:05 INFO Termination check: size was 5309; now 5025
+10:01:05 ERROR Skipping pass UnIfDefPass
+10:01:05 INFO ===< ClexPass::define >===
+10:01:05 INFO ===< IncludeIncludesPass >===
+10:01:05 INFO ===< TernaryPass::b >===
+10:01:05 INFO ===< TernaryPass::c >===
+10:01:19 INFO ===< BalancedPass::curly >===
+10:01:35 INFO ===< BalancedPass::curly2 >===
+10:01:35 INFO ===< BalancedPass::curly3 >===
+10:01:49 INFO ===< BalancedPass::parens >===
+10:01:50 INFO ===< BalancedPass::angles >===
+10:02:22 INFO ===< BalancedPass::square >===
+10:02:35 INFO ===< BalancedPass::curly-inside >===
+10:02:43 INFO ===< BalancedPass::parens-inside >===
+10:02:44 INFO ===< BalancedPass::angles-inside >===
+10:03:10 INFO ===< BalancedPass::square-inside >===
+10:03:22 INFO ===< BalancedPass::curly-only >===
+10:03:25 INFO ===< BalancedPass::angles-only >===
+10:03:52 INFO ===< BalancedPass::square-only >===
+10:03:52 INFO ===< ClangPass::remove-namespace >===
+10:03:52 INFO ===< ClangPass::aggregate-to-scalar >===
+10:03:52 INFO ===< ClangPass::param-to-global >===
+10:03:53 INFO ===< ClangPass::param-to-local >===
+10:03:54 INFO ===< ClangPass::remove-nested-function >===
+10:03:54 INFO ===< ClangPass::union-to-struct >===
+10:03:55 INFO ===< ClangPass::return-void >===
+10:03:55 INFO ===< ClangPass::simple-inliner >===
+10:04:10 INFO ===< ClangPass::reduce-pointer-level >===
+10:04:10 INFO ===< ClangPass::lift-assignment-expr >===
+10:04:10 INFO ===< ClangPass::copy-propagation >===
+10:04:11 INFO ===< ClangHintsPass::callexpr-to-value >===
+10:04:11 INFO ===< ClangPass::replace-callexpr >===
+10:04:12 INFO ===< ClangPass::simplify-callexpr >===
+10:04:12 INFO ===< ClangHintsPass::remove-unused-function >===
+10:04:12 INFO using C++ standard: c++2b with 0 transformation opportunities
+10:04:12 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+10:04:12 INFO ===< ClangPass::remove-enum-member-value >===
+10:04:12 INFO using C++ standard: c++2b with 6 transformation opportunities
+10:04:14 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+10:04:14 INFO ===< ClangPass::simplify-if >===
+10:04:14 INFO ===< ClangPass::reduce-array-dim >===
+10:04:14 INFO ===< ClangPass::reduce-array-size >===
+10:04:14 INFO ===< ClangPass::move-definition-to-declaration >===
+10:04:14 INFO ===< ClangPass::simplify-comma-expr >===
+10:04:14 INFO ===< ClangPass::simplify-dependent-typedef >===
+10:04:14 INFO ===< ClangPass::replace-simple-typedef >===
+10:04:14 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+10:04:14 INFO ===< ClangPass::replace-one-level-typedef-type >===
+10:04:42 INFO (96.7%, 4997 bytes, 205 lines)
+10:05:03 INFO (96.7%, 4976 bytes, 203 lines)
+10:05:25 INFO ===< ClangPass::remove-unused-field >===
+10:05:25 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+10:05:25 INFO ===< ClangPass::instantiate-template-param >===
+10:05:25 INFO ===< ClangPass::template-arg-to-int >===
+10:05:25 INFO ===< ClangPass::template-non-type-arg-to-int >===
+10:05:25 INFO ===< ClangPass::reduce-class-template-param >===
+10:05:25 INFO ===< ClangPass::remove-trivial-base-template >===
+10:05:25 INFO ===< ClangPass::class-template-to-class >===
+10:05:25 INFO ===< ClangPass::merge-base-class >===
+10:05:25 INFO ===< ClangPass::remove-base-class >===
+10:05:25 INFO ===< ClangPass::replace-derived-class >===
+10:05:25 INFO ===< ClangPass::remove-unresolved-base >===
+10:05:25 INFO ===< ClangPass::remove-ctor-initializer >===
+10:05:26 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+10:05:26 INFO ===< ClangPass::simplify-nested-class >===
+10:05:26 INFO ===< ClangPass::remove-unused-outer-class >===
+10:05:26 INFO ===< ClangPass::empty-struct-to-int >===
+10:05:26 INFO ===< ClangPass::remove-pointer >===
+10:05:26 INFO ===< ClangPass::reduce-pointer-pairs >===
+10:05:26 INFO ===< ClangPass::remove-array >===
+10:05:26 INFO ===< ClangPass::remove-addr-taken >===
+10:05:26 INFO ===< ClangPass::simplify-struct >===
+10:05:26 INFO ===< ClangPass::replace-undefined-function >===
+10:05:26 INFO ===< ClangPass::replace-array-index-var >===
+10:05:26 INFO ===< ClangPass::replace-array-access-with-index >===
+10:05:26 INFO ===< ClangPass::replace-dependent-name >===
+10:05:26 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+10:05:26 INFO ===< ClangPass::vector-to-array >===
+10:05:26 INFO ===< ClangPass::remove-try-catch >===
+10:05:26 INFO ===< ClangPass::class-to-struct >===
+10:05:52 INFO ===< ClangPass::member-to-global >===
+10:05:56 INFO ===< LinesPass::0 >===
+10:07:05 INFO ===< LinesPass::1 >===
+10:07:17 INFO ===< LinesPass::2 >===
+10:07:17 INFO ===< LinesPass::3 >===
+10:07:17 INFO ===< LinesPass::4 >===
+10:07:17 INFO ===< LinesPass::6 >===
+10:07:17 INFO ===< LinesPass::8 >===
+10:07:17 INFO ===< LinesPass::10 >===
+10:07:18 INFO ===< CommentsPass >===
+10:07:18 INFO ===< SpecialPass::b >===
+10:07:18 INFO ===< SpecialPass::c >===
+10:07:18 INFO ===< IndentPass::regular >===
+10:07:24 INFO ===< BalancedPass::parens-to-zero >===
+10:55:23 INFO (96.7%, 4957 bytes, 202 lines)
+11:00:49 INFO (96.8%, 4907 bytes, 199 lines)
+11:34:36 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+11:36:33 INFO (96.8%, 4901 bytes, 199 lines)
+11:36:52 INFO (96.8%, 4900 bytes, 198 lines)
+11:37:13 INFO (96.8%, 4889 bytes, 197 lines)
+11:37:33 INFO (96.8%, 4880 bytes, 196 lines)
+12:25:04 INFO ===< ClexPass::rm-tok-pattern-4 >===
+12:25:07 INFO ===< ClangPass::local-to-global >===
+12:25:36 INFO ===< PeepPass::c >===
+12:26:04 INFO (96.8%, 4879 bytes, 196 lines)
+12:26:29 INFO (96.8%, 4878 bytes, 196 lines)
+12:26:56 INFO (96.8%, 4877 bytes, 196 lines)
+12:27:19 INFO (96.8%, 4876 bytes, 196 lines)
+12:27:37 INFO (96.8%, 4875 bytes, 196 lines)
+12:27:44 INFO ===< IntsPass::a >===
+12:27:45 INFO ===< IntsPass::b >===
+12:27:45 INFO ===< IntsPass::c >===
+12:27:45 INFO ===< IntsPass::d >===
+12:27:45 INFO cache hit for HIPProg.hip
+12:27:45 INFO ===< IntsPass::c >===
+12:27:58 INFO ===< BalancedPass::parens-only >===
+12:28:00 INFO ===< ClexPass::delete-string >===
+12:28:02 INFO Termination check: size was 5025; now 4875
+12:28:02 ERROR Skipping pass UnIfDefPass
+12:28:02 INFO ===< ClexPass::define >===
+12:28:02 INFO ===< IncludeIncludesPass >===
+12:28:02 INFO ===< TernaryPass::b >===
+12:28:02 INFO ===< TernaryPass::c >===
+12:28:27 INFO ===< BalancedPass::curly >===
+12:28:55 INFO ===< BalancedPass::curly2 >===
+12:28:55 INFO ===< BalancedPass::curly3 >===
+12:29:09 INFO ===< BalancedPass::parens >===
+12:29:11 INFO ===< BalancedPass::angles >===
+12:29:58 INFO ===< BalancedPass::square >===
+12:30:12 INFO (96.8%, 4857 bytes, 195 lines)
+12:30:28 INFO ===< BalancedPass::curly-inside >===
+12:30:40 INFO ===< BalancedPass::parens-inside >===
+12:30:41 INFO ===< BalancedPass::angles-inside >===
+12:31:18 INFO ===< BalancedPass::square-inside >===
+12:31:37 INFO ===< BalancedPass::curly-only >===
+12:31:39 INFO ===< BalancedPass::angles-only >===
+12:32:13 INFO ===< BalancedPass::square-only >===
+12:32:13 INFO ===< ClangPass::remove-namespace >===
+12:32:14 INFO ===< ClangPass::aggregate-to-scalar >===
+12:32:14 INFO ===< ClangPass::param-to-global >===
+12:32:16 INFO ===< ClangPass::param-to-local >===
+12:32:16 INFO ===< ClangPass::remove-nested-function >===
+12:32:16 INFO ===< ClangPass::union-to-struct >===
+12:32:18 INFO ===< ClangPass::return-void >===
+12:32:18 INFO ===< ClangPass::simple-inliner >===
+12:32:38 INFO ===< ClangPass::reduce-pointer-level >===
+12:32:38 INFO ===< ClangPass::lift-assignment-expr >===
+12:32:38 INFO ===< ClangPass::copy-propagation >===
+12:32:41 INFO ===< ClangHintsPass::callexpr-to-value >===
+12:32:41 INFO ===< ClangPass::replace-callexpr >===
+12:32:43 INFO ===< ClangPass::simplify-callexpr >===
+12:32:43 INFO ===< ClangHintsPass::remove-unused-function >===
+12:32:43 INFO using C++ standard: c++2b with 0 transformation opportunities
+12:32:44 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+12:32:44 INFO ===< ClangPass::remove-enum-member-value >===
+12:32:44 INFO using C++ standard: c++2b with 6 transformation opportunities
+12:32:45 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+12:32:46 INFO ===< ClangPass::simplify-if >===
+12:32:46 INFO ===< ClangPass::reduce-array-dim >===
+12:32:46 INFO ===< ClangPass::reduce-array-size >===
+12:32:46 INFO ===< ClangPass::move-definition-to-declaration >===
+12:32:46 INFO ===< ClangPass::simplify-comma-expr >===
+12:32:46 INFO ===< ClangPass::simplify-dependent-typedef >===
+12:32:46 INFO ===< ClangPass::replace-simple-typedef >===
+12:32:46 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+12:32:46 INFO ===< ClangPass::replace-one-level-typedef-type >===
+12:33:20 INFO (96.8%, 4846 bytes, 194 lines)
+12:33:41 INFO (96.8%, 4806 bytes, 192 lines)
+12:34:01 INFO (96.8%, 4779 bytes, 190 lines)
+12:34:39 INFO (96.9%, 4752 bytes, 188 lines)
+12:35:01 INFO (96.9%, 4712 bytes, 186 lines)
+12:35:03 INFO ===< ClangPass::remove-unused-field >===
+12:35:03 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+12:35:03 INFO ===< ClangPass::instantiate-template-param >===
+12:35:03 INFO ===< ClangPass::template-arg-to-int >===
+12:35:03 INFO ===< ClangPass::template-non-type-arg-to-int >===
+12:35:03 INFO ===< ClangPass::reduce-class-template-param >===
+12:35:03 INFO ===< ClangPass::remove-trivial-base-template >===
+12:35:03 INFO ===< ClangPass::class-template-to-class >===
+12:35:03 INFO ===< ClangPass::merge-base-class >===
+12:35:03 INFO ===< ClangPass::remove-base-class >===
+12:35:04 INFO ===< ClangPass::replace-derived-class >===
+12:35:04 INFO ===< ClangPass::remove-unresolved-base >===
+12:35:04 INFO ===< ClangPass::remove-ctor-initializer >===
+12:35:04 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+12:35:04 INFO ===< ClangPass::simplify-nested-class >===
+12:35:04 INFO ===< ClangPass::remove-unused-outer-class >===
+12:35:21 INFO (96.9%, 4706 bytes, 185 lines)
+12:35:21 INFO ===< ClangPass::empty-struct-to-int >===
+12:35:32 INFO (96.9%, 4705 bytes, 185 lines)
+12:35:32 INFO ===< ClangPass::remove-pointer >===
+12:35:33 INFO ===< ClangPass::reduce-pointer-pairs >===
+12:35:33 INFO ===< ClangPass::remove-array >===
+12:35:33 INFO ===< ClangPass::remove-addr-taken >===
+12:35:33 INFO ===< ClangPass::simplify-struct >===
+12:35:33 INFO ===< ClangPass::replace-undefined-function >===
+12:35:33 INFO ===< ClangPass::replace-array-index-var >===
+12:35:33 INFO ===< ClangPass::replace-array-access-with-index >===
+12:35:33 INFO ===< ClangPass::replace-dependent-name >===
+12:35:33 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+12:35:34 INFO ===< ClangPass::vector-to-array >===
+12:35:34 INFO ===< ClangPass::remove-try-catch >===
+12:35:34 INFO ===< ClangPass::class-to-struct >===
+12:36:07 INFO ===< ClangPass::member-to-global >===
+12:36:14 INFO ===< LinesPass::0 >===
+12:37:49 INFO (96.9%, 4682 bytes, 184 lines)
+12:38:03 INFO ===< LinesPass::1 >===
+12:38:18 INFO ===< LinesPass::2 >===
+12:38:18 INFO ===< LinesPass::3 >===
+12:38:18 INFO ===< LinesPass::4 >===
+12:38:18 INFO ===< LinesPass::6 >===
+12:38:18 INFO ===< LinesPass::8 >===
+12:38:18 INFO ===< LinesPass::10 >===
+12:38:19 INFO ===< CommentsPass >===
+12:38:19 INFO ===< SpecialPass::b >===
+12:38:19 INFO ===< SpecialPass::c >===
+12:38:19 INFO ===< IndentPass::regular >===
+12:38:29 INFO ===< BalancedPass::parens-to-zero >===
+12:40:38 INFO (96.9%, 4681 bytes, 184 lines)
+12:45:52 INFO (96.9%, 4680 bytes, 184 lines)
+12:46:18 INFO (96.9%, 4679 bytes, 184 lines)
+12:51:03 INFO (96.9%, 4677 bytes, 184 lines)
+14:06:36 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+14:42:57 INFO ===< ClexPass::rm-tok-pattern-4 >===
+14:42:59 INFO ===< ClangPass::local-to-global >===
+14:43:14 INFO ===< PeepPass::c >===
+14:43:19 INFO ===< IntsPass::a >===
+14:43:19 INFO ===< IntsPass::b >===
+14:43:19 INFO ===< IntsPass::c >===
+14:43:19 INFO ===< IntsPass::d >===
+14:43:19 INFO cache hit for HIPProg.hip
+14:43:19 INFO ===< IntsPass::c >===
+14:43:26 INFO ===< BalancedPass::parens-only >===
+14:43:28 INFO ===< ClexPass::delete-string >===
+14:43:29 INFO Termination check: size was 4875; now 4677
+14:43:29 ERROR Skipping pass UnIfDefPass
+14:43:29 INFO ===< ClexPass::define >===
+14:43:29 INFO ===< IncludeIncludesPass >===
+14:43:29 INFO ===< TernaryPass::b >===
+14:43:29 INFO ===< TernaryPass::c >===
+14:43:45 INFO ===< BalancedPass::curly >===
+14:44:01 INFO ===< BalancedPass::curly2 >===
+14:44:01 INFO ===< BalancedPass::curly3 >===
+14:44:12 INFO ===< BalancedPass::parens >===
+14:44:13 INFO ===< BalancedPass::angles >===
+14:44:37 INFO ===< BalancedPass::square >===
+14:44:49 INFO ===< BalancedPass::curly-inside >===
+14:44:55 INFO ===< BalancedPass::parens-inside >===
+14:44:56 INFO ===< BalancedPass::angles-inside >===
+14:45:20 INFO ===< BalancedPass::square-inside >===
+14:45:31 INFO ===< BalancedPass::curly-only >===
+14:45:32 INFO ===< BalancedPass::angles-only >===
+14:46:04 INFO ===< BalancedPass::square-only >===
+14:46:04 INFO ===< ClangPass::remove-namespace >===
+14:46:04 INFO ===< ClangPass::aggregate-to-scalar >===
+14:46:04 INFO ===< ClangPass::param-to-global >===
+14:46:05 INFO ===< ClangPass::param-to-local >===
+14:46:06 INFO ===< ClangPass::remove-nested-function >===
+14:46:06 INFO ===< ClangPass::union-to-struct >===
+14:46:07 INFO ===< ClangPass::return-void >===
+14:46:07 INFO ===< ClangPass::simple-inliner >===
+14:46:18 INFO ===< ClangPass::reduce-pointer-level >===
+14:46:18 INFO ===< ClangPass::lift-assignment-expr >===
+14:46:18 INFO ===< ClangPass::copy-propagation >===
+14:46:19 INFO ===< ClangHintsPass::callexpr-to-value >===
+14:46:19 INFO ===< ClangPass::replace-callexpr >===
+14:46:20 INFO ===< ClangPass::simplify-callexpr >===
+14:46:21 INFO ===< ClangHintsPass::remove-unused-function >===
+14:46:21 INFO using C++ standard: c++2b with 0 transformation opportunities
+14:46:21 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+14:46:21 INFO ===< ClangPass::remove-enum-member-value >===
+14:46:21 INFO using C++ standard: c++2b with 6 transformation opportunities
+14:46:22 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+14:46:22 INFO ===< ClangPass::simplify-if >===
+14:46:23 INFO ===< ClangPass::reduce-array-dim >===
+14:46:23 INFO ===< ClangPass::reduce-array-size >===
+14:46:23 INFO ===< ClangPass::move-definition-to-declaration >===
+14:46:23 INFO ===< ClangPass::simplify-comma-expr >===
+14:46:23 INFO ===< ClangPass::simplify-dependent-typedef >===
+14:46:23 INFO ===< ClangPass::replace-simple-typedef >===
+14:46:23 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+14:46:23 INFO ===< ClangPass::replace-one-level-typedef-type >===
+14:46:45 INFO (96.9%, 4651 bytes, 182 lines)
+14:47:07 INFO (96.9%, 4629 bytes, 180 lines)
+14:47:25 INFO (97.0%, 4588 bytes, 178 lines)
+14:47:47 INFO (97.0%, 4559 bytes, 176 lines)
+14:48:02 INFO (97.0%, 4532 bytes, 174 lines)
+14:48:22 INFO (97.0%, 4505 bytes, 172 lines)
+14:48:46 INFO (97.1%, 4464 bytes, 170 lines)
+14:49:09 INFO (97.1%, 4436 bytes, 168 lines)
+14:49:24 INFO (97.1%, 4408 bytes, 166 lines)
+14:49:36 INFO (97.1%, 4380 bytes, 164 lines)
+14:49:37 INFO ===< ClangPass::remove-unused-field >===
+14:49:37 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+14:49:37 INFO ===< ClangPass::instantiate-template-param >===
+14:49:37 INFO ===< ClangPass::template-arg-to-int >===
+14:49:37 INFO ===< ClangPass::template-non-type-arg-to-int >===
+14:49:37 INFO ===< ClangPass::reduce-class-template-param >===
+14:49:37 INFO ===< ClangPass::remove-trivial-base-template >===
+14:49:37 INFO ===< ClangPass::class-template-to-class >===
+14:49:38 INFO ===< ClangPass::merge-base-class >===
+14:49:38 INFO ===< ClangPass::remove-base-class >===
+14:49:38 INFO ===< ClangPass::replace-derived-class >===
+14:49:38 INFO ===< ClangPass::remove-unresolved-base >===
+14:49:38 INFO ===< ClangPass::remove-ctor-initializer >===
+14:49:38 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+14:49:38 INFO ===< ClangPass::simplify-nested-class >===
+14:49:38 INFO ===< ClangPass::remove-unused-outer-class >===
+14:49:38 INFO ===< ClangPass::empty-struct-to-int >===
+14:49:38 INFO ===< ClangPass::remove-pointer >===
+14:49:38 INFO ===< ClangPass::reduce-pointer-pairs >===
+14:49:38 INFO ===< ClangPass::remove-array >===
+14:49:38 INFO ===< ClangPass::remove-addr-taken >===
+14:49:38 INFO ===< ClangPass::simplify-struct >===
+14:49:38 INFO ===< ClangPass::replace-undefined-function >===
+14:49:39 INFO ===< ClangPass::replace-array-index-var >===
+14:49:39 INFO ===< ClangPass::replace-array-access-with-index >===
+14:49:39 INFO ===< ClangPass::replace-dependent-name >===
+14:49:39 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+14:49:39 INFO ===< ClangPass::vector-to-array >===
+14:49:39 INFO ===< ClangPass::remove-try-catch >===
+14:49:39 INFO ===< ClangPass::class-to-struct >===
+14:49:56 INFO ===< ClangPass::member-to-global >===
+14:50:00 INFO ===< LinesPass::0 >===
+14:50:52 INFO ===< LinesPass::1 >===
+14:50:59 INFO ===< LinesPass::2 >===
+14:50:59 INFO ===< LinesPass::3 >===
+14:50:59 INFO ===< LinesPass::4 >===
+14:50:59 INFO ===< LinesPass::6 >===
+14:50:59 INFO ===< LinesPass::8 >===
+14:50:59 INFO ===< LinesPass::10 >===
+14:50:59 INFO ===< CommentsPass >===
+14:50:59 INFO ===< SpecialPass::b >===
+14:50:59 INFO ===< SpecialPass::c >===
+14:50:59 INFO ===< IndentPass::regular >===
+14:51:06 INFO ===< BalancedPass::parens-to-zero >===
+14:53:50 INFO (97.1%, 4379 bytes, 164 lines)
+14:54:12 INFO (97.1%, 4378 bytes, 164 lines)
+14:54:31 INFO (97.1%, 4377 bytes, 164 lines)
+15:55:14 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+16:32:58 INFO ===< ClexPass::rm-tok-pattern-4 >===
+16:33:00 INFO ===< ClangPass::local-to-global >===
+16:33:15 INFO ===< PeepPass::c >===
+16:33:20 INFO ===< IntsPass::a >===
+16:33:20 INFO ===< IntsPass::b >===
+16:33:20 INFO ===< IntsPass::c >===
+16:33:20 INFO ===< IntsPass::d >===
+16:33:20 INFO cache hit for HIPProg.hip
+16:33:20 INFO ===< IntsPass::c >===
+16:33:31 INFO ===< BalancedPass::parens-only >===
+16:33:32 INFO ===< ClexPass::delete-string >===
+16:33:33 INFO Termination check: size was 4677; now 4377
+16:33:33 ERROR Skipping pass UnIfDefPass
+16:33:33 INFO ===< ClexPass::define >===
+16:33:33 INFO ===< IncludeIncludesPass >===
+16:33:33 INFO ===< TernaryPass::b >===
+16:33:33 INFO ===< TernaryPass::c >===
+16:33:49 INFO ===< BalancedPass::curly >===
+16:34:04 INFO ===< BalancedPass::curly2 >===
+16:34:04 INFO ===< BalancedPass::curly3 >===
+16:34:14 INFO ===< BalancedPass::parens >===
+16:34:16 INFO ===< BalancedPass::angles >===
+16:34:47 INFO ===< BalancedPass::square >===
+16:34:59 INFO ===< BalancedPass::curly-inside >===
+16:35:07 INFO ===< BalancedPass::parens-inside >===
+16:35:08 INFO ===< BalancedPass::angles-inside >===
+16:35:37 INFO ===< BalancedPass::square-inside >===
+16:35:47 INFO ===< BalancedPass::curly-only >===
+16:35:48 INFO ===< BalancedPass::angles-only >===
+16:36:19 INFO ===< BalancedPass::square-only >===
+16:36:19 INFO ===< ClangPass::remove-namespace >===
+16:36:19 INFO ===< ClangPass::aggregate-to-scalar >===
+16:36:19 INFO ===< ClangPass::param-to-global >===
+16:36:21 INFO ===< ClangPass::param-to-local >===
+16:36:21 INFO ===< ClangPass::remove-nested-function >===
+16:36:21 INFO ===< ClangPass::union-to-struct >===
+16:36:22 INFO ===< ClangPass::return-void >===
+16:36:22 INFO ===< ClangPass::simple-inliner >===
+16:36:31 INFO ===< ClangPass::reduce-pointer-level >===
+16:36:31 INFO ===< ClangPass::lift-assignment-expr >===
+16:36:31 INFO ===< ClangPass::copy-propagation >===
+16:36:33 INFO ===< ClangHintsPass::callexpr-to-value >===
+16:36:33 INFO ===< ClangPass::replace-callexpr >===
+16:36:35 INFO ===< ClangPass::simplify-callexpr >===
+16:36:36 INFO ===< ClangHintsPass::remove-unused-function >===
+16:36:36 INFO using C++ standard: c++2b with 0 transformation opportunities
+16:36:36 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+16:36:36 INFO ===< ClangPass::remove-enum-member-value >===
+16:36:36 INFO using C++ standard: c++2b with 6 transformation opportunities
+16:36:39 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+16:36:39 INFO ===< ClangPass::simplify-if >===
+16:36:39 INFO ===< ClangPass::reduce-array-dim >===
+16:36:39 INFO ===< ClangPass::reduce-array-size >===
+16:36:39 INFO ===< ClangPass::move-definition-to-declaration >===
+16:36:39 INFO ===< ClangPass::simplify-comma-expr >===
+16:36:40 INFO ===< ClangPass::simplify-dependent-typedef >===
+16:36:40 INFO ===< ClangPass::replace-simple-typedef >===
+16:36:40 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+16:36:40 INFO ===< ClangPass::replace-one-level-typedef-type >===
+16:37:04 INFO (97.1%, 4338 bytes, 162 lines)
+16:37:31 INFO (97.2%, 4291 bytes, 160 lines)
+16:37:52 INFO (97.2%, 4264 bytes, 158 lines)
+16:38:10 INFO (97.2%, 4223 bytes, 156 lines)
+16:38:18 INFO ===< ClangPass::remove-unused-field >===
+16:38:18 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+16:38:18 INFO ===< ClangPass::instantiate-template-param >===
+16:38:18 INFO ===< ClangPass::template-arg-to-int >===
+16:38:19 INFO ===< ClangPass::template-non-type-arg-to-int >===
+16:38:19 INFO ===< ClangPass::reduce-class-template-param >===
+16:38:19 INFO ===< ClangPass::remove-trivial-base-template >===
+16:38:19 INFO ===< ClangPass::class-template-to-class >===
+16:38:19 INFO ===< ClangPass::merge-base-class >===
+16:38:19 INFO ===< ClangPass::remove-base-class >===
+16:38:19 INFO ===< ClangPass::replace-derived-class >===
+16:38:19 INFO ===< ClangPass::remove-unresolved-base >===
+16:38:19 INFO ===< ClangPass::remove-ctor-initializer >===
+16:38:19 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+16:38:19 INFO ===< ClangPass::simplify-nested-class >===
+16:38:19 INFO ===< ClangPass::remove-unused-outer-class >===
+16:38:19 INFO ===< ClangPass::empty-struct-to-int >===
+16:38:19 INFO ===< ClangPass::remove-pointer >===
+16:38:19 INFO ===< ClangPass::reduce-pointer-pairs >===
+16:38:19 INFO ===< ClangPass::remove-array >===
+16:38:19 INFO ===< ClangPass::remove-addr-taken >===
+16:38:19 INFO ===< ClangPass::simplify-struct >===
+16:38:19 INFO ===< ClangPass::replace-undefined-function >===
+16:38:20 INFO ===< ClangPass::replace-array-index-var >===
+16:38:20 INFO ===< ClangPass::replace-array-access-with-index >===
+16:38:20 INFO ===< ClangPass::replace-dependent-name >===
+16:38:20 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+16:38:20 INFO ===< ClangPass::vector-to-array >===
+16:38:20 INFO ===< ClangPass::remove-try-catch >===
+16:38:20 INFO ===< ClangPass::class-to-struct >===
+16:38:39 INFO ===< ClangPass::member-to-global >===
+16:38:42 INFO ===< LinesPass::0 >===
+16:39:37 INFO ===< LinesPass::1 >===
+16:39:44 INFO ===< LinesPass::2 >===
+16:39:44 INFO ===< LinesPass::3 >===
+16:39:44 INFO ===< LinesPass::4 >===
+16:39:44 INFO ===< LinesPass::6 >===
+16:39:44 INFO ===< LinesPass::8 >===
+16:39:44 INFO ===< LinesPass::10 >===
+16:39:45 INFO ===< CommentsPass >===
+16:39:45 INFO ===< SpecialPass::b >===
+16:39:45 INFO ===< SpecialPass::c >===
+16:39:45 INFO ===< IndentPass::regular >===
+16:39:55 INFO ===< BalancedPass::parens-to-zero >===
+16:41:44 INFO (97.2%, 4222 bytes, 156 lines)
+16:42:12 INFO (97.2%, 4221 bytes, 156 lines)
+16:42:33 INFO (97.2%, 4220 bytes, 156 lines)
+16:43:07 INFO (97.2%, 4219 bytes, 156 lines)
+16:43:30 INFO (97.2%, 4218 bytes, 156 lines)
+16:43:49 INFO (97.2%, 4217 bytes, 156 lines)
+16:48:05 INFO (97.2%, 4215 bytes, 156 lines)
+16:52:39 INFO (97.2%, 4211 bytes, 156 lines)
+17:51:28 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+18:25:30 INFO ===< ClexPass::rm-tok-pattern-4 >===
+18:25:33 INFO ===< ClangPass::local-to-global >===
+18:25:49 INFO ===< PeepPass::c >===
+18:25:53 INFO ===< IntsPass::a >===
+18:25:53 INFO ===< IntsPass::b >===
+18:25:53 INFO ===< IntsPass::c >===
+18:25:53 INFO ===< IntsPass::d >===
+18:25:53 INFO cache hit for HIPProg.hip
+18:25:53 INFO ===< IntsPass::c >===
+18:26:01 INFO ===< BalancedPass::parens-only >===
+18:26:03 INFO ===< ClexPass::delete-string >===
+18:26:05 INFO Termination check: size was 4377; now 4211
+18:26:05 ERROR Skipping pass UnIfDefPass
+18:26:05 INFO ===< ClexPass::define >===
+18:26:05 INFO ===< IncludeIncludesPass >===
+18:26:05 INFO ===< TernaryPass::b >===
+18:26:05 INFO ===< TernaryPass::c >===
+18:26:22 INFO ===< BalancedPass::curly >===
+18:26:39 INFO ===< BalancedPass::curly2 >===
+18:26:39 INFO ===< BalancedPass::curly3 >===
+18:26:52 INFO ===< BalancedPass::parens >===
+18:26:53 INFO ===< BalancedPass::angles >===
+18:27:18 INFO ===< BalancedPass::square >===
+18:27:31 INFO ===< BalancedPass::curly-inside >===
+18:27:36 INFO ===< BalancedPass::parens-inside >===
+18:27:37 INFO ===< BalancedPass::angles-inside >===
+18:28:02 INFO ===< BalancedPass::square-inside >===
+18:28:14 INFO ===< BalancedPass::curly-only >===
+18:28:16 INFO ===< BalancedPass::angles-only >===
+18:28:41 INFO ===< BalancedPass::square-only >===
+18:28:41 INFO ===< ClangPass::remove-namespace >===
+18:28:41 INFO ===< ClangPass::aggregate-to-scalar >===
+18:28:41 INFO ===< ClangPass::param-to-global >===
+18:28:42 INFO ===< ClangPass::param-to-local >===
+18:28:42 INFO ===< ClangPass::remove-nested-function >===
+18:28:42 INFO ===< ClangPass::union-to-struct >===
+18:28:43 INFO ===< ClangPass::return-void >===
+18:28:43 INFO ===< ClangPass::simple-inliner >===
+18:28:54 INFO ===< ClangPass::reduce-pointer-level >===
+18:28:54 INFO ===< ClangPass::lift-assignment-expr >===
+18:28:54 INFO ===< ClangPass::copy-propagation >===
+18:28:56 INFO ===< ClangHintsPass::callexpr-to-value >===
+18:28:56 INFO ===< ClangPass::replace-callexpr >===
+18:28:57 INFO ===< ClangPass::simplify-callexpr >===
+18:28:57 INFO ===< ClangHintsPass::remove-unused-function >===
+18:28:57 INFO using C++ standard: c++2b with 0 transformation opportunities
+18:28:58 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+18:28:58 INFO ===< ClangPass::remove-enum-member-value >===
+18:28:58 INFO using C++ standard: c++2b with 6 transformation opportunities
+18:28:59 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+18:28:59 INFO ===< ClangPass::simplify-if >===
+18:28:59 INFO ===< ClangPass::reduce-array-dim >===
+18:29:00 INFO ===< ClangPass::reduce-array-size >===
+18:29:00 INFO ===< ClangPass::move-definition-to-declaration >===
+18:29:00 INFO ===< ClangPass::simplify-comma-expr >===
+18:29:00 INFO ===< ClangPass::simplify-dependent-typedef >===
+18:29:00 INFO ===< ClangPass::replace-simple-typedef >===
+18:29:00 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+18:29:00 INFO ===< ClangPass::replace-one-level-typedef-type >===
+18:29:21 INFO (97.2%, 4186 bytes, 154 lines)
+18:29:51 INFO (97.3%, 4144 bytes, 152 lines)
+18:30:14 INFO (97.3%, 4116 bytes, 150 lines)
+18:30:36 INFO (97.3%, 4087 bytes, 148 lines)
+18:30:49 INFO (97.3%, 4046 bytes, 146 lines)
+18:30:55 INFO ===< ClangPass::remove-unused-field >===
+18:30:55 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+18:30:55 INFO ===< ClangPass::instantiate-template-param >===
+18:30:55 INFO ===< ClangPass::template-arg-to-int >===
+18:30:55 INFO ===< ClangPass::template-non-type-arg-to-int >===
+18:30:56 INFO ===< ClangPass::reduce-class-template-param >===
+18:30:56 INFO ===< ClangPass::remove-trivial-base-template >===
+18:30:56 INFO ===< ClangPass::class-template-to-class >===
+18:30:56 INFO ===< ClangPass::merge-base-class >===
+18:30:56 INFO ===< ClangPass::remove-base-class >===
+18:30:56 INFO ===< ClangPass::replace-derived-class >===
+18:30:56 INFO ===< ClangPass::remove-unresolved-base >===
+18:30:56 INFO ===< ClangPass::remove-ctor-initializer >===
+18:30:56 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+18:30:57 INFO ===< ClangPass::simplify-nested-class >===
+18:30:57 INFO ===< ClangPass::remove-unused-outer-class >===
+18:30:57 INFO ===< ClangPass::empty-struct-to-int >===
+18:30:57 INFO ===< ClangPass::remove-pointer >===
+18:30:57 INFO ===< ClangPass::reduce-pointer-pairs >===
+18:30:57 INFO ===< ClangPass::remove-array >===
+18:30:57 INFO ===< ClangPass::remove-addr-taken >===
+18:30:57 INFO ===< ClangPass::simplify-struct >===
+18:30:58 INFO ===< ClangPass::replace-undefined-function >===
+18:30:58 INFO ===< ClangPass::replace-array-index-var >===
+18:30:58 INFO ===< ClangPass::replace-array-access-with-index >===
+18:30:58 INFO ===< ClangPass::replace-dependent-name >===
+18:30:58 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+18:30:58 INFO ===< ClangPass::vector-to-array >===
+18:30:58 INFO ===< ClangPass::remove-try-catch >===
+18:30:58 INFO ===< ClangPass::class-to-struct >===
+18:31:14 INFO ===< ClangPass::member-to-global >===
+18:31:18 INFO ===< LinesPass::0 >===
+18:32:12 INFO ===< LinesPass::1 >===
+18:32:19 INFO ===< LinesPass::2 >===
+18:32:19 INFO ===< LinesPass::3 >===
+18:32:19 INFO ===< LinesPass::4 >===
+18:32:19 INFO ===< LinesPass::6 >===
+18:32:19 INFO ===< LinesPass::8 >===
+18:32:19 INFO ===< LinesPass::10 >===
+18:32:19 INFO ===< CommentsPass >===
+18:32:19 INFO ===< SpecialPass::b >===
+18:32:19 INFO ===< SpecialPass::c >===
+18:32:19 INFO ===< IndentPass::regular >===
+18:32:29 INFO ===< BalancedPass::parens-to-zero >===
+18:34:02 INFO (97.3%, 4045 bytes, 146 lines)
+18:34:21 INFO (97.3%, 4044 bytes, 146 lines)
+18:34:39 INFO (97.3%, 4043 bytes, 146 lines)
+18:34:55 INFO (97.3%, 4042 bytes, 146 lines)
+18:35:15 INFO (97.3%, 4041 bytes, 146 lines)
+18:35:50 INFO (97.3%, 4040 bytes, 146 lines)
+18:36:07 INFO (97.3%, 4039 bytes, 146 lines)
+18:36:28 INFO (97.3%, 4038 bytes, 146 lines)
+19:39:33 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+20:10:06 INFO ===< ClexPass::rm-tok-pattern-4 >===
+20:10:09 INFO ===< ClangPass::local-to-global >===
+20:10:20 INFO ===< PeepPass::c >===
+20:10:25 INFO ===< IntsPass::a >===
+20:10:25 INFO ===< IntsPass::b >===
+20:10:25 INFO ===< IntsPass::c >===
+20:10:25 INFO ===< IntsPass::d >===
+20:10:25 INFO cache hit for HIPProg.hip
+20:10:25 INFO ===< IntsPass::c >===
+20:10:32 INFO ===< BalancedPass::parens-only >===
+20:10:33 INFO ===< ClexPass::delete-string >===
+20:10:34 INFO Termination check: size was 4211; now 4038
+20:10:34 ERROR Skipping pass UnIfDefPass
+20:10:34 INFO ===< ClexPass::define >===
+20:10:34 INFO ===< IncludeIncludesPass >===
+20:10:34 INFO ===< TernaryPass::b >===
+20:10:34 INFO ===< TernaryPass::c >===
+20:10:50 INFO ===< BalancedPass::curly >===
+20:11:05 INFO ===< BalancedPass::curly2 >===
+20:11:05 INFO ===< BalancedPass::curly3 >===
+20:11:15 INFO ===< BalancedPass::parens >===
+20:11:17 INFO ===< BalancedPass::angles >===
+20:11:39 INFO ===< BalancedPass::square >===
+20:11:51 INFO ===< BalancedPass::curly-inside >===
+20:11:57 INFO ===< BalancedPass::parens-inside >===
+20:11:58 INFO ===< BalancedPass::angles-inside >===
+20:12:21 INFO ===< BalancedPass::square-inside >===
+20:12:30 INFO ===< BalancedPass::curly-only >===
+20:12:31 INFO ===< BalancedPass::angles-only >===
+20:12:53 INFO ===< BalancedPass::square-only >===
+20:12:53 INFO ===< ClangPass::remove-namespace >===
+20:12:53 INFO ===< ClangPass::aggregate-to-scalar >===
+20:12:53 INFO ===< ClangPass::param-to-global >===
+20:12:54 INFO ===< ClangPass::param-to-local >===
+20:12:54 INFO ===< ClangPass::remove-nested-function >===
+20:12:54 INFO ===< ClangPass::union-to-struct >===
+20:12:55 INFO ===< ClangPass::return-void >===
+20:12:55 INFO ===< ClangPass::simple-inliner >===
+20:13:03 INFO ===< ClangPass::reduce-pointer-level >===
+20:13:03 INFO ===< ClangPass::lift-assignment-expr >===
+20:13:03 INFO ===< ClangPass::copy-propagation >===
+20:13:05 INFO ===< ClangHintsPass::callexpr-to-value >===
+20:13:05 INFO ===< ClangPass::replace-callexpr >===
+20:13:06 INFO ===< ClangPass::simplify-callexpr >===
+20:13:06 INFO ===< ClangHintsPass::remove-unused-function >===
+20:13:06 INFO using C++ standard: c++2b with 0 transformation opportunities
+20:13:06 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+20:13:06 INFO ===< ClangPass::remove-enum-member-value >===
+20:13:06 INFO using C++ standard: c++2b with 6 transformation opportunities
+20:13:08 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+20:13:08 INFO ===< ClangPass::simplify-if >===
+20:13:08 INFO ===< ClangPass::reduce-array-dim >===
+20:13:08 INFO ===< ClangPass::reduce-array-size >===
+20:13:08 INFO ===< ClangPass::move-definition-to-declaration >===
+20:13:08 INFO ===< ClangPass::simplify-comma-expr >===
+20:13:08 INFO ===< ClangPass::simplify-dependent-typedef >===
+20:13:08 INFO ===< ClangPass::replace-simple-typedef >===
+20:13:08 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+20:13:09 INFO ===< ClangPass::replace-one-level-typedef-type >===
+20:13:34 INFO (97.4%, 3998 bytes, 144 lines)
+20:13:52 INFO (97.4%, 3970 bytes, 142 lines)
+20:14:03 INFO (97.4%, 3930 bytes, 140 lines)
+20:14:09 INFO ===< ClangPass::remove-unused-field >===
+20:14:09 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+20:14:09 INFO ===< ClangPass::instantiate-template-param >===
+20:14:09 INFO ===< ClangPass::template-arg-to-int >===
+20:14:09 INFO ===< ClangPass::template-non-type-arg-to-int >===
+20:14:09 INFO ===< ClangPass::reduce-class-template-param >===
+20:14:09 INFO ===< ClangPass::remove-trivial-base-template >===
+20:14:09 INFO ===< ClangPass::class-template-to-class >===
+20:14:09 INFO ===< ClangPass::merge-base-class >===
+20:14:09 INFO ===< ClangPass::remove-base-class >===
+20:14:09 INFO ===< ClangPass::replace-derived-class >===
+20:14:09 INFO ===< ClangPass::remove-unresolved-base >===
+20:14:09 INFO ===< ClangPass::remove-ctor-initializer >===
+20:14:09 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+20:14:09 INFO ===< ClangPass::simplify-nested-class >===
+20:14:10 INFO ===< ClangPass::remove-unused-outer-class >===
+20:14:10 INFO ===< ClangPass::empty-struct-to-int >===
+20:14:10 INFO ===< ClangPass::remove-pointer >===
+20:14:10 INFO ===< ClangPass::reduce-pointer-pairs >===
+20:14:10 INFO ===< ClangPass::remove-array >===
+20:14:10 INFO ===< ClangPass::remove-addr-taken >===
+20:14:10 INFO ===< ClangPass::simplify-struct >===
+20:14:10 INFO ===< ClangPass::replace-undefined-function >===
+20:14:10 INFO ===< ClangPass::replace-array-index-var >===
+20:14:10 INFO ===< ClangPass::replace-array-access-with-index >===
+20:14:10 INFO ===< ClangPass::replace-dependent-name >===
+20:14:10 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+20:14:10 INFO ===< ClangPass::vector-to-array >===
+20:14:10 INFO ===< ClangPass::remove-try-catch >===
+20:14:11 INFO ===< ClangPass::class-to-struct >===
+20:14:24 INFO ===< ClangPass::member-to-global >===
+20:14:27 INFO ===< LinesPass::0 >===
+20:15:16 INFO ===< LinesPass::1 >===
+20:15:22 INFO ===< LinesPass::2 >===
+20:15:22 INFO ===< LinesPass::3 >===
+20:15:22 INFO ===< LinesPass::4 >===
+20:15:22 INFO ===< LinesPass::6 >===
+20:15:22 INFO ===< LinesPass::8 >===
+20:15:22 INFO ===< LinesPass::10 >===
+20:15:22 INFO ===< CommentsPass >===
+20:15:22 INFO ===< SpecialPass::b >===
+20:15:22 INFO ===< SpecialPass::c >===
+20:15:22 INFO ===< IndentPass::regular >===
+20:15:29 INFO ===< BalancedPass::parens-to-zero >===
+20:16:37 INFO (97.4%, 3929 bytes, 140 lines)
+20:16:55 INFO (97.4%, 3928 bytes, 140 lines)
+20:17:11 INFO (97.4%, 3927 bytes, 140 lines)
+20:17:37 INFO (97.4%, 3926 bytes, 140 lines)
+20:17:51 INFO (97.4%, 3925 bytes, 140 lines)
+21:13:52 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+21:44:49 INFO ===< ClexPass::rm-tok-pattern-4 >===
+21:44:52 INFO ===< ClangPass::local-to-global >===
+21:45:03 INFO ===< PeepPass::c >===
+21:45:09 INFO ===< IntsPass::a >===
+21:45:09 INFO ===< IntsPass::b >===
+21:45:09 INFO ===< IntsPass::c >===
+21:45:09 INFO ===< IntsPass::d >===
+21:45:09 INFO cache hit for HIPProg.hip
+21:45:09 INFO ===< IntsPass::c >===
+21:45:16 INFO ===< BalancedPass::parens-only >===
+21:45:17 INFO ===< ClexPass::delete-string >===
+21:45:19 INFO Termination check: size was 4038; now 3925
+21:45:19 ERROR Skipping pass UnIfDefPass
+21:45:19 INFO ===< ClexPass::define >===
+21:45:19 INFO ===< IncludeIncludesPass >===
+21:45:19 INFO ===< TernaryPass::b >===
+21:45:19 INFO ===< TernaryPass::c >===
+21:45:33 INFO ===< BalancedPass::curly >===
+21:45:47 INFO ===< BalancedPass::curly2 >===
+21:45:47 INFO ===< BalancedPass::curly3 >===
+21:45:58 INFO ===< BalancedPass::parens >===
+21:45:59 INFO ===< BalancedPass::angles >===
+21:46:22 INFO ===< BalancedPass::square >===
+21:46:35 INFO ===< BalancedPass::curly-inside >===
+21:46:41 INFO ===< BalancedPass::parens-inside >===
+21:46:43 INFO ===< BalancedPass::angles-inside >===
+21:47:08 INFO ===< BalancedPass::square-inside >===
+21:47:15 INFO ===< BalancedPass::curly-only >===
+21:47:16 INFO ===< BalancedPass::angles-only >===
+21:47:39 INFO ===< BalancedPass::square-only >===
+21:47:39 INFO ===< ClangPass::remove-namespace >===
+21:47:39 INFO ===< ClangPass::aggregate-to-scalar >===
+21:47:39 INFO ===< ClangPass::param-to-global >===
+21:47:40 INFO ===< ClangPass::param-to-local >===
+21:47:40 INFO ===< ClangPass::remove-nested-function >===
+21:47:40 INFO ===< ClangPass::union-to-struct >===
+21:47:42 INFO ===< ClangPass::return-void >===
+21:47:42 INFO ===< ClangPass::simple-inliner >===
+21:47:49 INFO ===< ClangPass::reduce-pointer-level >===
+21:47:49 INFO ===< ClangPass::lift-assignment-expr >===
+21:47:49 INFO ===< ClangPass::copy-propagation >===
+21:47:50 INFO ===< ClangHintsPass::callexpr-to-value >===
+21:47:50 INFO ===< ClangPass::replace-callexpr >===
+21:47:51 INFO ===< ClangPass::simplify-callexpr >===
+21:47:52 INFO ===< ClangHintsPass::remove-unused-function >===
+21:47:52 INFO using C++ standard: c++2b with 0 transformation opportunities
+21:47:52 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+21:47:52 INFO ===< ClangPass::remove-enum-member-value >===
+21:47:52 INFO using C++ standard: c++2b with 5 transformation opportunities
+21:47:53 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+21:47:53 INFO ===< ClangPass::simplify-if >===
+21:47:53 INFO ===< ClangPass::reduce-array-dim >===
+21:47:53 INFO ===< ClangPass::reduce-array-size >===
+21:47:53 INFO ===< ClangPass::move-definition-to-declaration >===
+21:47:53 INFO ===< ClangPass::simplify-comma-expr >===
+21:47:53 INFO ===< ClangPass::simplify-dependent-typedef >===
+21:47:53 INFO ===< ClangPass::replace-simple-typedef >===
+21:47:53 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+21:47:53 INFO ===< ClangPass::replace-one-level-typedef-type >===
+21:48:12 INFO (97.4%, 3875 bytes, 138 lines)
+21:48:30 INFO (97.5%, 3836 bytes, 136 lines)
+21:48:42 INFO (97.5%, 3796 bytes, 134 lines)
+21:48:47 INFO ===< ClangPass::remove-unused-field >===
+21:48:47 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+21:48:47 INFO ===< ClangPass::instantiate-template-param >===
+21:48:47 INFO ===< ClangPass::template-arg-to-int >===
+21:48:48 INFO ===< ClangPass::template-non-type-arg-to-int >===
+21:48:48 INFO ===< ClangPass::reduce-class-template-param >===
+21:48:48 INFO ===< ClangPass::remove-trivial-base-template >===
+21:48:48 INFO ===< ClangPass::class-template-to-class >===
+21:48:48 INFO ===< ClangPass::merge-base-class >===
+21:48:48 INFO ===< ClangPass::remove-base-class >===
+21:48:48 INFO ===< ClangPass::replace-derived-class >===
+21:48:48 INFO ===< ClangPass::remove-unresolved-base >===
+21:48:48 INFO ===< ClangPass::remove-ctor-initializer >===
+21:48:48 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+21:48:48 INFO ===< ClangPass::simplify-nested-class >===
+21:48:48 INFO ===< ClangPass::remove-unused-outer-class >===
+21:48:48 INFO ===< ClangPass::empty-struct-to-int >===
+21:48:49 INFO ===< ClangPass::remove-pointer >===
+21:48:49 INFO ===< ClangPass::reduce-pointer-pairs >===
+21:48:49 INFO ===< ClangPass::remove-array >===
+21:48:49 INFO ===< ClangPass::remove-addr-taken >===
+21:48:49 INFO ===< ClangPass::simplify-struct >===
+21:48:49 INFO ===< ClangPass::replace-undefined-function >===
+21:48:49 INFO ===< ClangPass::replace-array-index-var >===
+21:48:49 INFO ===< ClangPass::replace-array-access-with-index >===
+21:48:49 INFO ===< ClangPass::replace-dependent-name >===
+21:48:49 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+21:48:49 INFO ===< ClangPass::vector-to-array >===
+21:48:49 INFO ===< ClangPass::remove-try-catch >===
+21:48:49 INFO ===< ClangPass::class-to-struct >===
+21:49:03 INFO ===< ClangPass::member-to-global >===
+21:49:06 INFO ===< LinesPass::0 >===
+21:49:58 INFO ===< LinesPass::1 >===
+21:50:03 INFO ===< LinesPass::2 >===
+21:50:03 INFO ===< LinesPass::3 >===
+21:50:03 INFO ===< LinesPass::4 >===
+21:50:03 INFO ===< LinesPass::6 >===
+21:50:03 INFO ===< LinesPass::8 >===
+21:50:03 INFO ===< LinesPass::10 >===
+21:50:04 INFO ===< CommentsPass >===
+21:50:04 INFO ===< SpecialPass::b >===
+21:50:04 INFO ===< SpecialPass::c >===
+21:50:04 INFO ===< IndentPass::regular >===
+21:50:11 INFO ===< BalancedPass::parens-to-zero >===
+21:52:09 INFO (97.5%, 3795 bytes, 134 lines)
+21:52:29 INFO (97.5%, 3794 bytes, 134 lines)
+21:52:47 INFO (97.5%, 3793 bytes, 134 lines)
+21:53:07 INFO (97.5%, 3792 bytes, 134 lines)
+21:55:35 INFO (97.5%, 3790 bytes, 134 lines)
+21:55:49 INFO (97.5%, 3788 bytes, 134 lines)
+22:01:20 INFO (97.5%, 3783 bytes, 134 lines)
+22:46:21 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+23:18:20 INFO ===< ClexPass::rm-tok-pattern-4 >===
+23:18:23 INFO ===< ClangPass::local-to-global >===
+23:18:38 INFO ===< PeepPass::c >===
+23:18:46 INFO ===< IntsPass::a >===
+23:18:46 INFO ===< IntsPass::b >===
+23:18:46 INFO ===< IntsPass::c >===
+23:18:46 INFO ===< IntsPass::d >===
+23:18:46 INFO cache hit for HIPProg.hip
+23:18:46 INFO ===< IntsPass::c >===
+23:18:55 INFO ===< BalancedPass::parens-only >===
+23:18:57 INFO ===< ClexPass::delete-string >===
+23:18:59 INFO Termination check: size was 3925; now 3783
+23:18:59 ERROR Skipping pass UnIfDefPass
+23:18:59 INFO ===< ClexPass::define >===
+23:18:59 INFO ===< IncludeIncludesPass >===
+23:18:59 INFO ===< TernaryPass::b >===
+23:18:59 INFO ===< TernaryPass::c >===
+23:19:14 INFO ===< BalancedPass::curly >===
+23:19:29 INFO ===< BalancedPass::curly2 >===
+23:19:29 INFO ===< BalancedPass::curly3 >===
+23:19:40 INFO ===< BalancedPass::parens >===
+23:19:41 INFO ===< BalancedPass::angles >===
+23:20:02 INFO ===< BalancedPass::square >===
+23:20:15 INFO ===< BalancedPass::curly-inside >===
+23:20:20 INFO ===< BalancedPass::parens-inside >===
+23:20:22 INFO ===< BalancedPass::angles-inside >===
+23:20:42 INFO ===< BalancedPass::square-inside >===
+23:20:48 INFO ===< BalancedPass::curly-only >===
+23:20:50 INFO ===< BalancedPass::angles-only >===
+23:21:10 INFO ===< BalancedPass::square-only >===
+23:21:10 INFO ===< ClangPass::remove-namespace >===
+23:21:11 INFO ===< ClangPass::aggregate-to-scalar >===
+23:21:11 INFO ===< ClangPass::param-to-global >===
+23:21:12 INFO ===< ClangPass::param-to-local >===
+23:21:12 INFO ===< ClangPass::remove-nested-function >===
+23:21:12 INFO ===< ClangPass::union-to-struct >===
+23:21:13 INFO ===< ClangPass::return-void >===
+23:21:13 INFO ===< ClangPass::simple-inliner >===
+23:21:21 INFO ===< ClangPass::reduce-pointer-level >===
+23:21:21 INFO ===< ClangPass::lift-assignment-expr >===
+23:21:21 INFO ===< ClangPass::copy-propagation >===
+23:21:22 INFO ===< ClangHintsPass::callexpr-to-value >===
+23:21:22 INFO ===< ClangPass::replace-callexpr >===
+23:21:24 INFO ===< ClangPass::simplify-callexpr >===
+23:21:24 INFO ===< ClangHintsPass::remove-unused-function >===
+23:21:24 INFO using C++ standard: c++2b with 0 transformation opportunities
+23:21:24 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+23:21:24 INFO ===< ClangPass::remove-enum-member-value >===
+23:21:24 INFO using C++ standard: c++2b with 5 transformation opportunities
+23:21:25 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+23:21:25 INFO ===< ClangPass::simplify-if >===
+23:21:25 INFO ===< ClangPass::reduce-array-dim >===
+23:21:25 INFO ===< ClangPass::reduce-array-size >===
+23:21:25 INFO ===< ClangPass::move-definition-to-declaration >===
+23:21:25 INFO ===< ClangPass::simplify-comma-expr >===
+23:21:25 INFO ===< ClangPass::simplify-dependent-typedef >===
+23:21:25 INFO ===< ClangPass::replace-simple-typedef >===
+23:21:25 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+23:21:25 INFO ===< ClangPass::replace-one-level-typedef-type >===
+23:21:46 INFO (97.5%, 3755 bytes, 132 lines)
+23:22:03 INFO (97.5%, 3716 bytes, 130 lines)
+23:22:13 INFO (97.6%, 3671 bytes, 128 lines)
+23:22:18 INFO ===< ClangPass::remove-unused-field >===
+23:22:19 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+23:22:19 INFO ===< ClangPass::instantiate-template-param >===
+23:22:19 INFO ===< ClangPass::template-arg-to-int >===
+23:22:19 INFO ===< ClangPass::template-non-type-arg-to-int >===
+23:22:19 INFO ===< ClangPass::reduce-class-template-param >===
+23:22:19 INFO ===< ClangPass::remove-trivial-base-template >===
+23:22:19 INFO ===< ClangPass::class-template-to-class >===
+23:22:19 INFO ===< ClangPass::merge-base-class >===
+23:22:19 INFO ===< ClangPass::remove-base-class >===
+23:22:19 INFO ===< ClangPass::replace-derived-class >===
+23:22:19 INFO ===< ClangPass::remove-unresolved-base >===
+23:22:19 INFO ===< ClangPass::remove-ctor-initializer >===
+23:22:19 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+23:22:19 INFO ===< ClangPass::simplify-nested-class >===
+23:22:20 INFO ===< ClangPass::remove-unused-outer-class >===
+23:22:20 INFO ===< ClangPass::empty-struct-to-int >===
+23:22:20 INFO ===< ClangPass::remove-pointer >===
+23:22:20 INFO ===< ClangPass::reduce-pointer-pairs >===
+23:22:20 INFO ===< ClangPass::remove-array >===
+23:22:20 INFO ===< ClangPass::remove-addr-taken >===
+23:22:20 INFO ===< ClangPass::simplify-struct >===
+23:22:20 INFO ===< ClangPass::replace-undefined-function >===
+23:22:20 INFO ===< ClangPass::replace-array-index-var >===
+23:22:20 INFO ===< ClangPass::replace-array-access-with-index >===
+23:22:20 INFO ===< ClangPass::replace-dependent-name >===
+23:22:20 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+23:22:20 INFO ===< ClangPass::vector-to-array >===
+23:22:21 INFO ===< ClangPass::remove-try-catch >===
+23:22:21 INFO ===< ClangPass::class-to-struct >===
+23:22:33 INFO ===< ClangPass::member-to-global >===
+23:22:36 INFO ===< LinesPass::0 >===
+23:23:26 INFO ===< LinesPass::1 >===
+23:23:32 INFO ===< LinesPass::2 >===
+23:23:32 INFO ===< LinesPass::3 >===
+23:23:32 INFO ===< LinesPass::4 >===
+23:23:32 INFO ===< LinesPass::6 >===
+23:23:32 INFO ===< LinesPass::8 >===
+23:23:32 INFO ===< LinesPass::10 >===
+23:23:33 INFO ===< CommentsPass >===
+23:23:33 INFO ===< SpecialPass::b >===
+23:23:33 INFO ===< SpecialPass::c >===
+23:23:33 INFO ===< IndentPass::regular >===
+23:23:42 INFO ===< BalancedPass::parens-to-zero >===
+23:25:31 INFO (97.6%, 3670 bytes, 128 lines)
+23:25:51 INFO (97.6%, 3669 bytes, 128 lines)
+23:26:18 INFO (97.6%, 3668 bytes, 128 lines)
+23:26:50 INFO (97.6%, 3667 bytes, 128 lines)
+23:27:14 INFO (97.6%, 3666 bytes, 128 lines)
+23:27:38 INFO (97.6%, 3665 bytes, 128 lines)
+23:28:06 INFO (97.6%, 3664 bytes, 128 lines)
+23:28:22 INFO (97.6%, 3663 bytes, 128 lines)
+23:28:40 INFO (97.6%, 3662 bytes, 128 lines)
+23:29:00 INFO (97.6%, 3661 bytes, 128 lines)
+23:35:45 INFO (97.6%, 3658 bytes, 128 lines)
+1 day, 0:26:24 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 0:58:37 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 0:58:39 INFO ===< ClangPass::local-to-global >===
+1 day, 0:58:47 INFO ===< PeepPass::c >===
+1 day, 0:58:53 INFO ===< IntsPass::a >===
+1 day, 0:58:54 INFO ===< IntsPass::b >===
+1 day, 0:58:54 INFO ===< IntsPass::c >===
+1 day, 0:58:54 INFO ===< IntsPass::d >===
+1 day, 0:58:54 INFO cache hit for HIPProg.hip
+1 day, 0:58:54 INFO ===< IntsPass::c >===
+1 day, 0:59:03 INFO ===< BalancedPass::parens-only >===
+1 day, 0:59:05 INFO ===< ClexPass::delete-string >===
+1 day, 0:59:06 INFO Termination check: size was 3783; now 3658
+1 day, 0:59:06 ERROR Skipping pass UnIfDefPass
+1 day, 0:59:06 INFO ===< ClexPass::define >===
+1 day, 0:59:06 INFO ===< IncludeIncludesPass >===
+1 day, 0:59:06 INFO ===< TernaryPass::b >===
+1 day, 0:59:07 INFO ===< TernaryPass::c >===
+1 day, 0:59:22 INFO ===< BalancedPass::curly >===
+1 day, 0:59:36 INFO ===< BalancedPass::curly2 >===
+1 day, 0:59:36 INFO ===< BalancedPass::curly3 >===
+1 day, 0:59:49 INFO ===< BalancedPass::parens >===
+1 day, 0:59:51 INFO ===< BalancedPass::angles >===
+1 day, 1:00:14 INFO ===< BalancedPass::square >===
+1 day, 1:00:29 INFO ===< BalancedPass::curly-inside >===
+1 day, 1:00:38 INFO ===< BalancedPass::parens-inside >===
+1 day, 1:00:39 INFO ===< BalancedPass::angles-inside >===
+1 day, 1:00:53 INFO ===< BalancedPass::square-inside >===
+1 day, 1:01:05 INFO ===< BalancedPass::curly-only >===
+1 day, 1:01:06 INFO ===< BalancedPass::angles-only >===
+1 day, 1:01:27 INFO ===< BalancedPass::square-only >===
+1 day, 1:01:27 INFO ===< ClangPass::remove-namespace >===
+1 day, 1:01:27 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 1:01:28 INFO ===< ClangPass::param-to-global >===
+1 day, 1:01:29 INFO ===< ClangPass::param-to-local >===
+1 day, 1:01:29 INFO ===< ClangPass::remove-nested-function >===
+1 day, 1:01:29 INFO ===< ClangPass::union-to-struct >===
+1 day, 1:01:30 INFO ===< ClangPass::return-void >===
+1 day, 1:01:30 INFO ===< ClangPass::simple-inliner >===
+1 day, 1:01:38 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 1:01:38 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 1:01:38 INFO ===< ClangPass::copy-propagation >===
+1 day, 1:01:41 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 1:01:41 INFO ===< ClangPass::replace-callexpr >===
+1 day, 1:01:42 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 1:01:43 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 1:01:42 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 1:01:43 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 1:01:43 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 1:01:43 INFO using C++ standard: c++2b with 5 transformation opportunities
+1 day, 1:01:43 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 1:01:43 INFO ===< ClangPass::simplify-if >===
+1 day, 1:01:43 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 1:01:43 INFO ===< ClangPass::reduce-array-size >===
+1 day, 1:01:44 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 1:01:44 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 1:01:44 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 1:01:44 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 1:01:44 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 1:01:44 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 1:02:06 INFO (97.6%, 3617 bytes, 126 lines)
+1 day, 1:02:31 INFO (97.6%, 3589 bytes, 124 lines)
+1 day, 1:02:43 INFO (97.7%, 3560 bytes, 122 lines)
+1 day, 1:02:51 INFO ===< ClangPass::remove-unused-field >===
+1 day, 1:02:51 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 1:02:52 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 1:02:52 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 1:02:52 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 1:02:52 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 1:02:52 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 1:02:52 INFO ===< ClangPass::class-template-to-class >===
+1 day, 1:02:52 INFO ===< ClangPass::merge-base-class >===
+1 day, 1:02:53 INFO ===< ClangPass::remove-base-class >===
+1 day, 1:02:53 INFO ===< ClangPass::replace-derived-class >===
+1 day, 1:02:53 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 1:02:53 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 1:02:53 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 1:02:53 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 1:02:54 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 1:02:54 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 1:02:54 INFO ===< ClangPass::remove-pointer >===
+1 day, 1:02:54 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 1:02:54 INFO ===< ClangPass::remove-array >===
+1 day, 1:02:54 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 1:02:55 INFO ===< ClangPass::simplify-struct >===
+1 day, 1:02:55 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 1:02:55 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 1:02:55 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 1:02:55 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 1:02:55 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 1:02:55 INFO ===< ClangPass::vector-to-array >===
+1 day, 1:02:55 INFO ===< ClangPass::remove-try-catch >===
+1 day, 1:02:55 INFO ===< ClangPass::class-to-struct >===
+1 day, 1:03:07 INFO ===< ClangPass::member-to-global >===
+1 day, 1:03:11 INFO ===< LinesPass::0 >===
+1 day, 1:04:09 INFO ===< LinesPass::1 >===
+1 day, 1:04:14 INFO ===< LinesPass::2 >===
+1 day, 1:04:14 INFO ===< LinesPass::3 >===
+1 day, 1:04:14 INFO ===< LinesPass::4 >===
+1 day, 1:04:14 INFO ===< LinesPass::6 >===
+1 day, 1:04:14 INFO ===< LinesPass::8 >===
+1 day, 1:04:14 INFO ===< LinesPass::10 >===
+1 day, 1:04:15 INFO ===< CommentsPass >===
+1 day, 1:04:15 INFO ===< SpecialPass::b >===
+1 day, 1:04:15 INFO ===< SpecialPass::c >===
+1 day, 1:04:15 INFO ===< IndentPass::regular >===
+1 day, 1:04:25 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 2:00:04 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 2:25:04 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 2:25:07 INFO ===< ClangPass::local-to-global >===
+1 day, 2:25:18 INFO ===< PeepPass::c >===
+1 day, 2:25:23 INFO ===< IntsPass::a >===
+1 day, 2:25:23 INFO ===< IntsPass::b >===
+1 day, 2:25:23 INFO ===< IntsPass::c >===
+1 day, 2:25:23 INFO ===< IntsPass::d >===
+1 day, 2:25:23 INFO cache hit for HIPProg.hip
+1 day, 2:25:23 INFO ===< IntsPass::c >===
+1 day, 2:25:30 INFO ===< BalancedPass::parens-only >===
+1 day, 2:25:31 INFO ===< ClexPass::delete-string >===
+1 day, 2:25:32 INFO Termination check: size was 3658; now 3560
+1 day, 2:25:32 ERROR Skipping pass UnIfDefPass
+1 day, 2:25:32 INFO ===< ClexPass::define >===
+1 day, 2:25:33 INFO ===< IncludeIncludesPass >===
+1 day, 2:25:33 INFO ===< TernaryPass::b >===
+1 day, 2:25:33 INFO ===< TernaryPass::c >===
+1 day, 2:25:47 INFO ===< BalancedPass::curly >===
+1 day, 2:26:01 INFO ===< BalancedPass::curly2 >===
+1 day, 2:26:01 INFO ===< BalancedPass::curly3 >===
+1 day, 2:26:11 INFO ===< BalancedPass::parens >===
+1 day, 2:26:13 INFO ===< BalancedPass::angles >===
+1 day, 2:26:31 INFO ===< BalancedPass::square >===
+1 day, 2:26:44 INFO ===< BalancedPass::curly-inside >===
+1 day, 2:26:49 INFO ===< BalancedPass::parens-inside >===
+1 day, 2:26:50 INFO ===< BalancedPass::angles-inside >===
+1 day, 2:27:05 INFO ===< BalancedPass::square-inside >===
+1 day, 2:27:11 INFO ===< BalancedPass::curly-only >===
+1 day, 2:27:12 INFO ===< BalancedPass::angles-only >===
+1 day, 2:27:31 INFO ===< BalancedPass::square-only >===
+1 day, 2:27:32 INFO ===< ClangPass::remove-namespace >===
+1 day, 2:27:32 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 2:27:32 INFO ===< ClangPass::param-to-global >===
+1 day, 2:27:33 INFO ===< ClangPass::param-to-local >===
+1 day, 2:27:33 INFO ===< ClangPass::remove-nested-function >===
+1 day, 2:27:33 INFO ===< ClangPass::union-to-struct >===
+1 day, 2:27:35 INFO ===< ClangPass::return-void >===
+1 day, 2:27:35 INFO ===< ClangPass::simple-inliner >===
+1 day, 2:27:40 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 2:27:40 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 2:27:40 INFO ===< ClangPass::copy-propagation >===
+1 day, 2:27:42 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 2:27:42 INFO ===< ClangPass::replace-callexpr >===
+1 day, 2:27:43 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 2:27:43 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 2:27:43 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 2:27:43 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 2:27:43 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 2:27:43 INFO using C++ standard: c++2b with 4 transformation opportunities
+1 day, 2:27:44 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 2:27:44 INFO ===< ClangPass::simplify-if >===
+1 day, 2:27:44 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 2:27:44 INFO ===< ClangPass::reduce-array-size >===
+1 day, 2:27:44 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 2:27:44 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 2:27:44 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 2:27:45 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 2:27:45 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 2:27:45 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 2:28:04 INFO (97.7%, 3514 bytes, 120 lines)
+1 day, 2:28:13 INFO ===< ClangPass::remove-unused-field >===
+1 day, 2:28:13 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 2:28:13 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 2:28:13 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 2:28:13 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 2:28:13 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 2:28:13 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 2:28:13 INFO ===< ClangPass::class-template-to-class >===
+1 day, 2:28:14 INFO ===< ClangPass::merge-base-class >===
+1 day, 2:28:14 INFO ===< ClangPass::remove-base-class >===
+1 day, 2:28:14 INFO ===< ClangPass::replace-derived-class >===
+1 day, 2:28:14 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 2:28:14 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 2:28:14 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 2:28:14 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 2:28:14 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 2:28:14 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 2:28:15 INFO ===< ClangPass::remove-pointer >===
+1 day, 2:28:15 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 2:28:15 INFO ===< ClangPass::remove-array >===
+1 day, 2:28:15 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 2:28:15 INFO ===< ClangPass::simplify-struct >===
+1 day, 2:28:15 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 2:28:15 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 2:28:15 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 2:28:15 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 2:28:15 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 2:28:15 INFO ===< ClangPass::vector-to-array >===
+1 day, 2:28:16 INFO ===< ClangPass::remove-try-catch >===
+1 day, 2:28:16 INFO ===< ClangPass::class-to-struct >===
+1 day, 2:28:30 INFO ===< ClangPass::member-to-global >===
+1 day, 2:28:34 INFO ===< LinesPass::0 >===
+1 day, 2:29:20 INFO ===< LinesPass::1 >===
+1 day, 2:29:24 INFO ===< LinesPass::2 >===
+1 day, 2:29:24 INFO ===< LinesPass::3 >===
+1 day, 2:29:24 INFO ===< LinesPass::4 >===
+1 day, 2:29:24 INFO ===< LinesPass::6 >===
+1 day, 2:29:24 INFO ===< LinesPass::8 >===
+1 day, 2:29:24 INFO ===< LinesPass::10 >===
+1 day, 2:29:24 INFO ===< CommentsPass >===
+1 day, 2:29:24 INFO ===< SpecialPass::b >===
+1 day, 2:29:24 INFO ===< SpecialPass::c >===
+1 day, 2:29:24 INFO ===< IndentPass::regular >===
+1 day, 2:29:32 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 2:33:18 INFO (97.7%, 3512 bytes, 120 lines)
+1 day, 2:37:21 INFO (97.7%, 3508 bytes, 120 lines)
+1 day, 3:19:06 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 3:41:49 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 3:41:52 INFO ===< ClangPass::local-to-global >===
+1 day, 3:42:02 INFO ===< PeepPass::c >===
+1 day, 3:42:07 INFO ===< IntsPass::a >===
+1 day, 3:42:07 INFO ===< IntsPass::b >===
+1 day, 3:42:07 INFO ===< IntsPass::c >===
+1 day, 3:42:07 INFO ===< IntsPass::d >===
+1 day, 3:42:07 INFO cache hit for HIPProg.hip
+1 day, 3:42:07 INFO ===< IntsPass::c >===
+1 day, 3:42:14 INFO ===< BalancedPass::parens-only >===
+1 day, 3:42:16 INFO ===< ClexPass::delete-string >===
+1 day, 3:42:17 INFO Termination check: size was 3560; now 3508
+1 day, 3:42:17 ERROR Skipping pass UnIfDefPass
+1 day, 3:42:17 INFO ===< ClexPass::define >===
+1 day, 3:42:17 INFO ===< IncludeIncludesPass >===
+1 day, 3:42:17 INFO ===< TernaryPass::b >===
+1 day, 3:42:17 INFO ===< TernaryPass::c >===
+1 day, 3:42:31 INFO ===< BalancedPass::curly >===
+1 day, 3:42:45 INFO ===< BalancedPass::curly2 >===
+1 day, 3:42:45 INFO ===< BalancedPass::curly3 >===
+1 day, 3:42:55 INFO ===< BalancedPass::parens >===
+1 day, 3:42:57 INFO ===< BalancedPass::angles >===
+1 day, 3:43:10 INFO ===< BalancedPass::square >===
+1 day, 3:43:22 INFO ===< BalancedPass::curly-inside >===
+1 day, 3:43:29 INFO ===< BalancedPass::parens-inside >===
+1 day, 3:43:30 INFO ===< BalancedPass::angles-inside >===
+1 day, 3:43:44 INFO ===< BalancedPass::square-inside >===
+1 day, 3:43:49 INFO ===< BalancedPass::curly-only >===
+1 day, 3:43:51 INFO ===< BalancedPass::angles-only >===
+1 day, 3:44:04 INFO ===< BalancedPass::square-only >===
+1 day, 3:44:04 INFO ===< ClangPass::remove-namespace >===
+1 day, 3:44:04 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 3:44:04 INFO ===< ClangPass::param-to-global >===
+1 day, 3:44:06 INFO ===< ClangPass::param-to-local >===
+1 day, 3:44:06 INFO ===< ClangPass::remove-nested-function >===
+1 day, 3:44:06 INFO ===< ClangPass::union-to-struct >===
+1 day, 3:44:07 INFO ===< ClangPass::return-void >===
+1 day, 3:44:07 INFO ===< ClangPass::simple-inliner >===
+1 day, 3:44:14 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 3:44:14 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 3:44:14 INFO ===< ClangPass::copy-propagation >===
+1 day, 3:44:16 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 3:44:16 INFO ===< ClangPass::replace-callexpr >===
+1 day, 3:44:17 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 3:44:18 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 3:44:18 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 3:44:18 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 3:44:18 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 3:44:18 INFO using C++ standard: c++2b with 4 transformation opportunities
+1 day, 3:44:19 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 3:44:19 INFO ===< ClangPass::simplify-if >===
+1 day, 3:44:19 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 3:44:19 INFO ===< ClangPass::reduce-array-size >===
+1 day, 3:44:19 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 3:44:19 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 3:44:19 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 3:44:19 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 3:44:19 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 3:44:19 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 3:44:39 INFO (97.7%, 3481 bytes, 118 lines)
+1 day, 3:44:49 INFO ===< ClangPass::remove-unused-field >===
+1 day, 3:44:49 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 3:44:49 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 3:44:49 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 3:44:49 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 3:44:49 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 3:44:49 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 3:44:49 INFO ===< ClangPass::class-template-to-class >===
+1 day, 3:44:49 INFO ===< ClangPass::merge-base-class >===
+1 day, 3:44:50 INFO ===< ClangPass::remove-base-class >===
+1 day, 3:44:50 INFO ===< ClangPass::replace-derived-class >===
+1 day, 3:44:50 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 3:44:50 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 3:44:50 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 3:44:50 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 3:44:50 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 3:44:50 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 3:44:50 INFO ===< ClangPass::remove-pointer >===
+1 day, 3:44:50 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 3:44:50 INFO ===< ClangPass::remove-array >===
+1 day, 3:44:50 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 3:44:50 INFO ===< ClangPass::simplify-struct >===
+1 day, 3:44:51 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 3:44:51 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 3:44:51 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 3:44:51 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 3:44:51 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 3:44:51 INFO ===< ClangPass::vector-to-array >===
+1 day, 3:44:51 INFO ===< ClangPass::remove-try-catch >===
+1 day, 3:44:51 INFO ===< ClangPass::class-to-struct >===
+1 day, 3:45:02 INFO ===< ClangPass::member-to-global >===
+1 day, 3:45:05 INFO ===< LinesPass::0 >===
+1 day, 3:45:51 INFO ===< LinesPass::1 >===
+1 day, 3:45:54 INFO ===< LinesPass::2 >===
+1 day, 3:45:54 INFO ===< LinesPass::3 >===
+1 day, 3:45:54 INFO ===< LinesPass::4 >===
+1 day, 3:45:54 INFO ===< LinesPass::6 >===
+1 day, 3:45:54 INFO ===< LinesPass::8 >===
+1 day, 3:45:54 INFO ===< LinesPass::10 >===
+1 day, 3:45:54 INFO ===< CommentsPass >===
+1 day, 3:45:54 INFO ===< SpecialPass::b >===
+1 day, 3:45:54 INFO ===< SpecialPass::c >===
+1 day, 3:45:55 INFO ===< IndentPass::regular >===
+1 day, 3:46:02 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 4:29:31 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 4:52:28 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 4:52:30 INFO ===< ClangPass::local-to-global >===
+1 day, 4:52:41 INFO ===< PeepPass::c >===
+1 day, 4:52:46 INFO ===< IntsPass::a >===
+1 day, 4:52:46 INFO ===< IntsPass::b >===
+1 day, 4:52:46 INFO ===< IntsPass::c >===
+1 day, 4:52:46 INFO ===< IntsPass::d >===
+1 day, 4:52:46 INFO cache hit for HIPProg.hip
+1 day, 4:52:46 INFO ===< IntsPass::c >===
+1 day, 4:52:53 INFO ===< BalancedPass::parens-only >===
+1 day, 4:52:55 INFO ===< ClexPass::delete-string >===
+1 day, 4:52:56 INFO Termination check: size was 3508; now 3481
+1 day, 4:52:56 ERROR Skipping pass UnIfDefPass
+1 day, 4:52:56 INFO ===< ClexPass::define >===
+1 day, 4:52:56 INFO ===< IncludeIncludesPass >===
+1 day, 4:52:56 INFO ===< TernaryPass::b >===
+1 day, 4:52:56 INFO ===< TernaryPass::c >===
+1 day, 4:53:10 INFO ===< BalancedPass::curly >===
+1 day, 4:53:24 INFO ===< BalancedPass::curly2 >===
+1 day, 4:53:24 INFO ===< BalancedPass::curly3 >===
+1 day, 4:53:35 INFO ===< BalancedPass::parens >===
+1 day, 4:53:36 INFO ===< BalancedPass::angles >===
+1 day, 4:53:49 INFO ===< BalancedPass::square >===
+1 day, 4:54:02 INFO ===< BalancedPass::curly-inside >===
+1 day, 4:54:08 INFO ===< BalancedPass::parens-inside >===
+1 day, 4:54:09 INFO ===< BalancedPass::angles-inside >===
+1 day, 4:54:22 INFO ===< BalancedPass::square-inside >===
+1 day, 4:54:28 INFO ===< BalancedPass::curly-only >===
+1 day, 4:54:29 INFO ===< BalancedPass::angles-only >===
+1 day, 4:54:43 INFO ===< BalancedPass::square-only >===
+1 day, 4:54:43 INFO ===< ClangPass::remove-namespace >===
+1 day, 4:54:43 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 4:54:43 INFO ===< ClangPass::param-to-global >===
+1 day, 4:54:44 INFO ===< ClangPass::param-to-local >===
+1 day, 4:54:45 INFO ===< ClangPass::remove-nested-function >===
+1 day, 4:54:45 INFO ===< ClangPass::union-to-struct >===
+1 day, 4:54:46 INFO ===< ClangPass::return-void >===
+1 day, 4:54:46 INFO ===< ClangPass::simple-inliner >===
+1 day, 4:54:51 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 4:54:51 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 4:54:52 INFO ===< ClangPass::copy-propagation >===
+1 day, 4:54:53 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 4:54:53 INFO ===< ClangPass::replace-callexpr >===
+1 day, 4:54:54 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 4:54:55 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 4:54:55 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 4:54:55 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 4:54:55 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 4:54:55 INFO using C++ standard: c++2b with 4 transformation opportunities
+1 day, 4:54:56 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 4:54:56 INFO ===< ClangPass::simplify-if >===
+1 day, 4:54:56 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 4:54:56 INFO ===< ClangPass::reduce-array-size >===
+1 day, 4:54:56 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 4:54:56 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 4:54:56 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 4:54:56 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 4:54:56 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 4:54:56 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 4:55:07 INFO ===< ClangPass::remove-unused-field >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::class-template-to-class >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::merge-base-class >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-base-class >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::replace-derived-class >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-pointer >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-array >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::simplify-struct >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::vector-to-array >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::remove-try-catch >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::class-to-struct >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< ClangPass::member-to-global >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::0 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::1 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::2 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::3 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::4 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::6 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::8 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:07 INFO ===< LinesPass::10 >===
+1 day, 4:55:07 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< CommentsPass >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< SpecialPass::b >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< SpecialPass::c >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< IndentPass::regular >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< ClangPass::local-to-global >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< PeepPass::c >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< IntsPass::a >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< IntsPass::b >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< IntsPass::c >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< IntsPass::d >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< IntsPass::c >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< BalancedPass::parens-only >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO ===< ClexPass::delete-string >===
+1 day, 4:55:08 INFO cache hit for HIPProg.hip
+1 day, 4:55:08 INFO Termination check: size was 3481; now 3481
+1 day, 4:55:08 INFO CLEANUP PASSES
+1 day, 4:55:08 INFO ===< ClexPass::define >===
+1 day, 4:55:08 INFO ===< ClangPass::combine-global-var >===
+1 day, 4:55:09 INFO ===< ClangPass::combine-local-var >===
+1 day, 4:55:09 INFO ===< ClangPass::simplify-struct-union-decl >===
+1 day, 4:55:09 INFO ===< ClangPass::move-global-var >===
+1 day, 4:55:09 INFO ===< ClangPass::unify-function-decl >===
+1 day, 4:55:09 INFO cache hit for HIPProg.hip
+1 day, 4:55:09 INFO ===< LinesPass::0 >===
+1 day, 4:55:09 INFO cache hit for HIPProg.hip
+1 day, 4:55:09 INFO ===< ClexPass::delete-string >===
+1 day, 4:55:26 INFO (97.9%, 3255 bytes, 118 lines)
+1 day, 4:55:28 INFO ===< BlankPass >===
+1 day, 4:55:30 INFO ===< BlankPass >===
+1 day, 4:55:30 INFO ===================== done ====================
+===< PASS statistics >===
+  pass name                                                     bytes reduced time (s) time (%)   worked   failed  total executed
+  BalancedPass::curly-inside                                            58856   318.87     0.31       15      365             380
+  ClangHintsPass::remove-unused-function                                51191    15.20     0.01        2       39              41
+  LinesPass::3                                                          14400    82.77     0.08       14       33              47
+  CommentsPass                                                           7305    56.07     0.05        9      756             765
+  BalancedPass::curly3                                                   3785    72.95     0.07        7       16              23
+  LinesPass::1                                                           2291  1720.97     1.65       24     4822            4846
+  LinesPass::0                                                           2068   178.14     0.17       10      612             622
+  LinesPass::4                                                           1726     3.79     0.00        1        0               1
+  LinesPass::None                                                        1594  1416.36     1.36       10     4003            4013
+  ClangPass::remove-unused-field                                         1440   719.58     0.69       45     1251            1296
+  ClangHintsPass::callexpr-to-value                                      1070   142.49     0.14       30      347             377
+  BalancedPass::curly2                                                    691   426.78     0.41        4     1177            1181
+  ClexHintsPass::rm-toks-1-to-4                                           417  4652.55     4.47       64    14974           15038
+  BlankPass                                                               383   121.08     0.12       13      198             211
+  LinesPass::2                                                            252   362.09     0.35        5     1101            1106
+  BalancedPass::parens-to-zero                                            222   425.11     0.41       16     2214            2230
+  ClexHintsPass::rm-toks-1-to-16                                          195 46400.72    44.56       53   183343          183396
+  IntsPass::a                                                             116  1723.48     1.66      118      790             908
+  TreeSitterPass::remove-function                                         110    25.51     0.02        1      196             197
+  BalancedPass::curly                                                      65   505.89     0.49        2     1180            1182
+  BalancedPass::parens-only                                                58   355.96     0.34       33     1891            1924
+  BalancedPass::square                                                     58   777.36     0.75       15     2280            2295
+  IntsPass::c                                                              31   305.33     0.29       21      125             146
+  ClexPass::rm-tok-pattern-4                                               29 23753.95    22.81        5    91765           91770
+  ClexHintsPass::rm-toks-9-to-12                                           15  4230.63     4.06        1    14867           14868
+  ClexHintsPass::rm-toks-5-to-8                                            15  4294.33     4.12        5    14884           14889
+  IntsPass::b                                                              12    73.10     0.07        6       81              87
+  BalancedPass::curly-only                                                 10   423.21     0.41        7     1096            1103
+  ClangPass::empty-struct-to-int                                            6     5.21     0.01        1       51              52
+  IntsPass::d                                                               5    47.07     0.05        5       43              48
+  ClangPass::reduce-pointer-level                                           3   145.63     0.14        3      381             384
+  ClangPass::remove-pointer                                                 1     3.81     0.00        1       51              52
+  InlineIncludesPass                                                        0     0.00     0.00        0        0               0
+  RmUnusedFilesPass                                                         0     0.00     0.00        0        0               0
+  IndentPass::final                                                         0     0.03     0.00        0        1               1
+  LineMarkersPass                                                           0     0.05     0.00        0        0               0
+  SpecialPass::c                                                            0     0.05     0.00        0        0               0
+  ClangPass::combine-global-var                                             0     0.06     0.00        0        4               4
+  ClangPass::move-global-var                                                0     0.06     0.00        0        4               4
+  ClangPass::simplify-struct-union-decl                                     0     0.06     0.00        0        4               4
+  ClangPass::unify-function-decl                                            0     0.06     0.00        0        4               4
+  ClangModuleMapPass                                                        0     0.07     0.00        0        0               0
+  SpecialPass::b                                                            0     0.07     0.00        0        0               0
+  TreeSitterPass::erase-namespace                                           0     0.08     0.00        0        0               0
+  MakefilePass                                                              0     0.10     0.00        0        0               0
+  LinesPass::10                                                             0     0.11     0.00        0        0               0
+  TernaryPass::c                                                            0     0.20     0.00        0        0               0
+  IncludeIncludesPass                                                       0     0.20     0.00        0       52              52
+  TernaryPass::b                                                            0     0.21     0.00        0        0               0
+  ClangHintsPass::remove-unused-function (30 T)                             0     0.28     0.00        0        1               1
+  ClangHintsPass::replace-function-def-with-decl (30 T)                     0     0.28     0.00        0        3               3
+  IndentPass::regular                                                       0     0.36     0.00        0       12              12
+  ClangPass::combine-local-var                                              0     0.47     0.00        0        7               7
+  ClangHintsPass::replace-dependent-typedef                                 0     0.58     0.00        0        0               0
+  SpecialPass::a                                                            0     0.60     0.00        0        2               2
+  ClangIncludeGraphPass                                                     0     0.66     0.00        0        0               0
+  ClangPass::replace-simple-typedef                                         0     0.70     0.00        0       52              52
+  ClangPass::reduce-class-template-param                                    0     0.71     0.00        0       48              48
+  ClangPass::remove-try-catch                                               0     0.71     0.00        0       48              48
+  ClangPass::move-definition-to-declaration                                 0     0.71     0.00        0       52              52
+  ClangPass::template-non-type-arg-to-int                                   0     0.72     0.00        0       48              48
+  ClangPass::instantiate-template-param                                     0     0.72     0.00        0       48              48
+  ClangPass::replace-one-level-typedef-type                                 0     0.73     0.00        0       52              52
+  ClangPass::template-arg-to-int                                            0     0.74     0.00        0       48              48
+  ClangPass::simplify-dependent-typedef                                     0     0.74     0.00        0       52              52
+  ClangPass::simplify-comma-expr                                            0     0.74     0.00        0       52              52
+  ClangPass::simplify-recursive-template-instantiation                      0     0.75     0.00        0       48              48
+  ClangPass::simplify-if                                                    0     0.75     0.00        0       52              52
+  ClangPass::simplify-struct                                                0     0.75     0.00        0       48              48
+  ClangPass::reduce-array-size                                              0     0.75     0.00        0       52              52
+  ClangPass::remove-ctor-initializer                                        0     0.75     0.00        0       48              48
+  ClangPass::replace-array-access-with-index                                0     0.76     0.00        0       48              48
+  ClangPass::vector-to-array                                                0     0.76     0.00        0       48              48
+  ClangPass::replace-class-with-base-template-spec                          0     0.76     0.00        0       48              48
+  ClangPass::replace-derived-class                                          0     0.76     0.00        0       48              48
+  ClangPass::remove-base-class                                              0     0.77     0.00        0       48              48
+  ClangPass::remove-trivial-base-template                                   0     0.77     0.00        0       48              48
+  ClangPass::union-to-struct                                                0     0.77     0.00        0       52              52
+  ClangPass::remove-unused-outer-class                                      0     0.78     0.00        0       48              48
+  ClangPass::replace-array-index-var                                        0     0.78     0.00        0       48              48
+  ClangPass::class-template-to-class                                        0     0.78     0.00        0       48              48
+  ClangPass::reduce-pointer-pairs                                           0     0.78     0.00        0       48              48
+  ClangPass::instantiate-template-type-param-to-int                         0     0.78     0.00        0       48              48
+  ClangPass::remove-unresolved-base                                         0     0.79     0.00        0       48              48
+  ClangPass::replace-dependent-name                                         0     0.79     0.00        0       48              48
+  ClangPass::replace-undefined-function                                     0     0.79     0.00        0       48              48
+  ClangPass::class-to-struct                                                0     0.79     0.00        0       48              48
+  ClangPass::remove-addr-taken                                              0     0.80     0.00        0       48              48
+  ClangPass::simple-inliner                                                 0     0.80     0.00        0       52              52
+  ClangPass::reduce-array-dim                                               0     0.80     0.00        0       52              52
+  ClangPass::simplify-nested-class                                          0     0.80     0.00        0       48              48
+  ClangPass::remove-enum-member-value                                       0     0.80     0.00        0       56              56
+  ClangPass::remove-array                                                   0     0.81     0.00        0       48              48
+  ClangPass::merge-base-class                                               0     0.83     0.00        0       48              48
+  IncludesPass                                                              0     0.86     0.00        0        4               4
+  ClangPass::copy-propagation                                               0     0.87     0.00        0       52              52
+  ClangPass::remove-namespace                                               0     0.87     0.00        0       52              52
+  ClangPass::lift-assignment-expr                                           0     0.89     0.00        0       52              52
+  ClangPass::replace-callexpr                                               0     0.96     0.00        0       56              56
+  ClangPass::param-to-global                                                0     1.48     0.00        0       52              52
+  ClangPass::remove-nested-function                                         0     1.71     0.00        0       64              64
+  ClangBinarySearchPass::remove-unused-enum-member                          0     3.90     0.00        0        0               0
+  ClexPass::define                                                          0     4.29     0.00        0       48              48
+  LinesPass::6                                                              0     4.38     0.00        1        0               1
+  LinesPass::8                                                              0     4.62     0.00        1        0               1
+  ClangPass::return-void                                                    0     4.74     0.00        0       52              52
+  ClangPass::param-to-local                                                 0     5.05     0.00        0       52              52
+  ClangHintsPass::replace-function-def-with-decl                            0     7.25     0.01        1       70              71
+  ClexPass::delete-string                                                   0     8.70     0.01        0       48              48
+  ClangPass::simplify-callexpr                                              0    10.04     0.01        0      184             184
+  ClangBinarySearchPass::remove-unused-var                                  0    10.44     0.01        0      120             120
+  ClangPass::local-to-global                                                0    24.63     0.02        0      197             197
+  TreeSitterPass::replace-function-def-with-decl                            0    32.02     0.03        2       96              98
+  BalancedPass::angles-inside                                               0    42.07     0.04        0      197             197
+  BalancedPass::angles                                                      0    43.42     0.04        0      197             197
+  BalancedPass::angles-only                                                 0    47.58     0.05        1      196             197
+  PeepPass::c                                                               0   130.41     0.13        0    49282           49282
+  ClangPass::member-to-global                                               0   205.76     0.20        0      571             571
+  BalancedPass::parens-inside                                               0   262.46     0.25        0     1683            1683
+  BalancedPass::parens                                                      0   320.93     0.31        0     2215            2215
+  BalancedPass::square-inside                                               0   702.56     0.67        0     2175            2175
+  BalancedPass::square-only                                                 0   716.72     0.69        6     2204            2210
+  ClexHintsPass::rm-toks-13-to-16                                           0  4167.67     4.00        0    14787           14787
+  ClangPass::aggregate-to-scalar                                          -51    17.41     0.02        3       61              64
+  Folding (merging transformations from other passes)                  146174   832.85     0.80      250       18             268
+
+Runtime: 104130 seconds
+Reduced test-cases:
+
+--- HIPProg.hip ---
+#include <hip/hip_runtime.h>
+#include "HIPSmith.h"
+#include "safe_math_macros.h"
+#define transparent_crc(X, Y, Z) transparent_crc_(&crc64_context, X, , )
+struct S1 {
+    int32_t g_2[6][8][5];
+    int32_t g_5[1][8];
+    uint32_t g_154[2];
+    int8_t g_245;
+    int32_t *g_576[4];
+    int32_t **g_575;
+    int16_t g_592;
+    int64_t *g_640;
+    int64_t *g_639;
+    uint32_t g_675;
+    int32_t ****g_744[10];
+    int32_t g_743;
+    int16_t g_1270;
+    int16_t g_1269;
+    int8_t *g_1732;
+    int32_t g_1762;
+    uint32_t g_1778;
+    int16_t g_1839;
+    int8_t *g_2018;
+    uint32_t *g_2036;
+    uint16_t g_2120;
+    int64_t g_2121;
+    uint32_t *g_2208;
+    int ****g_2227;
+    int *****g_2226;
+    uint8_t g_2333;
+    uint32_t g_2419;
+    int64_t g_2482;
+    int32_t *g_2594;
+};
+__device__ int8_t  func_1(S1 * p_2693)
+{
+    int32_t *****l_2545[5];
+    int i;
+    for (i = 0; i < 5; i++)
+        l_2545[i] = nullptr;
+        for (i = 0; i < 2; i++)
+            **p_2693->g_575 &= p_2693->g_2482 |= safe_add_func_int16_t_s_s(safe_add_func_uint64_t_u_u(&p_2693->g_744[1] == l_2545[4], 0), 65531);
+    return *p_2693->g_1732;
+}
+__global__ void hipsmith_kernel(uint64_t *results) {
+    S1 c_2694;
+    S1* p_2693 = &c_2694;
+    int ****p_2693_66;
+    int ***p_2693_25;
+    S1 c_2695 {
+        {}, 
+        {}, 
+        {}, 
+        0, 
+        &p_2693->g_5[0][2], &p_2693->g_5[0][2], &p_2693->g_5[0][2], &p_2693->g_5[0][2], 
+        &p_2693->g_576[2], 
+        5, 
+        nullptr, 
+        nullptr, 
+        {}, 
+        {}, 
+        0, 
+        1, 
+        4073709551608, 
+        &p_2693->g_245, 
+        5, 
+        1, 
+        4, 
+        nullptr, 
+        &p_2693->g_154[0], 
+        6, 
+        1, 
+        nullptr, 
+        &p_2693_25, 
+        &p_2693_66, 
+        8, 
+        {}, 
+        3, 
+        &p_2693->g_2[5][7][4]};
+    c_2694 = c_2695;
+    func_1(p_2693);
+    uint64_t crc64_context = 0xFFFFFFFFFFFFFFFFUL;
+    transparent_crc(p_2693->g_2482, , );
+    int tid = threadIdx.x + blockIdx.x * blockDim.x;
+    results[tid] = (crc64_context ^ 0xFFFFFFFFFFFFFFFFUL);
+}
+// ------------------------------------------------------------------
+// Host Main
+// ------------------------------------------------------------------
+int main(int argc, const char* argv[]) {
+    // Config
+    const unsigned int num_threads = 4;
+    const unsigned int block_size = 4;
+    // Host Alloc
+    std::vector<uint64_t> h_results(num_threads);
+    const size_t results_bytes = sizeof(uint64_t) * h_results.size();
+    // Device Alloc
+    uint64_t *d_results;
+    HIP_CHECK(hipMalloc((void**)&d_results, results_bytes));
+    HIP_CHECK(hipMemset(d_results, 0, results_bytes));
+    // Dimensions
+    const dim3 block_dim(block_size);
+    const dim3 grid_dim((num_threads + block_size - 1) / block_size);
+    // Launch
+    hipLaunchKernelGGL(hipsmith_kernel, grid_dim, block_dim, 0, 0, d_results);
+    HIP_CHECK(hipGetLastError());
+    HIP_CHECK(hipDeviceSynchronize());
+    // Copy Back
+    HIP_CHECK(hipMemcpy(h_results.data(), d_results, results_bytes, hipMemcpyDeviceToHost));
+    // Free
+    HIP_CHECK(hipFree(d_results));
+    // Output
+    for (size_t i = 0; i < h_results.size(); ++i) {
+        printf("Thread %zu CRC: %lu\n", i, h_results[i]);
+    }
+    return 0;
+}
+

@@ -55650,3 +55650,7 @@
 [2026-04-17 14:32:43] REJECTED | Bug -O1 Runtime Fail/UB
 [2026-04-17 14:52:19] REJECTED | Bug -O1 Runtime Fail/UB
 [2026-04-17 16:18:01] REJECTED | Bug -O1 Runtime Fail/UB
+[2026-04-19 16:59:41] INTERESTING | Clean Mismatch Found!
+[2026-04-24 10:35:31] INTERESTING | Clean Mismatch Found!
+[2026-04-26 12:05:26] INTERESTING | Clean Mismatch Found!
+[2026-04-27 10:51:09] INTERESTING | Clean Mismatch Found!

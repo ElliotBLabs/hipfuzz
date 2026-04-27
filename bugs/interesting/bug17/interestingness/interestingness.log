@@ -33981,3 +33981,7 @@
 [2026-04-17 14:32:54] REJECTED | Bug -O2 Runtime Fail/UB
 [2026-04-17 14:52:30] REJECTED | Bug -O2 Runtime Fail/UB
 [2026-04-17 16:18:11] REJECTED | Bug -O2 Runtime Fail/UB
+[2026-04-19 17:00:13] INTERESTING | Clean Mismatch Found!
+[2026-04-24 10:36:02] INTERESTING | Clean Mismatch Found!
+[2026-04-26 12:05:43] INTERESTING | Clean Mismatch Found!
+[2026-04-27 10:51:26] INTERESTING | Clean Mismatch Found!

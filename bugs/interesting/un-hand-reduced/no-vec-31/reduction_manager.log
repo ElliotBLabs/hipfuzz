@@ -1,0 +1,1694 @@
+00:00:00 ERROR Prereqs not found for pass UnIfDefPass
+00:00:00 ERROR Prereqs not found for pass IfPass
+00:00:00 ERROR Prereqs not found for pass UnIfDefPass
+00:00:17 INFO ===< 118868 >===
+00:00:17 INFO running 4 interestingness tests in parallel
+00:00:17 INFO (0.0%, 261458 bytes, 2635 lines)
+00:00:17 INFO INITIAL PASSES (interleaving)
+00:00:17 INFO ===<  >===
+00:11:32 INFO (81.1%, 49305 bytes, 806 lines, via TreeSitterPass::remove-function + LinesPass::4 + CommentsPass + LinesPass::3 + ClangHintsPass::callexpr-to-value + LinesPass::6 + LinesPass::0 + BlankPass)
+00:18:42 INFO (87.2%, 33381 bytes, 630 lines, via LinesPass::3 + BalancedPass::curly + BalancedPass::curly3 + LinesPass::1 + ClangHintsPass::callexpr-to-value + BalancedPass::curly-only + CommentsPass + BlankPass + LinesPass::0)
+00:27:31 INFO (91.1%, 23292 bytes, 560 lines, via BalancedPass::curly-inside + LinesPass::1 + LinesPass::3 + ClangHintsPass::callexpr-to-value + LinesPass::0 + BalancedPass::curly3 + LinesPass::2 + BlankPass)
+00:34:30 INFO (92.1%, 20720 bytes, 488 lines, via BalancedPass::curly-inside + LinesPass::0 + BalancedPass::parens-to-zero + ClexHintsPass::rm-toks-5-to-8 + BalancedPass::curly-only + ClexHintsPass::rm-toks-1-to-4)
+00:41:48 INFO (92.4%, 19813 bytes, 466 lines, via BalancedPass::parens-to-zero + BalancedPass::curly2 + BalancedPass::curly-inside + BlankPass + LinesPass::1 + BalancedPass::curly3)
+00:47:13 INFO (92.7%, 19193 bytes, 450 lines, via LinesPass::1 + BalancedPass::parens-to-zero + LinesPass::2 + BalancedPass::parens-only + BalancedPass::curly-only + BalancedPass::curly + BalancedPass::curly2)
+00:53:05 INFO (92.9%, 18669 bytes, 439 lines, via LinesPass::1 + BalancedPass::parens-to-zero + ClexHintsPass::rm-toks-1-to-4)
+00:58:29 INFO (93.1%, 18027 bytes, 419 lines, via LinesPass::None + BalancedPass::parens-to-zero + BalancedPass::square + BalancedPass::parens-only + BlankPass + ClexHintsPass::rm-toks-1-to-4)
+01:03:53 INFO (93.3%, 17456 bytes, 405 lines, via LinesPass::None + LinesPass::2 + BalancedPass::parens-to-zero + BalancedPass::square + BalancedPass::parens-only + BalancedPass::square-only + BalancedPass::curly3)
+01:11:52 INFO (93.6%, 16769 bytes, 388 lines, via LinesPass::1 + LinesPass::2 + BalancedPass::parens-to-zero + BalancedPass::parens-only + BalancedPass::curly2)
+01:14:56 INFO (93.6%, 16763 bytes, 388 lines, via ClexHintsPass::rm-toks-1-to-4)
+01:21:37 INFO (93.8%, 16219 bytes, 370 lines, via LinesPass::None + BalancedPass::square + ClexHintsPass::rm-toks-1-to-4 + ClexHintsPass::rm-toks-5-to-8)
+01:26:22 INFO (93.8%, 16138 bytes, 368 lines, via LinesPass::2 + BalancedPass::square + ClexHintsPass::rm-toks-1-to-4)
+01:31:05 INFO (93.9%, 15973 bytes, 363 lines, via LinesPass::None + LinesPass::2 + BalancedPass::square + ClexHintsPass::rm-toks-1-to-4)
+01:36:01 INFO (94.0%, 15588 bytes, 351 lines, via LinesPass::1 + BalancedPass::parens-only)
+01:39:04 INFO (94.0%, 15570 bytes, 349 lines, via LinesPass::1)
+01:43:29 INFO (94.0%, 15569 bytes, 349 lines, via ClexHintsPass::rm-toks-1-to-4)
+01:47:35 INFO (94.1%, 15454 bytes, 345 lines, via LinesPass::None + ClexHintsPass::rm-toks-1-to-4)
+01:51:09 INFO (94.1%, 15413 bytes, 344 lines, via LinesPass::1 + ClexHintsPass::rm-toks-1-to-4 + BalancedPass::square)
+01:55:24 INFO (94.1%, 15400 bytes, 344 lines, via ClexHintsPass::rm-toks-5-to-8 + ClexHintsPass::rm-toks-1-to-4 + ClexHintsPass::rm-toks-9-to-12)
+02:01:06 INFO (94.2%, 15287 bytes, 343 lines, via LinesPass::None + ClexHintsPass::rm-toks-1-to-4)
+02:06:05 INFO (94.2%, 15246 bytes, 342 lines, via LinesPass::1 + ClexHintsPass::rm-toks-5-to-8 + ClexHintsPass::rm-toks-1-to-4)
+02:09:53 INFO (94.2%, 15242 bytes, 342 lines, via ClexHintsPass::rm-toks-1-to-4)
+02:13:10 INFO (94.2%, 15185 bytes, 341 lines, via ClexHintsPass::rm-toks-1-to-4 + ClexHintsPass::rm-toks-13-to-16)
+02:16:25 INFO (94.2%, 15155 bytes, 340 lines, via ClexHintsPass::rm-toks-13-to-16 + ClexHintsPass::rm-toks-1-to-4)
+02:20:04 INFO (94.3%, 15003 bytes, 340 lines, via ClexHintsPass::rm-toks-1-to-4 + ClexHintsPass::rm-toks-13-to-16 + ClexHintsPass::rm-toks-5-to-8)
+02:23:03 INFO (94.3%, 14975 bytes, 340 lines, via ClexHintsPass::rm-toks-5-to-8 + ClexHintsPass::rm-toks-9-to-12 + BalancedPass::square)
+02:28:16 INFO (94.3%, 14917 bytes, 340 lines, via ClexHintsPass::rm-toks-9-to-12 + ClexHintsPass::rm-toks-13-to-16 + BalancedPass::square + ClexHintsPass::rm-toks-1-to-4)
+02:31:34 INFO (94.3%, 14823 bytes, 336 lines, via LinesPass::1)
+02:34:32 INFO (94.3%, 14817 bytes, 336 lines, via BalancedPass::parens-only)
+02:37:33 INFO (94.3%, 14775 bytes, 335 lines, via LinesPass::2 + BalancedPass::parens-only)
+02:40:50 INFO (94.4%, 14758 bytes, 334 lines, via LinesPass::1)
+03:46:47 INFO (94.4%, 14751 bytes, 333 lines, via ClexHintsPass::rm-toks-1-to-4)
+03:49:44 INFO (94.4%, 14736 bytes, 333 lines, via ClexHintsPass::rm-toks-1-to-4)
+03:51:19 INFO (94.4%, 14720 bytes, 333 lines, via ClexHintsPass::rm-toks-1-to-4)
+04:08:38 INFO (94.4%, 14650 bytes, 330 lines, via ClexHintsPass::rm-toks-9-to-12)
+04:13:25 INFO (94.4%, 14568 bytes, 330 lines, via ClexHintsPass::rm-toks-9-to-12)
+04:41:09 INFO (94.5%, 14496 bytes, 330 lines, via ClexHintsPass::rm-toks-13-to-16)
+05:21:05 INFO (94.5%, 14476 bytes, 330 lines, via ClexHintsPass::rm-toks-5-to-8)
+05:25:01 INFO (94.5%, 14438 bytes, 330 lines, via ClexHintsPass::rm-toks-5-to-8)
+05:49:24 INFO (94.5%, 14434 bytes, 330 lines, via ClexHintsPass::rm-toks-1-to-4)
+06:02:16 INFO (94.5%, 14432 bytes, 330 lines, via ClexHintsPass::rm-toks-1-to-4)
+06:25:53 INFO (94.5%, 14429 bytes, 330 lines, via ClexHintsPass::rm-toks-1-to-4)
+08:04:18 INFO (94.5%, 14419 bytes, 330 lines, via ClexHintsPass::rm-toks-1-to-4)
+08:10:09 INFO (94.5%, 14373 bytes, 329 lines, via LinesPass::2)
+08:28:47 INFO (94.5%, 14371 bytes, 329 lines, via BalancedPass::parens-only)
+09:14:00 INFO (94.5%, 14332 bytes, 329 lines, via ClexHintsPass::rm-toks-5-to-8)
+09:16:56 INFO (94.5%, 14312 bytes, 329 lines, via ClexHintsPass::rm-toks-5-to-8)
+09:25:37 INFO (94.5%, 14310 bytes, 329 lines, via BalancedPass::parens-only)
+09:31:54 INFO (94.5%, 14284 bytes, 328 lines, via LinesPass::1)
+11:42:11 INFO INITIAL PASSES
+11:42:11 ERROR Skipping pass UnIfDefPass
+11:42:11 ERROR Skipping pass IfPass
+11:42:11 INFO ===< BalancedPass::angles, BalancedPass::angles-inside, BalancedPass::angles-only, BalancedPass::curly, BalancedPass::curly-inside, BalancedPass::curly-only, BalancedPass::curly2, BalancedPass::curly3, BalancedPass::parens, BalancedPass::parens-inside, BalancedPass::parens-only, BalancedPass::parens-to-zero, BalancedPass::square, BalancedPass::square-inside, BalancedPass::square-only, BlankPass, ClangHintsPass::callexpr-to-value, ClangHintsPass::remove-unused-function, ClangHintsPass::replace-dependent-typedef, ClangHintsPass::replace-function-def-with-decl, ClangIncludeGraphPass, ClangModuleMapPass, ClexHintsPass::rm-toks-1-to-4, ClexHintsPass::rm-toks-13-to-16, ClexHintsPass::rm-toks-5-to-8, ClexHintsPass::rm-toks-9-to-12, CommentsPass, InlineIncludesPass, LineMarkersPass, LinesPass::0, LinesPass::1, LinesPass::10, LinesPass::2, LinesPass::3, LinesPass::4, LinesPass::6, LinesPass::8, LinesPass::None, MakefilePass, RmUnusedFilesPass, TreeSitterPass::erase-namespace, TreeSitterPass::remove-function, TreeSitterPass::replace-function-def-with-decl >===
+11:42:12 INFO ===< IncludesPass >===
+11:42:13 INFO ===< CommentsPass >===
+11:42:13 INFO ===< LineMarkersPass >===
+11:42:15 INFO ===< BlankPass >===
+11:42:15 INFO ===< ClangHintsPass::replace-function-def-with-decl (30 T) >===
+11:42:16 INFO ===< ClangHintsPass::remove-unused-function (30 T) >===
+11:42:16 INFO cache hit for HIPProg.hip
+11:42:16 INFO ===< ClangHintsPass::replace-function-def-with-decl (30 T) >===
+11:42:16 INFO cache hit for HIPProg.hip
+11:42:16 INFO ===< ClangHintsPass::remove-unused-function (30 T) >===
+11:42:16 INFO ===< ClangHintsPass::replace-function-def-with-decl >===
+11:42:16 INFO ===< ClangHintsPass::remove-unused-function >===
+11:42:22 INFO ===< LinesPass::0 >===
+11:44:23 INFO ===< LinesPass::1 >===
+11:44:38 INFO ===< LinesPass::2 >===
+11:44:38 INFO ===< LinesPass::3 >===
+11:44:38 INFO ===< LinesPass::4 >===
+11:44:38 INFO ===< LinesPass::6 >===
+11:44:38 INFO ===< LinesPass::8 >===
+11:44:38 INFO ===< LinesPass::10 >===
+11:44:38 INFO cache hit for HIPProg.hip
+11:44:38 INFO ===< ClangHintsPass::replace-function-def-with-decl >===
+11:44:38 INFO cache hit for HIPProg.hip
+11:44:38 INFO ===< ClangHintsPass::remove-unused-function >===
+11:44:38 INFO cache hit for HIPProg.hip
+11:44:38 INFO ===< ClangHintsPass::remove-unused-function >===
+11:44:58 INFO ===< BalancedPass::curly >===
+11:45:18 INFO ===< BalancedPass::curly2 >===
+11:45:31 INFO ===< BalancedPass::curly3 >===
+11:45:44 INFO ===< BalancedPass::parens-to-zero >===
+11:45:45 INFO ===< ClangHintsPass::callexpr-to-value >===
+11:45:45 INFO ===< ClangPass::replace-callexpr >===
+11:45:46 INFO ===< ClangPass::simplify-callexpr >===
+11:45:46 INFO using C++ standard: c++2b with 0 transformation opportunities
+11:45:46 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+11:45:47 INFO ===< ClangPass::remove-enum-member-value >===
+11:45:46 INFO using C++ standard: c++2b with 10 transformation opportunities
+11:45:50 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+11:45:51 INFO ===< SpecialPass::a >===
+11:45:51 INFO ===< SpecialPass::b >===
+11:45:51 INFO INTERLEAVING PASSES
+11:45:51 INFO ===< SpecialPass::c >===
+11:49:05 INFO (94.5%, 14282 bytes, 326 lines, via BalancedPass::curly-only)
+11:51:54 INFO (94.5%, 14269 bytes, 324 lines, via BlankPass + BalancedPass::curly-only)
+11:57:03 INFO (94.5%, 14259 bytes, 324 lines, via BlankPass)
+12:46:01 INFO (94.5%, 14258 bytes, 324 lines, via ClexHintsPass::rm-toks-1-to-4)
+13:06:07 INFO (94.5%, 14257 bytes, 324 lines, via ClexHintsPass::rm-toks-1-to-4)
+13:12:19 INFO (94.5%, 14251 bytes, 324 lines, via ClexHintsPass::rm-toks-1-to-4)
+13:15:20 INFO (94.6%, 14244 bytes, 324 lines, via ClexHintsPass::rm-toks-1-to-4)
+13:18:47 INFO (94.6%, 14237 bytes, 324 lines, via ClexHintsPass::rm-toks-1-to-4)
+13:21:27 INFO (94.6%, 14230 bytes, 324 lines, via ClexHintsPass::rm-toks-1-to-4)
+13:25:21 INFO (94.6%, 14184 bytes, 323 lines, via ClexHintsPass::rm-toks-1-to-4 + LinesPass::1 + BalancedPass::curly)
+13:28:40 INFO (94.6%, 14159 bytes, 322 lines, via ClexHintsPass::rm-toks-1-to-4 + BalancedPass::curly2)
+13:31:31 INFO (94.6%, 14096 bytes, 322 lines, via BalancedPass::parens-to-zero)
+13:34:25 INFO (94.7%, 13977 bytes, 319 lines, via LinesPass::0 + BalancedPass::square)
+13:37:01 INFO (94.7%, 13975 bytes, 319 lines, via BalancedPass::parens-only)
+13:39:47 INFO (94.7%, 13973 bytes, 319 lines, via BalancedPass::parens-only)
+13:43:20 INFO (94.7%, 13951 bytes, 319 lines, via ClexHintsPass::rm-toks-5-to-8 + BalancedPass::square)
+13:54:45 INFO (94.7%, 13927 bytes, 318 lines, via LinesPass::1)
+15:00:26 INFO (94.7%, 13923 bytes, 318 lines, via ClexHintsPass::rm-toks-1-to-4)
+15:02:41 INFO (94.7%, 13907 bytes, 318 lines, via ClexHintsPass::rm-toks-1-to-4)
+17:46:45 INFO Termination check: size was 14284; now 13907
+17:46:45 INFO ===< BalancedPass::angles, BalancedPass::angles-inside, BalancedPass::angles-only, BalancedPass::curly, BalancedPass::curly-inside, BalancedPass::curly-only, BalancedPass::curly2, BalancedPass::curly3, BalancedPass::parens, BalancedPass::parens-inside, BalancedPass::parens-only, BalancedPass::parens-to-zero, BalancedPass::square, BalancedPass::square-inside, BalancedPass::square-only, BlankPass, ClangHintsPass::callexpr-to-value, ClangHintsPass::remove-unused-function, ClangHintsPass::replace-dependent-typedef, ClangHintsPass::replace-function-def-with-decl, ClangIncludeGraphPass, ClangModuleMapPass, ClexHintsPass::rm-toks-1-to-4, ClexHintsPass::rm-toks-13-to-16, ClexHintsPass::rm-toks-5-to-8, ClexHintsPass::rm-toks-9-to-12, CommentsPass, InlineIncludesPass, LineMarkersPass, LinesPass::0, LinesPass::1, LinesPass::10, LinesPass::2, LinesPass::3, LinesPass::4, LinesPass::6, LinesPass::8, LinesPass::None, MakefilePass, RmUnusedFilesPass, TreeSitterPass::erase-namespace, TreeSitterPass::remove-function, TreeSitterPass::replace-function-def-with-decl >===
+18:48:01 INFO (94.7%, 13881 bytes, 318 lines, via ClexHintsPass::rm-toks-1-to-4)
+18:56:06 INFO (94.7%, 13879 bytes, 318 lines, via BalancedPass::parens-only)
+19:55:32 INFO (94.7%, 13875 bytes, 318 lines, via ClexHintsPass::rm-toks-1-to-4)
+19:57:03 INFO (94.7%, 13866 bytes, 318 lines, via ClexHintsPass::rm-toks-1-to-4)
+20:05:12 INFO (94.7%, 13841 bytes, 317 lines, via LinesPass::1)
+21:58:34 INFO Termination check: size was 13907; now 13841
+21:58:34 INFO ===< BalancedPass::angles, BalancedPass::angles-inside, BalancedPass::angles-only, BalancedPass::curly, BalancedPass::curly-inside, BalancedPass::curly-only, BalancedPass::curly2, BalancedPass::curly3, BalancedPass::parens, BalancedPass::parens-inside, BalancedPass::parens-only, BalancedPass::parens-to-zero, BalancedPass::square, BalancedPass::square-inside, BalancedPass::square-only, BlankPass, ClangHintsPass::callexpr-to-value, ClangHintsPass::remove-unused-function, ClangHintsPass::replace-dependent-typedef, ClangHintsPass::replace-function-def-with-decl, ClangIncludeGraphPass, ClangModuleMapPass, ClexHintsPass::rm-toks-1-to-4, ClexHintsPass::rm-toks-13-to-16, ClexHintsPass::rm-toks-5-to-8, ClexHintsPass::rm-toks-9-to-12, CommentsPass, InlineIncludesPass, LineMarkersPass, LinesPass::0, LinesPass::1, LinesPass::10, LinesPass::2, LinesPass::3, LinesPass::4, LinesPass::6, LinesPass::8, LinesPass::None, MakefilePass, RmUnusedFilesPass, TreeSitterPass::erase-namespace, TreeSitterPass::remove-function, TreeSitterPass::replace-function-def-with-decl >===
+1 day, 1:10:51 INFO Termination check: size was 13841; now 13841
+1 day, 1:10:51 INFO MAIN PASSES
+1 day, 1:10:51 ERROR Skipping pass UnIfDefPass
+1 day, 1:10:51 INFO ===< BalancedPass::angles, BalancedPass::angles-inside, BalancedPass::angles-only, BalancedPass::curly, BalancedPass::curly-inside, BalancedPass::curly-only, BalancedPass::curly2, BalancedPass::curly3, BalancedPass::parens, BalancedPass::parens-inside, BalancedPass::parens-only, BalancedPass::parens-to-zero, BalancedPass::square, BalancedPass::square-inside, BalancedPass::square-only, BlankPass, ClangHintsPass::callexpr-to-value, ClangHintsPass::remove-unused-function, ClangHintsPass::replace-dependent-typedef, ClangHintsPass::replace-function-def-with-decl, ClangIncludeGraphPass, ClangModuleMapPass, ClexHintsPass::rm-toks-1-to-4, ClexHintsPass::rm-toks-13-to-16, ClexHintsPass::rm-toks-5-to-8, ClexHintsPass::rm-toks-9-to-12, CommentsPass, InlineIncludesPass, LineMarkersPass, LinesPass::0, LinesPass::1, LinesPass::10, LinesPass::2, LinesPass::3, LinesPass::4, LinesPass::6, LinesPass::8, LinesPass::None, MakefilePass, RmUnusedFilesPass, TreeSitterPass::erase-namespace, TreeSitterPass::remove-function, TreeSitterPass::replace-function-def-with-decl >===
+1 day, 1:10:51 INFO ===< IncludeIncludesPass >===
+1 day, 1:10:52 INFO ===< TernaryPass::b >===
+1 day, 1:10:52 INFO ===< TernaryPass::c >===
+1 day, 1:11:05 INFO ===< BalancedPass::curly >===
+1 day, 1:11:18 INFO ===< BalancedPass::curly2 >===
+1 day, 1:11:18 INFO ===< BalancedPass::curly3 >===
+1 day, 1:11:25 INFO ===< BalancedPass::parens >===
+1 day, 1:11:26 INFO ===< BalancedPass::angles >===
+1 day, 1:12:31 INFO ===< BalancedPass::square >===
+1 day, 1:12:44 INFO ===< BalancedPass::curly-inside >===
+1 day, 1:12:49 INFO ===< BalancedPass::parens-inside >===
+1 day, 1:12:49 INFO ===< BalancedPass::angles-inside >===
+1 day, 1:13:55 INFO ===< BalancedPass::square-inside >===
+1 day, 1:14:02 INFO ===< BalancedPass::curly-only >===
+1 day, 1:14:03 INFO ===< BalancedPass::angles-only >===
+1 day, 1:15:08 INFO ===< BalancedPass::square-only >===
+1 day, 1:15:08 INFO ===< ClangPass::remove-namespace >===
+1 day, 1:15:19 INFO (94.7%, 13858 bytes, 318 lines)
+1 day, 1:15:27 INFO (94.7%, 13874 bytes, 319 lines)
+1 day, 1:15:32 INFO (94.7%, 13891 bytes, 320 lines)
+1 day, 1:15:32 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 1:15:32 INFO ===< ClangPass::param-to-global >===
+1 day, 1:15:33 INFO ===< ClangPass::param-to-local >===
+1 day, 1:15:33 INFO ===< ClangPass::remove-nested-function >===
+1 day, 1:15:38 INFO (94.7%, 13892 bytes, 320 lines)
+1 day, 1:15:38 INFO ===< ClangPass::union-to-struct >===
+1 day, 1:15:39 INFO ===< ClangPass::return-void >===
+1 day, 1:15:39 INFO ===< ClangPass::simple-inliner >===
+1 day, 1:15:53 INFO (94.7%, 13891 bytes, 320 lines)
+1 day, 1:15:59 INFO (94.7%, 13890 bytes, 320 lines)
+1 day, 1:16:01 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 1:16:01 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 1:16:01 INFO ===< ClangPass::copy-propagation >===
+1 day, 1:16:02 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 1:16:02 INFO ===< ClangPass::replace-callexpr >===
+1 day, 1:16:03 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 1:16:03 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 1:16:03 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 1:16:03 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 1:16:03 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 1:16:03 INFO using C++ standard: c++2b with 8 transformation opportunities
+1 day, 1:16:04 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 1:16:04 INFO ===< ClangPass::simplify-if >===
+1 day, 1:16:04 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 1:16:04 INFO ===< ClangPass::reduce-array-size >===
+1 day, 1:16:04 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 1:16:04 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 1:16:04 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 1:16:04 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 1:16:04 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 1:16:04 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 1:16:15 INFO (94.7%, 13875 bytes, 318 lines)
+1 day, 1:16:27 INFO (94.7%, 13844 bytes, 316 lines)
+1 day, 1:16:40 INFO (94.7%, 13808 bytes, 314 lines)
+1 day, 1:16:49 INFO (94.7%, 13769 bytes, 312 lines)
+1 day, 1:17:01 INFO (94.7%, 13737 bytes, 310 lines)
+1 day, 1:17:12 INFO (94.8%, 13710 bytes, 308 lines)
+1 day, 1:17:25 INFO (94.8%, 13688 bytes, 306 lines)
+1 day, 1:17:35 INFO (94.8%, 13655 bytes, 304 lines)
+1 day, 1:17:45 INFO (94.8%, 13627 bytes, 302 lines)
+1 day, 1:18:01 INFO (94.8%, 13600 bytes, 300 lines)
+1 day, 1:18:10 INFO (94.8%, 13554 bytes, 298 lines)
+1 day, 1:18:20 INFO (94.8%, 13527 bytes, 296 lines)
+1 day, 1:18:30 INFO (94.8%, 13494 bytes, 294 lines)
+1 day, 1:18:39 INFO (94.9%, 13457 bytes, 292 lines)
+1 day, 1:18:50 INFO (94.9%, 13424 bytes, 290 lines)
+1 day, 1:19:01 INFO (94.9%, 13382 bytes, 288 lines)
+1 day, 1:19:11 INFO (94.9%, 13353 bytes, 286 lines)
+1 day, 1:19:21 INFO (94.9%, 13317 bytes, 284 lines)
+1 day, 1:19:31 INFO (94.9%, 13284 bytes, 282 lines)
+1 day, 1:19:41 INFO (94.9%, 13242 bytes, 280 lines)
+1 day, 1:19:51 INFO (95.0%, 13196 bytes, 278 lines)
+1 day, 1:20:01 INFO (95.0%, 13167 bytes, 276 lines)
+1 day, 1:20:11 INFO (95.0%, 13127 bytes, 274 lines)
+1 day, 1:20:21 INFO (95.0%, 13099 bytes, 272 lines)
+1 day, 1:20:31 INFO (95.0%, 13070 bytes, 270 lines)
+1 day, 1:20:41 INFO (95.0%, 13044 bytes, 268 lines)
+1 day, 1:20:51 INFO (95.0%, 12999 bytes, 266 lines)
+1 day, 1:21:01 INFO (95.0%, 12953 bytes, 264 lines)
+1 day, 1:21:13 INFO (95.1%, 12925 bytes, 262 lines)
+1 day, 1:21:26 INFO (95.1%, 12892 bytes, 260 lines)
+1 day, 1:21:34 INFO (95.1%, 12853 bytes, 258 lines)
+1 day, 1:21:46 INFO (95.1%, 12816 bytes, 256 lines)
+1 day, 1:21:56 INFO (95.1%, 12770 bytes, 254 lines)
+1 day, 1:22:06 INFO (95.1%, 12734 bytes, 252 lines)
+1 day, 1:22:16 INFO (95.1%, 12687 bytes, 250 lines)
+1 day, 1:22:27 INFO (95.2%, 12644 bytes, 248 lines)
+1 day, 1:22:48 INFO (95.2%, 12609 bytes, 246 lines)
+1 day, 1:22:59 INFO (95.2%, 12562 bytes, 244 lines)
+1 day, 1:23:09 INFO (95.2%, 12532 bytes, 242 lines)
+1 day, 1:23:19 INFO (95.2%, 12494 bytes, 240 lines)
+1 day, 1:23:28 INFO (95.2%, 12466 bytes, 238 lines)
+1 day, 1:23:37 INFO (95.2%, 12436 bytes, 236 lines)
+1 day, 1:23:46 INFO (95.3%, 12398 bytes, 234 lines)
+1 day, 1:23:55 INFO ===< ClangPass::remove-unused-field >===
+1 day, 1:23:55 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 1:23:55 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 1:23:55 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 1:23:55 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 1:23:55 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 1:23:55 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 1:23:55 INFO ===< ClangPass::class-template-to-class >===
+1 day, 1:23:55 INFO ===< ClangPass::merge-base-class >===
+1 day, 1:23:55 INFO ===< ClangPass::remove-base-class >===
+1 day, 1:23:56 INFO ===< ClangPass::replace-derived-class >===
+1 day, 1:23:56 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 1:23:56 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 1:23:56 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 1:23:56 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 1:23:56 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 1:23:56 WARNING ClangPass::empty-struct-to-int has encountered a non fatal bug: pass error
+1 day, 1:23:56 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 1:24:04 INFO (95.3%, 12397 bytes, 234 lines)
+1 day, 1:24:10 INFO (95.3%, 12396 bytes, 234 lines)
+1 day, 1:24:18 INFO (95.3%, 12395 bytes, 234 lines)
+1 day, 1:24:23 INFO (95.3%, 12394 bytes, 234 lines)
+1 day, 1:24:28 INFO (95.3%, 12393 bytes, 234 lines)
+1 day, 1:24:29 INFO ===< ClangPass::remove-pointer >===
+1 day, 1:24:29 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 1:24:29 INFO ===< ClangPass::remove-array >===
+1 day, 1:24:29 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 1:24:29 INFO ===< ClangPass::simplify-struct >===
+1 day, 1:24:29 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 1:24:29 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 1:24:29 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 1:24:29 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 1:24:29 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 1:24:29 INFO ===< ClangPass::vector-to-array >===
+1 day, 1:24:29 INFO ===< ClangPass::remove-try-catch >===
+1 day, 1:24:29 INFO ===< ClangPass::class-to-struct >===
+1 day, 1:24:43 INFO ===< ClangPass::member-to-global >===
+1 day, 1:24:46 INFO ===< LinesPass::0 >===
+1 day, 1:25:19 INFO (95.3%, 12355 bytes, 232 lines)
+1 day, 1:25:56 INFO ===< LinesPass::1 >===
+1 day, 1:26:00 INFO ===< LinesPass::2 >===
+1 day, 1:26:00 INFO ===< LinesPass::3 >===
+1 day, 1:26:00 INFO ===< LinesPass::4 >===
+1 day, 1:26:00 INFO ===< LinesPass::6 >===
+1 day, 1:26:00 INFO ===< LinesPass::8 >===
+1 day, 1:26:00 INFO ===< LinesPass::10 >===
+1 day, 1:26:00 INFO ===< CommentsPass >===
+1 day, 1:26:00 INFO ===< SpecialPass::b >===
+1 day, 1:26:00 INFO ===< SpecialPass::c >===
+1 day, 1:26:00 INFO ===< IndentPass::regular >===
+1 day, 1:26:05 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 3:38:54 WARNING ClexHintsPass::rm-toks-1-to-16 has encountered a non fatal bug: pass got stuck
+1 day, 3:38:55 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 3:51:31 INFO (95.3%, 12347 bytes, 232 lines)
+1 day, 4:57:55 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 4:57:57 INFO ===< ClangPass::local-to-global >===
+1 day, 4:58:09 INFO ===< PeepPass::c >===
+1 day, 4:58:19 INFO (95.3%, 12346 bytes, 232 lines)
+1 day, 4:58:30 INFO (95.3%, 12345 bytes, 232 lines)
+1 day, 4:58:40 INFO (95.3%, 12344 bytes, 232 lines)
+1 day, 4:58:50 INFO (95.3%, 12343 bytes, 232 lines)
+1 day, 4:59:00 INFO (95.3%, 12342 bytes, 232 lines)
+1 day, 4:59:11 INFO (95.3%, 12341 bytes, 232 lines)
+1 day, 4:59:21 INFO (95.3%, 12340 bytes, 232 lines)
+1 day, 4:59:31 INFO (95.3%, 12339 bytes, 232 lines)
+1 day, 4:59:42 INFO (95.3%, 12338 bytes, 232 lines)
+1 day, 4:59:52 INFO (95.3%, 12337 bytes, 232 lines)
+1 day, 5:00:02 INFO (95.3%, 12336 bytes, 232 lines)
+1 day, 5:00:13 INFO (95.3%, 12335 bytes, 232 lines)
+1 day, 5:00:26 INFO (95.3%, 12334 bytes, 232 lines)
+1 day, 5:00:36 INFO (95.3%, 12333 bytes, 232 lines)
+1 day, 5:00:52 INFO (95.3%, 12332 bytes, 232 lines)
+1 day, 5:01:07 INFO (95.3%, 12331 bytes, 232 lines)
+1 day, 5:01:17 INFO (95.3%, 12330 bytes, 232 lines)
+1 day, 5:01:27 INFO (95.3%, 12329 bytes, 232 lines)
+1 day, 5:01:38 INFO (95.3%, 12328 bytes, 232 lines)
+1 day, 5:01:48 INFO (95.3%, 12327 bytes, 232 lines)
+1 day, 5:01:58 INFO (95.3%, 12326 bytes, 232 lines)
+1 day, 5:02:09 INFO (95.3%, 12325 bytes, 232 lines)
+1 day, 5:02:19 INFO (95.3%, 12324 bytes, 232 lines)
+1 day, 5:02:29 INFO (95.3%, 12323 bytes, 232 lines)
+1 day, 5:02:39 INFO (95.3%, 12322 bytes, 232 lines)
+1 day, 5:02:50 INFO (95.3%, 12321 bytes, 232 lines)
+1 day, 5:03:00 INFO (95.3%, 12320 bytes, 232 lines)
+1 day, 5:03:10 INFO (95.3%, 12319 bytes, 232 lines)
+1 day, 5:03:20 INFO (95.3%, 12318 bytes, 232 lines)
+1 day, 5:03:34 INFO (95.3%, 12317 bytes, 232 lines)
+1 day, 5:03:44 INFO (95.3%, 12316 bytes, 232 lines)
+1 day, 5:04:12 INFO (95.3%, 12315 bytes, 232 lines)
+1 day, 5:04:22 INFO (95.3%, 12314 bytes, 232 lines)
+1 day, 5:04:33 INFO (95.3%, 12313 bytes, 232 lines)
+1 day, 5:04:43 INFO (95.3%, 12312 bytes, 232 lines)
+1 day, 5:04:53 INFO (95.3%, 12311 bytes, 232 lines)
+1 day, 5:05:03 INFO (95.3%, 12310 bytes, 232 lines)
+1 day, 5:05:14 INFO (95.3%, 12309 bytes, 232 lines)
+1 day, 5:05:24 INFO (95.3%, 12308 bytes, 232 lines)
+1 day, 5:05:34 INFO (95.3%, 12307 bytes, 232 lines)
+1 day, 5:05:44 INFO (95.3%, 12306 bytes, 232 lines)
+1 day, 5:05:54 INFO (95.3%, 12305 bytes, 232 lines)
+1 day, 5:06:05 INFO (95.3%, 12304 bytes, 232 lines)
+1 day, 5:06:15 INFO (95.3%, 12303 bytes, 232 lines)
+1 day, 5:06:31 INFO (95.3%, 12302 bytes, 232 lines)
+1 day, 5:06:41 INFO (95.3%, 12301 bytes, 232 lines)
+1 day, 5:06:51 INFO (95.3%, 12300 bytes, 232 lines)
+1 day, 5:07:01 INFO (95.3%, 12299 bytes, 232 lines)
+1 day, 5:07:12 INFO (95.3%, 12298 bytes, 232 lines)
+1 day, 5:07:22 INFO (95.3%, 12297 bytes, 232 lines)
+1 day, 5:07:32 INFO (95.3%, 12296 bytes, 232 lines)
+1 day, 5:07:42 INFO (95.3%, 12295 bytes, 232 lines)
+1 day, 5:07:52 INFO (95.3%, 12294 bytes, 232 lines)
+1 day, 5:08:03 INFO (95.3%, 12293 bytes, 232 lines)
+1 day, 5:08:13 INFO (95.3%, 12292 bytes, 232 lines)
+1 day, 5:08:23 INFO (95.3%, 12291 bytes, 232 lines)
+1 day, 5:08:33 INFO (95.3%, 12290 bytes, 232 lines)
+1 day, 5:08:48 INFO (95.3%, 12289 bytes, 232 lines)
+1 day, 5:09:14 INFO (95.3%, 12288 bytes, 232 lines)
+1 day, 5:09:31 INFO (95.3%, 12287 bytes, 232 lines)
+1 day, 5:09:41 INFO (95.3%, 12286 bytes, 232 lines)
+1 day, 5:09:52 INFO (95.3%, 12285 bytes, 232 lines)
+1 day, 5:10:02 INFO (95.3%, 12284 bytes, 232 lines)
+1 day, 5:10:12 INFO (95.3%, 12283 bytes, 232 lines)
+1 day, 5:10:22 INFO (95.3%, 12282 bytes, 232 lines)
+1 day, 5:10:32 INFO (95.3%, 12281 bytes, 232 lines)
+1 day, 5:10:42 INFO (95.3%, 12280 bytes, 232 lines)
+1 day, 5:10:56 INFO (95.3%, 12279 bytes, 232 lines)
+1 day, 5:11:06 INFO (95.3%, 12278 bytes, 232 lines)
+1 day, 5:11:16 INFO (95.3%, 12277 bytes, 232 lines)
+1 day, 5:11:26 INFO (95.3%, 12276 bytes, 232 lines)
+1 day, 5:11:36 INFO (95.3%, 12275 bytes, 232 lines)
+1 day, 5:11:47 INFO (95.3%, 12274 bytes, 232 lines)
+1 day, 5:11:57 INFO (95.3%, 12273 bytes, 232 lines)
+1 day, 5:12:07 INFO (95.3%, 12272 bytes, 232 lines)
+1 day, 5:12:17 INFO (95.3%, 12271 bytes, 232 lines)
+1 day, 5:12:28 INFO (95.3%, 12270 bytes, 232 lines)
+1 day, 5:12:56 INFO (95.3%, 12269 bytes, 232 lines)
+1 day, 5:13:08 INFO (95.3%, 12268 bytes, 232 lines)
+1 day, 5:13:18 INFO (95.3%, 12267 bytes, 232 lines)
+1 day, 5:13:28 INFO (95.3%, 12266 bytes, 232 lines)
+1 day, 5:13:38 INFO (95.3%, 12265 bytes, 232 lines)
+1 day, 5:13:48 INFO (95.3%, 12264 bytes, 232 lines)
+1 day, 5:13:58 INFO (95.3%, 12263 bytes, 232 lines)
+1 day, 5:14:09 INFO (95.3%, 12262 bytes, 232 lines)
+1 day, 5:14:19 INFO (95.3%, 12261 bytes, 232 lines)
+1 day, 5:14:29 INFO (95.3%, 12260 bytes, 232 lines)
+1 day, 5:14:39 INFO (95.3%, 12259 bytes, 232 lines)
+1 day, 5:14:49 INFO (95.3%, 12258 bytes, 232 lines)
+1 day, 5:14:59 INFO (95.3%, 12257 bytes, 232 lines)
+1 day, 5:15:10 INFO (95.3%, 12256 bytes, 232 lines)
+1 day, 5:15:20 INFO (95.3%, 12255 bytes, 232 lines)
+1 day, 5:15:30 INFO (95.3%, 12254 bytes, 232 lines)
+1 day, 5:15:41 INFO (95.3%, 12253 bytes, 232 lines)
+1 day, 5:15:54 INFO (95.3%, 12252 bytes, 232 lines)
+1 day, 5:16:04 INFO (95.3%, 12251 bytes, 232 lines)
+1 day, 5:16:15 INFO (95.3%, 12250 bytes, 232 lines)
+1 day, 5:16:25 INFO (95.3%, 12249 bytes, 232 lines)
+1 day, 5:16:35 INFO (95.3%, 12248 bytes, 232 lines)
+1 day, 5:16:48 INFO (95.3%, 12247 bytes, 232 lines)
+1 day, 5:16:58 INFO (95.3%, 12246 bytes, 232 lines)
+1 day, 5:17:08 INFO (95.3%, 12245 bytes, 232 lines)
+1 day, 5:17:19 INFO (95.3%, 12244 bytes, 232 lines)
+1 day, 5:17:29 INFO (95.3%, 12243 bytes, 232 lines)
+1 day, 5:17:39 INFO (95.3%, 12242 bytes, 232 lines)
+1 day, 5:17:49 INFO (95.3%, 12241 bytes, 232 lines)
+1 day, 5:17:59 INFO (95.3%, 12240 bytes, 232 lines)
+1 day, 5:18:09 INFO (95.3%, 12239 bytes, 232 lines)
+1 day, 5:18:20 INFO (95.3%, 12238 bytes, 232 lines)
+1 day, 5:18:33 INFO (95.3%, 12237 bytes, 232 lines)
+1 day, 5:18:48 INFO (95.3%, 12236 bytes, 232 lines)
+1 day, 5:18:58 INFO (95.3%, 12235 bytes, 232 lines)
+1 day, 5:19:08 INFO (95.3%, 12234 bytes, 232 lines)
+1 day, 5:19:19 INFO (95.3%, 12233 bytes, 232 lines)
+1 day, 5:19:29 INFO (95.3%, 12232 bytes, 232 lines)
+1 day, 5:19:39 INFO (95.3%, 12231 bytes, 232 lines)
+1 day, 5:19:49 INFO (95.3%, 12230 bytes, 232 lines)
+1 day, 5:19:59 INFO (95.3%, 12229 bytes, 232 lines)
+1 day, 5:20:09 INFO (95.3%, 12228 bytes, 232 lines)
+1 day, 5:20:20 INFO (95.3%, 12227 bytes, 232 lines)
+1 day, 5:20:30 INFO (95.3%, 12226 bytes, 232 lines)
+1 day, 5:20:37 INFO (95.3%, 12225 bytes, 232 lines)
+1 day, 5:20:44 INFO (95.3%, 12224 bytes, 232 lines)
+1 day, 5:20:54 INFO (95.3%, 12223 bytes, 232 lines)
+1 day, 5:21:01 INFO (95.3%, 12222 bytes, 232 lines)
+1 day, 5:21:15 INFO (95.3%, 12221 bytes, 232 lines)
+1 day, 5:21:25 INFO (95.3%, 12220 bytes, 232 lines)
+1 day, 5:21:38 INFO (95.3%, 12219 bytes, 232 lines)
+1 day, 5:21:48 INFO (95.3%, 12218 bytes, 232 lines)
+1 day, 5:21:58 INFO (95.3%, 12217 bytes, 232 lines)
+1 day, 5:22:12 INFO (95.3%, 12216 bytes, 232 lines)
+1 day, 5:22:22 INFO (95.3%, 12215 bytes, 232 lines)
+1 day, 5:22:39 INFO (95.3%, 12214 bytes, 232 lines)
+1 day, 5:22:49 INFO (95.3%, 12213 bytes, 232 lines)
+1 day, 5:22:59 INFO (95.3%, 12212 bytes, 232 lines)
+1 day, 5:23:09 INFO (95.3%, 12211 bytes, 232 lines)
+1 day, 5:23:20 INFO (95.3%, 12210 bytes, 232 lines)
+1 day, 5:23:30 INFO (95.3%, 12209 bytes, 232 lines)
+1 day, 5:23:40 INFO (95.3%, 12208 bytes, 232 lines)
+1 day, 5:23:50 INFO (95.3%, 12207 bytes, 232 lines)
+1 day, 5:24:00 INFO (95.3%, 12206 bytes, 232 lines)
+1 day, 5:24:10 INFO (95.3%, 12205 bytes, 232 lines)
+1 day, 5:24:24 INFO (95.3%, 12204 bytes, 232 lines)
+1 day, 5:24:34 INFO (95.3%, 12203 bytes, 232 lines)
+1 day, 5:24:44 INFO (95.3%, 12202 bytes, 232 lines)
+1 day, 5:24:54 INFO (95.3%, 12201 bytes, 232 lines)
+1 day, 5:25:05 INFO (95.3%, 12200 bytes, 232 lines)
+1 day, 5:25:15 INFO (95.3%, 12199 bytes, 232 lines)
+1 day, 5:25:25 INFO (95.3%, 12198 bytes, 232 lines)
+1 day, 5:25:35 INFO (95.3%, 12197 bytes, 232 lines)
+1 day, 5:25:45 INFO (95.3%, 12196 bytes, 232 lines)
+1 day, 5:25:58 INFO (95.3%, 12195 bytes, 232 lines)
+1 day, 5:26:08 INFO (95.3%, 12194 bytes, 232 lines)
+1 day, 5:26:19 INFO (95.3%, 12193 bytes, 232 lines)
+1 day, 5:26:29 INFO (95.3%, 12192 bytes, 232 lines)
+1 day, 5:26:39 INFO (95.3%, 12191 bytes, 232 lines)
+1 day, 5:27:31 INFO (95.3%, 12190 bytes, 232 lines)
+1 day, 5:28:36 INFO (95.3%, 12189 bytes, 232 lines)
+1 day, 5:29:40 INFO (95.3%, 12188 bytes, 232 lines)
+1 day, 5:29:58 INFO (95.3%, 12187 bytes, 232 lines)
+1 day, 5:30:09 INFO (95.3%, 12186 bytes, 232 lines)
+1 day, 5:30:19 INFO (95.3%, 12185 bytes, 232 lines)
+1 day, 5:30:29 INFO (95.3%, 12184 bytes, 232 lines)
+1 day, 5:30:39 INFO (95.3%, 12183 bytes, 232 lines)
+1 day, 5:30:49 INFO (95.3%, 12182 bytes, 232 lines)
+1 day, 5:31:00 INFO (95.3%, 12181 bytes, 232 lines)
+1 day, 5:31:10 INFO (95.3%, 12180 bytes, 232 lines)
+1 day, 5:31:20 INFO (95.3%, 12179 bytes, 232 lines)
+1 day, 5:31:30 INFO (95.3%, 12178 bytes, 232 lines)
+1 day, 5:31:40 INFO (95.3%, 12177 bytes, 232 lines)
+1 day, 5:31:50 INFO (95.3%, 12176 bytes, 232 lines)
+1 day, 5:32:06 INFO (95.3%, 12175 bytes, 232 lines)
+1 day, 5:32:17 INFO (95.3%, 12174 bytes, 232 lines)
+1 day, 5:32:27 INFO (95.3%, 12173 bytes, 232 lines)
+1 day, 5:32:37 INFO (95.3%, 12172 bytes, 232 lines)
+1 day, 5:32:47 INFO (95.3%, 12171 bytes, 232 lines)
+1 day, 5:32:57 INFO (95.3%, 12170 bytes, 232 lines)
+1 day, 5:33:10 INFO (95.3%, 12169 bytes, 232 lines)
+1 day, 5:33:21 INFO (95.3%, 12168 bytes, 232 lines)
+1 day, 5:33:34 INFO (95.3%, 12167 bytes, 232 lines)
+1 day, 5:33:44 INFO (95.3%, 12166 bytes, 232 lines)
+1 day, 5:33:54 INFO (95.3%, 12165 bytes, 232 lines)
+1 day, 5:34:04 INFO (95.3%, 12164 bytes, 232 lines)
+1 day, 5:34:15 INFO (95.3%, 12163 bytes, 232 lines)
+1 day, 5:34:25 INFO (95.3%, 12162 bytes, 232 lines)
+1 day, 5:34:35 INFO (95.3%, 12161 bytes, 232 lines)
+1 day, 5:34:45 INFO (95.3%, 12160 bytes, 232 lines)
+1 day, 5:34:55 INFO (95.3%, 12159 bytes, 232 lines)
+1 day, 5:35:42 INFO (95.3%, 12158 bytes, 232 lines)
+1 day, 5:36:15 INFO (95.4%, 12157 bytes, 232 lines)
+1 day, 5:36:25 INFO (95.4%, 12156 bytes, 232 lines)
+1 day, 5:36:35 INFO (95.4%, 12155 bytes, 232 lines)
+1 day, 5:36:46 INFO (95.4%, 12154 bytes, 232 lines)
+1 day, 5:36:56 INFO (95.4%, 12153 bytes, 232 lines)
+1 day, 5:37:06 INFO (95.4%, 12152 bytes, 232 lines)
+1 day, 5:37:16 INFO (95.4%, 12151 bytes, 232 lines)
+1 day, 5:37:26 INFO (95.4%, 12150 bytes, 232 lines)
+1 day, 5:37:37 INFO (95.4%, 12149 bytes, 232 lines)
+1 day, 5:37:47 INFO (95.4%, 12148 bytes, 232 lines)
+1 day, 5:37:57 INFO (95.4%, 12147 bytes, 232 lines)
+1 day, 5:38:07 INFO (95.4%, 12146 bytes, 232 lines)
+1 day, 5:38:17 INFO (95.4%, 12145 bytes, 232 lines)
+1 day, 5:38:27 INFO (95.4%, 12144 bytes, 232 lines)
+1 day, 5:38:37 INFO (95.4%, 12143 bytes, 232 lines)
+1 day, 5:38:51 INFO (95.4%, 12142 bytes, 232 lines)
+1 day, 5:39:01 INFO (95.4%, 12141 bytes, 232 lines)
+1 day, 5:39:11 INFO (95.4%, 12140 bytes, 232 lines)
+1 day, 5:39:21 INFO (95.4%, 12139 bytes, 232 lines)
+1 day, 5:39:31 INFO (95.4%, 12138 bytes, 232 lines)
+1 day, 5:39:41 INFO (95.4%, 12137 bytes, 232 lines)
+1 day, 5:39:51 INFO (95.4%, 12136 bytes, 232 lines)
+1 day, 5:40:02 INFO (95.4%, 12135 bytes, 232 lines)
+1 day, 5:40:12 INFO (95.4%, 12134 bytes, 232 lines)
+1 day, 5:40:22 INFO (95.4%, 12133 bytes, 232 lines)
+1 day, 5:40:32 INFO (95.4%, 12132 bytes, 232 lines)
+1 day, 5:40:42 INFO (95.4%, 12131 bytes, 232 lines)
+1 day, 5:40:52 INFO (95.4%, 12130 bytes, 232 lines)
+1 day, 5:41:02 INFO (95.4%, 12129 bytes, 232 lines)
+1 day, 5:41:12 INFO (95.4%, 12128 bytes, 232 lines)
+1 day, 5:41:23 INFO (95.4%, 12127 bytes, 232 lines)
+1 day, 5:41:33 INFO (95.4%, 12126 bytes, 232 lines)
+1 day, 5:41:43 INFO (95.4%, 12125 bytes, 232 lines)
+1 day, 5:41:53 INFO (95.4%, 12124 bytes, 232 lines)
+1 day, 5:42:03 INFO (95.4%, 12123 bytes, 232 lines)
+1 day, 5:42:14 INFO (95.4%, 12122 bytes, 232 lines)
+1 day, 5:42:24 INFO (95.4%, 12121 bytes, 232 lines)
+1 day, 5:42:34 INFO (95.4%, 12120 bytes, 232 lines)
+1 day, 5:42:44 INFO (95.4%, 12119 bytes, 232 lines)
+1 day, 5:42:54 INFO (95.4%, 12118 bytes, 232 lines)
+1 day, 5:43:04 INFO (95.4%, 12117 bytes, 232 lines)
+1 day, 5:43:15 INFO (95.4%, 12116 bytes, 232 lines)
+1 day, 5:43:25 INFO (95.4%, 12115 bytes, 232 lines)
+1 day, 5:43:35 INFO (95.4%, 12114 bytes, 232 lines)
+1 day, 5:43:45 INFO (95.4%, 12113 bytes, 232 lines)
+1 day, 5:43:58 INFO (95.4%, 12112 bytes, 232 lines)
+1 day, 5:44:30 INFO (95.4%, 12111 bytes, 232 lines)
+1 day, 5:44:40 INFO (95.4%, 12110 bytes, 232 lines)
+1 day, 5:44:50 INFO (95.4%, 12109 bytes, 232 lines)
+1 day, 5:45:00 INFO (95.4%, 12108 bytes, 232 lines)
+1 day, 5:45:10 INFO (95.4%, 12107 bytes, 232 lines)
+1 day, 5:45:20 INFO (95.4%, 12106 bytes, 232 lines)
+1 day, 5:45:31 INFO (95.4%, 12105 bytes, 232 lines)
+1 day, 5:45:41 INFO (95.4%, 12104 bytes, 232 lines)
+1 day, 5:45:51 INFO (95.4%, 12103 bytes, 232 lines)
+1 day, 5:46:01 INFO (95.4%, 12102 bytes, 232 lines)
+1 day, 5:46:11 INFO (95.4%, 12101 bytes, 232 lines)
+1 day, 5:46:21 INFO (95.4%, 12100 bytes, 232 lines)
+1 day, 5:46:31 INFO (95.4%, 12099 bytes, 232 lines)
+1 day, 5:46:42 INFO (95.4%, 12098 bytes, 232 lines)
+1 day, 5:46:52 INFO (95.4%, 12097 bytes, 232 lines)
+1 day, 5:47:02 INFO (95.4%, 12096 bytes, 232 lines)
+1 day, 5:47:12 INFO (95.4%, 12095 bytes, 232 lines)
+1 day, 5:47:22 INFO (95.4%, 12094 bytes, 232 lines)
+1 day, 5:47:32 INFO (95.4%, 12093 bytes, 232 lines)
+1 day, 5:47:42 INFO (95.4%, 12092 bytes, 232 lines)
+1 day, 5:47:53 INFO (95.4%, 12091 bytes, 232 lines)
+1 day, 5:48:03 INFO (95.4%, 12090 bytes, 232 lines)
+1 day, 5:48:13 INFO (95.4%, 12089 bytes, 232 lines)
+1 day, 5:48:23 INFO (95.4%, 12088 bytes, 232 lines)
+1 day, 5:48:48 INFO (95.4%, 12087 bytes, 232 lines)
+1 day, 5:49:14 INFO (95.4%, 12086 bytes, 232 lines)
+1 day, 5:49:24 INFO (95.4%, 12085 bytes, 232 lines)
+1 day, 5:49:34 INFO (95.4%, 12084 bytes, 232 lines)
+1 day, 5:49:44 INFO (95.4%, 12083 bytes, 232 lines)
+1 day, 5:49:54 INFO (95.4%, 12082 bytes, 232 lines)
+1 day, 5:50:10 INFO (95.4%, 12081 bytes, 232 lines)
+1 day, 5:50:21 INFO (95.4%, 12080 bytes, 232 lines)
+1 day, 5:50:31 INFO (95.4%, 12079 bytes, 232 lines)
+1 day, 5:50:41 INFO (95.4%, 12078 bytes, 232 lines)
+1 day, 5:51:00 INFO (95.4%, 12077 bytes, 232 lines)
+1 day, 5:51:11 INFO (95.4%, 12076 bytes, 232 lines)
+1 day, 5:51:20 INFO (95.4%, 12075 bytes, 232 lines)
+1 day, 5:51:33 INFO (95.4%, 12074 bytes, 232 lines)
+1 day, 5:51:42 INFO (95.4%, 12073 bytes, 232 lines)
+1 day, 5:51:52 INFO (95.4%, 12072 bytes, 232 lines)
+1 day, 5:52:02 INFO (95.4%, 12071 bytes, 232 lines)
+1 day, 5:52:25 INFO (95.4%, 12070 bytes, 232 lines)
+1 day, 5:52:34 INFO (95.4%, 12069 bytes, 232 lines)
+1 day, 5:52:40 INFO (95.4%, 12068 bytes, 232 lines)
+1 day, 5:52:45 INFO (95.4%, 12067 bytes, 232 lines)
+1 day, 5:52:50 INFO (95.4%, 12066 bytes, 232 lines)
+1 day, 5:52:59 INFO (95.4%, 12065 bytes, 232 lines)
+1 day, 5:53:07 INFO (95.4%, 12064 bytes, 232 lines)
+1 day, 5:53:16 INFO (95.4%, 12063 bytes, 232 lines)
+1 day, 5:53:24 INFO (95.4%, 12062 bytes, 232 lines)
+1 day, 5:53:33 INFO (95.4%, 12061 bytes, 232 lines)
+1 day, 5:53:41 INFO (95.4%, 12060 bytes, 232 lines)
+1 day, 5:53:50 INFO (95.4%, 12059 bytes, 232 lines)
+1 day, 5:53:58 INFO (95.4%, 12058 bytes, 232 lines)
+1 day, 5:54:07 INFO (95.4%, 12057 bytes, 232 lines)
+1 day, 5:54:12 INFO (95.4%, 12056 bytes, 232 lines)
+1 day, 5:54:15 INFO ===< IntsPass::a >===
+1 day, 5:54:24 INFO (95.4%, 12054 bytes, 232 lines)
+1 day, 5:54:34 INFO (95.4%, 12052 bytes, 232 lines)
+1 day, 5:54:57 INFO (95.4%, 12050 bytes, 232 lines)
+1 day, 5:55:06 INFO (95.4%, 12048 bytes, 232 lines)
+1 day, 5:55:15 INFO (95.4%, 12046 bytes, 232 lines)
+1 day, 5:55:24 INFO (95.4%, 12044 bytes, 232 lines)
+1 day, 5:55:35 INFO (95.4%, 12042 bytes, 232 lines)
+1 day, 5:55:46 INFO (95.4%, 12040 bytes, 232 lines)
+1 day, 5:55:57 INFO (95.4%, 12038 bytes, 232 lines)
+1 day, 5:56:07 INFO (95.4%, 12036 bytes, 232 lines)
+1 day, 5:56:18 INFO (95.4%, 12034 bytes, 232 lines)
+1 day, 5:56:29 INFO (95.4%, 12032 bytes, 232 lines)
+1 day, 5:56:52 INFO (95.4%, 12030 bytes, 232 lines)
+1 day, 5:57:03 INFO (95.4%, 12028 bytes, 232 lines)
+1 day, 5:57:13 INFO (95.4%, 12026 bytes, 232 lines)
+1 day, 5:57:24 INFO (95.4%, 12024 bytes, 232 lines)
+1 day, 5:57:34 INFO (95.4%, 12022 bytes, 232 lines)
+1 day, 5:57:45 INFO (95.4%, 12020 bytes, 232 lines)
+1 day, 5:57:56 INFO (95.4%, 12018 bytes, 232 lines)
+1 day, 5:58:07 INFO (95.4%, 12016 bytes, 232 lines)
+1 day, 5:58:17 INFO (95.4%, 12014 bytes, 232 lines)
+1 day, 5:58:28 INFO (95.4%, 12012 bytes, 232 lines)
+1 day, 5:58:38 INFO (95.4%, 12010 bytes, 232 lines)
+1 day, 5:58:49 INFO (95.4%, 12008 bytes, 232 lines)
+1 day, 5:59:00 INFO (95.4%, 12006 bytes, 232 lines)
+1 day, 5:59:11 INFO (95.4%, 12004 bytes, 232 lines)
+1 day, 5:59:21 INFO (95.4%, 12002 bytes, 232 lines)
+1 day, 5:59:32 INFO (95.4%, 12000 bytes, 232 lines)
+1 day, 5:59:43 INFO (95.4%, 11998 bytes, 232 lines)
+1 day, 5:59:53 INFO (95.4%, 11996 bytes, 232 lines)
+1 day, 6:00:04 INFO (95.4%, 11994 bytes, 232 lines)
+1 day, 6:00:15 INFO (95.4%, 11992 bytes, 232 lines)
+1 day, 6:00:25 INFO (95.4%, 11990 bytes, 232 lines)
+1 day, 6:00:36 INFO (95.4%, 11988 bytes, 232 lines)
+1 day, 6:00:47 INFO (95.4%, 11986 bytes, 232 lines)
+1 day, 6:00:58 INFO (95.4%, 11984 bytes, 232 lines)
+1 day, 6:01:08 INFO (95.4%, 11982 bytes, 232 lines)
+1 day, 6:01:19 INFO (95.4%, 11980 bytes, 232 lines)
+1 day, 6:01:30 INFO (95.4%, 11978 bytes, 232 lines)
+1 day, 6:01:40 INFO (95.4%, 11976 bytes, 232 lines)
+1 day, 6:01:51 INFO (95.4%, 11974 bytes, 232 lines)
+1 day, 6:02:02 INFO (95.4%, 11972 bytes, 232 lines)
+1 day, 6:02:13 INFO (95.4%, 11970 bytes, 232 lines)
+1 day, 6:02:23 INFO (95.4%, 11968 bytes, 232 lines)
+1 day, 6:02:34 INFO (95.4%, 11966 bytes, 232 lines)
+1 day, 6:02:44 INFO (95.4%, 11964 bytes, 232 lines)
+1 day, 6:03:31 INFO (95.4%, 11962 bytes, 232 lines)
+1 day, 6:04:46 INFO (95.4%, 11960 bytes, 232 lines)
+1 day, 6:05:25 INFO (95.4%, 11958 bytes, 232 lines)
+1 day, 6:05:45 INFO (95.4%, 11956 bytes, 232 lines)
+1 day, 6:05:55 INFO (95.4%, 11954 bytes, 232 lines)
+1 day, 6:06:06 INFO (95.4%, 11952 bytes, 232 lines)
+1 day, 6:06:16 INFO (95.4%, 11950 bytes, 232 lines)
+1 day, 6:06:27 INFO (95.4%, 11948 bytes, 232 lines)
+1 day, 6:06:38 INFO (95.4%, 11946 bytes, 232 lines)
+1 day, 6:06:49 INFO (95.4%, 11944 bytes, 232 lines)
+1 day, 6:06:59 INFO (95.4%, 11942 bytes, 232 lines)
+1 day, 6:07:10 INFO (95.4%, 11940 bytes, 232 lines)
+1 day, 6:07:20 INFO (95.4%, 11938 bytes, 232 lines)
+1 day, 6:07:31 INFO (95.4%, 11936 bytes, 232 lines)
+1 day, 6:07:42 INFO (95.4%, 11934 bytes, 232 lines)
+1 day, 6:07:53 INFO (95.4%, 11932 bytes, 232 lines)
+1 day, 6:08:03 INFO (95.4%, 11930 bytes, 232 lines)
+1 day, 6:08:14 INFO (95.4%, 11928 bytes, 232 lines)
+1 day, 6:08:24 INFO (95.4%, 11926 bytes, 232 lines)
+1 day, 6:08:35 INFO (95.4%, 11924 bytes, 232 lines)
+1 day, 6:08:46 INFO (95.4%, 11922 bytes, 232 lines)
+1 day, 6:08:57 INFO (95.4%, 11920 bytes, 232 lines)
+1 day, 6:09:07 INFO (95.4%, 11918 bytes, 232 lines)
+1 day, 6:09:18 INFO (95.4%, 11916 bytes, 232 lines)
+1 day, 6:09:28 INFO (95.4%, 11914 bytes, 232 lines)
+1 day, 6:09:39 INFO (95.4%, 11912 bytes, 232 lines)
+1 day, 6:09:53 INFO (95.4%, 11910 bytes, 232 lines)
+1 day, 6:10:07 INFO (95.4%, 11908 bytes, 232 lines)
+1 day, 6:10:17 INFO (95.4%, 11906 bytes, 232 lines)
+1 day, 6:10:28 INFO (95.4%, 11904 bytes, 232 lines)
+1 day, 6:10:39 INFO (95.4%, 11902 bytes, 232 lines)
+1 day, 6:10:50 INFO (95.4%, 11900 bytes, 232 lines)
+1 day, 6:11:00 INFO (95.4%, 11898 bytes, 232 lines)
+1 day, 6:12:13 INFO (95.5%, 11896 bytes, 232 lines)
+1 day, 6:13:27 INFO (95.5%, 11894 bytes, 232 lines)
+1 day, 6:14:29 INFO (95.5%, 11892 bytes, 232 lines)
+1 day, 6:15:03 INFO (95.5%, 11890 bytes, 232 lines)
+1 day, 6:15:14 INFO (95.5%, 11888 bytes, 232 lines)
+1 day, 6:15:25 INFO (95.5%, 11886 bytes, 232 lines)
+1 day, 6:15:35 INFO (95.5%, 11884 bytes, 232 lines)
+1 day, 6:15:46 INFO (95.5%, 11882 bytes, 232 lines)
+1 day, 6:15:57 INFO (95.5%, 11880 bytes, 232 lines)
+1 day, 6:16:07 INFO (95.5%, 11878 bytes, 232 lines)
+1 day, 6:16:18 INFO (95.5%, 11876 bytes, 232 lines)
+1 day, 6:16:29 INFO (95.5%, 11874 bytes, 232 lines)
+1 day, 6:16:39 INFO (95.5%, 11872 bytes, 232 lines)
+1 day, 6:16:50 INFO (95.5%, 11870 bytes, 232 lines)
+1 day, 6:17:00 INFO (95.5%, 11868 bytes, 232 lines)
+1 day, 6:17:11 INFO (95.5%, 11866 bytes, 232 lines)
+1 day, 6:17:22 INFO (95.5%, 11864 bytes, 232 lines)
+1 day, 6:17:33 INFO (95.5%, 11862 bytes, 232 lines)
+1 day, 6:17:43 INFO (95.5%, 11860 bytes, 232 lines)
+1 day, 6:17:54 INFO (95.5%, 11858 bytes, 232 lines)
+1 day, 6:18:04 INFO (95.5%, 11856 bytes, 232 lines)
+1 day, 6:18:15 INFO (95.5%, 11854 bytes, 232 lines)
+1 day, 6:18:26 INFO (95.5%, 11852 bytes, 232 lines)
+1 day, 6:18:36 INFO (95.5%, 11850 bytes, 232 lines)
+1 day, 6:18:47 INFO (95.5%, 11848 bytes, 232 lines)
+1 day, 6:18:58 INFO (95.5%, 11846 bytes, 232 lines)
+1 day, 6:19:09 INFO (95.5%, 11844 bytes, 232 lines)
+1 day, 6:19:19 INFO (95.5%, 11842 bytes, 232 lines)
+1 day, 6:19:30 INFO (95.5%, 11840 bytes, 232 lines)
+1 day, 6:19:41 INFO (95.5%, 11838 bytes, 232 lines)
+1 day, 6:19:51 INFO (95.5%, 11836 bytes, 232 lines)
+1 day, 6:20:02 INFO (95.5%, 11834 bytes, 232 lines)
+1 day, 6:20:16 INFO (95.5%, 11832 bytes, 232 lines)
+1 day, 6:20:26 INFO (95.5%, 11830 bytes, 232 lines)
+1 day, 6:20:37 INFO (95.5%, 11828 bytes, 232 lines)
+1 day, 6:20:48 INFO (95.5%, 11826 bytes, 232 lines)
+1 day, 6:20:59 INFO (95.5%, 11824 bytes, 232 lines)
+1 day, 6:21:09 INFO (95.5%, 11822 bytes, 232 lines)
+1 day, 6:21:20 INFO (95.5%, 11820 bytes, 232 lines)
+1 day, 6:21:31 INFO (95.5%, 11818 bytes, 232 lines)
+1 day, 6:21:44 INFO (95.5%, 11816 bytes, 232 lines)
+1 day, 6:21:55 INFO (95.5%, 11814 bytes, 232 lines)
+1 day, 6:22:06 INFO (95.5%, 11812 bytes, 232 lines)
+1 day, 6:22:17 INFO (95.5%, 11810 bytes, 232 lines)
+1 day, 6:22:27 INFO (95.5%, 11808 bytes, 232 lines)
+1 day, 6:22:38 INFO (95.5%, 11806 bytes, 232 lines)
+1 day, 6:22:48 INFO (95.5%, 11804 bytes, 232 lines)
+1 day, 6:22:59 INFO (95.5%, 11802 bytes, 232 lines)
+1 day, 6:23:10 INFO (95.5%, 11800 bytes, 232 lines)
+1 day, 6:23:21 INFO (95.5%, 11798 bytes, 232 lines)
+1 day, 6:23:34 INFO (95.5%, 11796 bytes, 232 lines)
+1 day, 6:23:45 INFO (95.5%, 11794 bytes, 232 lines)
+1 day, 6:23:56 INFO (95.5%, 11792 bytes, 232 lines)
+1 day, 6:24:09 INFO (95.5%, 11790 bytes, 232 lines)
+1 day, 6:24:20 INFO (95.5%, 11788 bytes, 232 lines)
+1 day, 6:24:31 INFO (95.5%, 11786 bytes, 232 lines)
+1 day, 6:24:42 INFO (95.5%, 11784 bytes, 232 lines)
+1 day, 6:24:52 INFO (95.5%, 11782 bytes, 232 lines)
+1 day, 6:25:06 INFO (95.5%, 11780 bytes, 232 lines)
+1 day, 6:25:17 INFO (95.5%, 11778 bytes, 232 lines)
+1 day, 6:25:28 INFO (95.5%, 11776 bytes, 232 lines)
+1 day, 6:25:38 INFO (95.5%, 11774 bytes, 232 lines)
+1 day, 6:25:49 INFO (95.5%, 11772 bytes, 232 lines)
+1 day, 6:26:00 INFO (95.5%, 11770 bytes, 232 lines)
+1 day, 6:26:10 INFO (95.5%, 11768 bytes, 232 lines)
+1 day, 6:26:21 INFO (95.5%, 11766 bytes, 232 lines)
+1 day, 6:26:35 INFO (95.5%, 11764 bytes, 232 lines)
+1 day, 6:26:46 INFO (95.5%, 11762 bytes, 232 lines)
+1 day, 6:26:56 INFO (95.5%, 11760 bytes, 232 lines)
+1 day, 6:27:07 INFO (95.5%, 11758 bytes, 232 lines)
+1 day, 6:27:17 INFO (95.5%, 11756 bytes, 232 lines)
+1 day, 6:27:28 INFO (95.5%, 11754 bytes, 232 lines)
+1 day, 6:27:44 INFO (95.5%, 11752 bytes, 232 lines)
+1 day, 6:27:55 INFO (95.5%, 11750 bytes, 232 lines)
+1 day, 6:28:05 INFO (95.5%, 11748 bytes, 232 lines)
+1 day, 6:28:16 INFO (95.5%, 11746 bytes, 232 lines)
+1 day, 6:28:27 INFO (95.5%, 11744 bytes, 232 lines)
+1 day, 6:28:37 INFO (95.5%, 11742 bytes, 232 lines)
+1 day, 6:28:48 INFO (95.5%, 11740 bytes, 232 lines)
+1 day, 6:28:59 INFO (95.5%, 11738 bytes, 232 lines)
+1 day, 6:29:10 INFO (95.5%, 11736 bytes, 232 lines)
+1 day, 6:29:20 INFO (95.5%, 11734 bytes, 232 lines)
+1 day, 6:30:00 INFO (95.5%, 11732 bytes, 232 lines)
+1 day, 6:30:50 INFO (95.5%, 11730 bytes, 232 lines)
+1 day, 6:31:00 INFO (95.5%, 11728 bytes, 232 lines)
+1 day, 6:31:11 INFO (95.5%, 11726 bytes, 232 lines)
+1 day, 6:31:22 INFO (95.5%, 11724 bytes, 232 lines)
+1 day, 6:31:33 INFO (95.5%, 11722 bytes, 232 lines)
+1 day, 6:31:43 INFO (95.5%, 11720 bytes, 232 lines)
+1 day, 6:31:54 INFO (95.5%, 11718 bytes, 232 lines)
+1 day, 6:32:04 INFO (95.5%, 11716 bytes, 232 lines)
+1 day, 6:32:14 INFO (95.5%, 11714 bytes, 232 lines)
+1 day, 6:32:23 INFO (95.5%, 11712 bytes, 232 lines)
+1 day, 6:32:29 INFO (95.5%, 11710 bytes, 232 lines)
+1 day, 6:32:30 INFO ===< IntsPass::b >===
+1 day, 6:32:40 INFO (95.5%, 11708 bytes, 232 lines)
+1 day, 6:32:50 INFO (95.5%, 11707 bytes, 232 lines)
+1 day, 6:33:00 INFO (95.5%, 11706 bytes, 232 lines)
+1 day, 6:33:10 INFO (95.5%, 11705 bytes, 232 lines)
+1 day, 6:33:21 INFO (95.5%, 11704 bytes, 232 lines)
+1 day, 6:33:34 INFO (95.5%, 11703 bytes, 232 lines)
+1 day, 6:33:45 INFO (95.5%, 11702 bytes, 232 lines)
+1 day, 6:33:55 INFO (95.5%, 11700 bytes, 232 lines)
+1 day, 6:34:05 INFO (95.5%, 11698 bytes, 232 lines)
+1 day, 6:34:15 INFO (95.5%, 11697 bytes, 232 lines)
+1 day, 6:34:28 INFO (95.5%, 11695 bytes, 232 lines)
+1 day, 6:34:38 INFO (95.5%, 11694 bytes, 232 lines)
+1 day, 6:34:51 INFO (95.5%, 11693 bytes, 232 lines)
+1 day, 6:35:01 INFO (95.5%, 11691 bytes, 232 lines)
+1 day, 6:35:12 INFO (95.5%, 11689 bytes, 232 lines)
+1 day, 6:35:22 INFO (95.5%, 11687 bytes, 232 lines)
+1 day, 6:35:32 INFO (95.5%, 11685 bytes, 232 lines)
+1 day, 6:35:42 INFO (95.5%, 11683 bytes, 232 lines)
+1 day, 6:35:52 INFO (95.5%, 11682 bytes, 232 lines)
+1 day, 6:36:03 INFO (95.5%, 11680 bytes, 232 lines)
+1 day, 6:36:13 INFO (95.5%, 11679 bytes, 232 lines)
+1 day, 6:36:23 INFO (95.5%, 11677 bytes, 232 lines)
+1 day, 6:36:33 INFO (95.5%, 11675 bytes, 232 lines)
+1 day, 6:36:43 INFO (95.5%, 11674 bytes, 232 lines)
+1 day, 6:36:53 INFO (95.5%, 11672 bytes, 232 lines)
+1 day, 6:37:03 INFO (95.5%, 11671 bytes, 232 lines)
+1 day, 6:37:41 INFO (95.5%, 11670 bytes, 232 lines)
+1 day, 6:38:07 INFO (95.5%, 11668 bytes, 232 lines)
+1 day, 6:38:41 INFO (95.5%, 11667 bytes, 232 lines)
+1 day, 6:39:22 INFO (95.5%, 11666 bytes, 232 lines)
+1 day, 6:40:18 INFO (95.5%, 11665 bytes, 232 lines)
+1 day, 6:40:28 INFO (95.5%, 11664 bytes, 232 lines)
+1 day, 6:40:39 INFO (95.5%, 11663 bytes, 232 lines)
+1 day, 6:40:49 INFO (95.5%, 11661 bytes, 232 lines)
+1 day, 6:40:59 INFO (95.5%, 11660 bytes, 232 lines)
+1 day, 6:41:09 INFO (95.5%, 11659 bytes, 232 lines)
+1 day, 6:41:19 INFO (95.5%, 11658 bytes, 232 lines)
+1 day, 6:41:29 INFO (95.5%, 11657 bytes, 232 lines)
+1 day, 6:41:39 INFO (95.5%, 11656 bytes, 232 lines)
+1 day, 6:41:50 INFO (95.5%, 11655 bytes, 232 lines)
+1 day, 6:42:03 INFO (95.5%, 11654 bytes, 232 lines)
+1 day, 6:42:13 INFO (95.5%, 11653 bytes, 232 lines)
+1 day, 6:42:23 INFO (95.5%, 11652 bytes, 232 lines)
+1 day, 6:42:33 INFO (95.5%, 11651 bytes, 232 lines)
+1 day, 6:42:44 INFO (95.5%, 11650 bytes, 232 lines)
+1 day, 6:42:54 INFO (95.5%, 11649 bytes, 232 lines)
+1 day, 6:43:04 INFO (95.5%, 11648 bytes, 232 lines)
+1 day, 6:43:14 INFO (95.5%, 11647 bytes, 232 lines)
+1 day, 6:43:24 INFO (95.5%, 11646 bytes, 232 lines)
+1 day, 6:43:34 INFO (95.5%, 11645 bytes, 232 lines)
+1 day, 6:43:44 INFO (95.5%, 11644 bytes, 232 lines)
+1 day, 6:43:55 INFO (95.5%, 11643 bytes, 232 lines)
+1 day, 6:44:05 INFO (95.5%, 11642 bytes, 232 lines)
+1 day, 6:44:15 INFO (95.5%, 11641 bytes, 232 lines)
+1 day, 6:44:25 INFO (95.5%, 11640 bytes, 232 lines)
+1 day, 6:44:35 INFO (95.5%, 11639 bytes, 232 lines)
+1 day, 6:44:45 INFO (95.5%, 11638 bytes, 232 lines)
+1 day, 6:44:55 INFO (95.5%, 11637 bytes, 232 lines)
+1 day, 6:45:05 INFO (95.5%, 11636 bytes, 232 lines)
+1 day, 6:45:15 INFO (95.5%, 11635 bytes, 232 lines)
+1 day, 6:45:26 INFO (95.6%, 11634 bytes, 232 lines)
+1 day, 6:45:36 INFO (95.6%, 11633 bytes, 232 lines)
+1 day, 6:45:46 INFO (95.6%, 11632 bytes, 232 lines)
+1 day, 6:45:56 INFO (95.6%, 11631 bytes, 232 lines)
+1 day, 6:46:06 INFO (95.6%, 11630 bytes, 232 lines)
+1 day, 6:46:17 INFO (95.6%, 11629 bytes, 232 lines)
+1 day, 6:46:27 INFO (95.6%, 11628 bytes, 232 lines)
+1 day, 6:46:37 INFO (95.6%, 11627 bytes, 232 lines)
+1 day, 6:46:47 INFO (95.6%, 11626 bytes, 232 lines)
+1 day, 6:46:57 INFO (95.6%, 11625 bytes, 232 lines)
+1 day, 6:47:07 INFO (95.6%, 11624 bytes, 232 lines)
+1 day, 6:47:21 INFO (95.6%, 11623 bytes, 232 lines)
+1 day, 6:47:31 INFO (95.6%, 11622 bytes, 232 lines)
+1 day, 6:47:41 INFO (95.6%, 11621 bytes, 232 lines)
+1 day, 6:47:51 INFO (95.6%, 11620 bytes, 232 lines)
+1 day, 6:48:01 INFO (95.6%, 11619 bytes, 232 lines)
+1 day, 6:48:12 INFO (95.6%, 11618 bytes, 232 lines)
+1 day, 6:48:22 INFO (95.6%, 11617 bytes, 232 lines)
+1 day, 6:48:32 INFO (95.6%, 11616 bytes, 232 lines)
+1 day, 6:48:42 INFO (95.6%, 11615 bytes, 232 lines)
+1 day, 6:48:52 INFO (95.6%, 11614 bytes, 232 lines)
+1 day, 6:49:02 INFO (95.6%, 11613 bytes, 232 lines)
+1 day, 6:49:12 INFO (95.6%, 11612 bytes, 232 lines)
+1 day, 6:49:23 INFO (95.6%, 11611 bytes, 232 lines)
+1 day, 6:49:33 INFO (95.6%, 11610 bytes, 232 lines)
+1 day, 6:49:43 INFO (95.6%, 11609 bytes, 232 lines)
+1 day, 6:49:53 INFO (95.6%, 11608 bytes, 232 lines)
+1 day, 6:50:03 INFO (95.6%, 11607 bytes, 232 lines)
+1 day, 6:50:13 INFO (95.6%, 11606 bytes, 232 lines)
+1 day, 6:50:23 INFO (95.6%, 11605 bytes, 232 lines)
+1 day, 6:50:33 INFO (95.6%, 11604 bytes, 232 lines)
+1 day, 6:50:43 INFO (95.6%, 11603 bytes, 232 lines)
+1 day, 6:50:54 INFO (95.6%, 11602 bytes, 232 lines)
+1 day, 6:51:04 INFO (95.6%, 11601 bytes, 232 lines)
+1 day, 6:51:14 INFO (95.6%, 11600 bytes, 232 lines)
+1 day, 6:51:24 INFO (95.6%, 11599 bytes, 232 lines)
+1 day, 6:51:34 INFO (95.6%, 11598 bytes, 232 lines)
+1 day, 6:51:44 INFO (95.6%, 11597 bytes, 232 lines)
+1 day, 6:51:54 INFO (95.6%, 11596 bytes, 232 lines)
+1 day, 6:52:05 INFO (95.6%, 11595 bytes, 232 lines)
+1 day, 6:52:15 INFO (95.6%, 11594 bytes, 232 lines)
+1 day, 6:52:25 INFO (95.6%, 11593 bytes, 232 lines)
+1 day, 6:52:35 INFO (95.6%, 11592 bytes, 232 lines)
+1 day, 6:52:45 INFO (95.6%, 11591 bytes, 232 lines)
+1 day, 6:52:55 INFO (95.6%, 11590 bytes, 232 lines)
+1 day, 6:53:05 INFO (95.6%, 11589 bytes, 232 lines)
+1 day, 6:53:44 INFO (95.6%, 11588 bytes, 232 lines)
+1 day, 6:53:54 INFO (95.6%, 11587 bytes, 232 lines)
+1 day, 6:54:04 INFO (95.6%, 11586 bytes, 232 lines)
+1 day, 6:54:14 INFO (95.6%, 11585 bytes, 232 lines)
+1 day, 6:54:28 INFO (95.6%, 11584 bytes, 232 lines)
+1 day, 6:54:38 INFO (95.6%, 11583 bytes, 232 lines)
+1 day, 6:54:48 INFO (95.6%, 11582 bytes, 232 lines)
+1 day, 6:54:58 INFO (95.6%, 11581 bytes, 232 lines)
+1 day, 6:55:08 INFO (95.6%, 11580 bytes, 232 lines)
+1 day, 6:55:18 INFO (95.6%, 11579 bytes, 232 lines)
+1 day, 6:55:28 INFO (95.6%, 11578 bytes, 232 lines)
+1 day, 6:55:38 INFO (95.6%, 11577 bytes, 232 lines)
+1 day, 6:55:49 INFO (95.6%, 11576 bytes, 232 lines)
+1 day, 6:55:59 INFO (95.6%, 11575 bytes, 232 lines)
+1 day, 6:56:09 INFO (95.6%, 11574 bytes, 232 lines)
+1 day, 6:56:19 INFO (95.6%, 11573 bytes, 232 lines)
+1 day, 6:56:29 INFO (95.6%, 11572 bytes, 232 lines)
+1 day, 6:56:39 INFO (95.6%, 11571 bytes, 232 lines)
+1 day, 6:56:50 INFO (95.6%, 11570 bytes, 232 lines)
+1 day, 6:57:00 INFO (95.6%, 11569 bytes, 232 lines)
+1 day, 6:57:10 INFO (95.6%, 11568 bytes, 232 lines)
+1 day, 6:57:20 INFO (95.6%, 11567 bytes, 232 lines)
+1 day, 6:57:30 INFO (95.6%, 11566 bytes, 232 lines)
+1 day, 6:58:29 INFO (95.6%, 11565 bytes, 232 lines)
+1 day, 6:58:42 INFO (95.6%, 11564 bytes, 232 lines)
+1 day, 6:59:03 INFO (95.6%, 11563 bytes, 232 lines)
+1 day, 6:59:13 INFO (95.6%, 11562 bytes, 232 lines)
+1 day, 6:59:25 INFO (95.6%, 11561 bytes, 232 lines)
+1 day, 6:59:49 INFO (95.6%, 11560 bytes, 232 lines)
+1 day, 7:01:08 INFO (95.6%, 11559 bytes, 232 lines)
+1 day, 7:01:44 INFO (95.6%, 11558 bytes, 232 lines)
+1 day, 7:02:06 INFO (95.6%, 11557 bytes, 232 lines)
+1 day, 7:02:25 INFO (95.6%, 11556 bytes, 232 lines)
+1 day, 7:02:35 INFO (95.6%, 11555 bytes, 232 lines)
+1 day, 7:02:45 INFO (95.6%, 11554 bytes, 232 lines)
+1 day, 7:02:55 INFO (95.6%, 11553 bytes, 232 lines)
+1 day, 7:03:08 INFO (95.6%, 11552 bytes, 232 lines)
+1 day, 7:03:18 INFO (95.6%, 11551 bytes, 232 lines)
+1 day, 7:03:25 INFO (95.6%, 11550 bytes, 232 lines)
+1 day, 7:03:35 INFO (95.6%, 11549 bytes, 232 lines)
+1 day, 7:03:46 INFO (95.6%, 11548 bytes, 232 lines)
+1 day, 7:03:56 INFO (95.6%, 11547 bytes, 232 lines)
+1 day, 7:04:09 INFO (95.6%, 11546 bytes, 232 lines)
+1 day, 7:04:20 INFO (95.6%, 11545 bytes, 232 lines)
+1 day, 7:04:33 INFO (95.6%, 11544 bytes, 232 lines)
+1 day, 7:04:47 INFO (95.6%, 11543 bytes, 232 lines)
+1 day, 7:04:57 INFO (95.6%, 11542 bytes, 232 lines)
+1 day, 7:05:07 INFO (95.6%, 11541 bytes, 232 lines)
+1 day, 7:05:17 INFO (95.6%, 11540 bytes, 232 lines)
+1 day, 7:05:30 INFO (95.6%, 11539 bytes, 232 lines)
+1 day, 7:05:40 INFO (95.6%, 11538 bytes, 232 lines)
+1 day, 7:05:50 INFO (95.6%, 11537 bytes, 232 lines)
+1 day, 7:06:00 INFO (95.6%, 11536 bytes, 232 lines)
+1 day, 7:06:14 INFO (95.6%, 11535 bytes, 232 lines)
+1 day, 7:06:24 INFO (95.6%, 11534 bytes, 232 lines)
+1 day, 7:06:34 INFO (95.6%, 11533 bytes, 232 lines)
+1 day, 7:06:44 INFO (95.6%, 11532 bytes, 232 lines)
+1 day, 7:06:54 INFO (95.6%, 11531 bytes, 232 lines)
+1 day, 7:07:04 INFO (95.6%, 11530 bytes, 232 lines)
+1 day, 7:07:15 INFO (95.6%, 11529 bytes, 232 lines)
+1 day, 7:07:25 INFO (95.6%, 11528 bytes, 232 lines)
+1 day, 7:07:35 INFO (95.6%, 11527 bytes, 232 lines)
+1 day, 7:07:45 INFO (95.6%, 11526 bytes, 232 lines)
+1 day, 7:07:55 INFO (95.6%, 11525 bytes, 232 lines)
+1 day, 7:08:05 INFO (95.6%, 11524 bytes, 232 lines)
+1 day, 7:08:19 INFO (95.6%, 11523 bytes, 232 lines)
+1 day, 7:08:29 INFO (95.6%, 11522 bytes, 232 lines)
+1 day, 7:08:39 INFO (95.6%, 11521 bytes, 232 lines)
+1 day, 7:08:49 INFO (95.6%, 11520 bytes, 232 lines)
+1 day, 7:09:00 INFO (95.6%, 11519 bytes, 232 lines)
+1 day, 7:09:10 INFO (95.6%, 11518 bytes, 232 lines)
+1 day, 7:09:20 INFO (95.6%, 11517 bytes, 232 lines)
+1 day, 7:09:30 INFO (95.6%, 11516 bytes, 232 lines)
+1 day, 7:09:40 INFO (95.6%, 11515 bytes, 232 lines)
+1 day, 7:09:50 INFO (95.6%, 11514 bytes, 232 lines)
+1 day, 7:10:16 INFO (95.6%, 11513 bytes, 232 lines)
+1 day, 7:10:38 INFO (95.6%, 11512 bytes, 232 lines)
+1 day, 7:10:49 INFO (95.6%, 11511 bytes, 232 lines)
+1 day, 7:10:59 INFO (95.6%, 11510 bytes, 232 lines)
+1 day, 7:11:10 INFO (95.6%, 11509 bytes, 232 lines)
+1 day, 7:11:23 INFO (95.6%, 11508 bytes, 232 lines)
+1 day, 7:11:36 INFO (95.6%, 11507 bytes, 232 lines)
+1 day, 7:11:46 INFO (95.6%, 11506 bytes, 232 lines)
+1 day, 7:11:56 INFO (95.6%, 11505 bytes, 232 lines)
+1 day, 7:12:06 INFO (95.6%, 11504 bytes, 232 lines)
+1 day, 7:12:17 INFO (95.6%, 11503 bytes, 232 lines)
+1 day, 7:12:27 INFO (95.6%, 11502 bytes, 232 lines)
+1 day, 7:12:37 INFO (95.6%, 11501 bytes, 232 lines)
+1 day, 7:12:47 INFO (95.6%, 11500 bytes, 232 lines)
+1 day, 7:12:57 INFO (95.6%, 11499 bytes, 232 lines)
+1 day, 7:13:07 INFO (95.6%, 11498 bytes, 232 lines)
+1 day, 7:13:17 INFO (95.6%, 11497 bytes, 232 lines)
+1 day, 7:13:28 INFO (95.6%, 11495 bytes, 232 lines)
+1 day, 7:13:38 INFO (95.6%, 11494 bytes, 232 lines)
+1 day, 7:13:47 INFO (95.6%, 11493 bytes, 232 lines)
+1 day, 7:13:53 INFO (95.6%, 11492 bytes, 232 lines)
+1 day, 7:13:58 INFO (95.6%, 11490 bytes, 232 lines)
+1 day, 7:13:58 INFO ===< IntsPass::c >===
+1 day, 7:14:08 INFO (95.6%, 11489 bytes, 232 lines)
+1 day, 7:14:21 INFO (95.6%, 11488 bytes, 232 lines)
+1 day, 7:14:34 INFO (95.6%, 11487 bytes, 232 lines)
+1 day, 7:14:44 INFO (95.6%, 11486 bytes, 232 lines)
+1 day, 7:14:54 INFO (95.6%, 11485 bytes, 232 lines)
+1 day, 7:15:02 INFO (95.6%, 11484 bytes, 232 lines)
+1 day, 7:15:07 INFO (95.6%, 11483 bytes, 232 lines)
+1 day, 7:15:07 INFO ===< IntsPass::d >===
+1 day, 7:15:07 INFO ===< IntsPass::c >===
+1 day, 7:15:12 INFO ===< BalancedPass::parens-only >===
+1 day, 7:15:12 INFO ===< ClexPass::delete-string >===
+1 day, 7:15:13 INFO Termination check: size was 13841; now 11483
+1 day, 7:15:13 ERROR Skipping pass UnIfDefPass
+1 day, 7:15:13 INFO ===< ClexPass::define >===
+1 day, 7:15:13 INFO ===< IncludeIncludesPass >===
+1 day, 7:15:13 INFO ===< TernaryPass::b >===
+1 day, 7:15:13 INFO ===< TernaryPass::c >===
+1 day, 7:15:27 INFO ===< BalancedPass::curly >===
+1 day, 7:15:41 INFO ===< BalancedPass::curly2 >===
+1 day, 7:15:41 INFO ===< BalancedPass::curly3 >===
+1 day, 7:15:48 INFO ===< BalancedPass::parens >===
+1 day, 7:15:48 INFO ===< BalancedPass::angles >===
+1 day, 7:16:53 INFO ===< BalancedPass::square >===
+1 day, 7:17:06 INFO ===< BalancedPass::curly-inside >===
+1 day, 7:17:11 INFO ===< BalancedPass::parens-inside >===
+1 day, 7:17:11 INFO ===< BalancedPass::angles-inside >===
+1 day, 7:18:16 INFO ===< BalancedPass::square-inside >===
+1 day, 7:18:21 INFO ===< BalancedPass::curly-only >===
+1 day, 7:18:22 INFO ===< BalancedPass::angles-only >===
+1 day, 7:19:27 INFO ===< BalancedPass::square-only >===
+1 day, 7:19:27 INFO ===< ClangPass::remove-namespace >===
+1 day, 7:19:27 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 7:19:27 INFO ===< ClangPass::param-to-global >===
+1 day, 7:19:28 INFO ===< ClangPass::param-to-local >===
+1 day, 7:19:28 INFO ===< ClangPass::remove-nested-function >===
+1 day, 7:19:28 INFO ===< ClangPass::union-to-struct >===
+1 day, 7:19:29 INFO ===< ClangPass::return-void >===
+1 day, 7:19:29 INFO ===< ClangPass::simple-inliner >===
+1 day, 7:19:36 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 7:19:36 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 7:19:36 INFO ===< ClangPass::copy-propagation >===
+1 day, 7:19:36 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 7:19:36 INFO ===< ClangPass::replace-callexpr >===
+1 day, 7:19:37 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 7:19:37 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 7:19:37 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 7:19:38 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 7:19:38 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 7:19:37 INFO using C++ standard: c++2b with 8 transformation opportunities
+1 day, 7:19:39 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 7:19:39 INFO ===< ClangPass::simplify-if >===
+1 day, 7:19:39 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 7:19:39 INFO ===< ClangPass::reduce-array-size >===
+1 day, 7:19:39 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 7:19:39 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 7:19:39 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 7:19:39 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 7:19:39 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 7:19:39 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 7:19:48 INFO (95.6%, 11458 bytes, 230 lines)
+1 day, 7:19:56 INFO (95.6%, 11421 bytes, 228 lines)
+1 day, 7:20:08 INFO (95.6%, 11379 bytes, 226 lines)
+1 day, 7:20:32 INFO ===< ClangPass::remove-unused-field >===
+1 day, 7:20:32 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 7:20:32 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 7:20:32 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 7:20:32 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 7:20:32 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 7:20:32 INFO ===< ClangPass::class-template-to-class >===
+1 day, 7:20:32 INFO ===< ClangPass::merge-base-class >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-base-class >===
+1 day, 7:20:32 INFO ===< ClangPass::replace-derived-class >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 7:20:32 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 7:20:32 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 7:20:32 WARNING ClangPass::empty-struct-to-int has encountered a non fatal bug: pass error
+1 day, 7:20:32 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-pointer >===
+1 day, 7:20:32 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-array >===
+1 day, 7:20:32 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 7:20:32 INFO ===< ClangPass::simplify-struct >===
+1 day, 7:20:32 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 7:20:32 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 7:20:32 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 7:20:33 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 7:20:33 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 7:20:33 INFO ===< ClangPass::vector-to-array >===
+1 day, 7:20:33 INFO ===< ClangPass::remove-try-catch >===
+1 day, 7:20:33 INFO ===< ClangPass::class-to-struct >===
+1 day, 7:20:46 INFO ===< ClangPass::member-to-global >===
+1 day, 7:20:49 INFO ===< LinesPass::0 >===
+1 day, 7:21:31 INFO ===< LinesPass::1 >===
+1 day, 7:21:35 INFO ===< LinesPass::2 >===
+1 day, 7:21:35 INFO ===< LinesPass::3 >===
+1 day, 7:21:35 INFO ===< LinesPass::4 >===
+1 day, 7:21:35 INFO ===< LinesPass::6 >===
+1 day, 7:21:35 INFO ===< LinesPass::8 >===
+1 day, 7:21:35 INFO ===< LinesPass::10 >===
+1 day, 7:21:35 INFO ===< CommentsPass >===
+1 day, 7:21:35 INFO ===< SpecialPass::b >===
+1 day, 7:21:35 INFO ===< SpecialPass::c >===
+1 day, 7:21:35 INFO ===< IndentPass::regular >===
+1 day, 7:21:40 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 7:39:53 INFO (95.6%, 11376 bytes, 226 lines)
+1 day, 7:40:01 INFO (95.7%, 11373 bytes, 226 lines)
+1 day, 8:14:41 INFO (95.7%, 11361 bytes, 226 lines)
+1 day, 8:17:35 INFO (95.7%, 11343 bytes, 226 lines)
+1 day, 8:49:19 INFO (95.7%, 11313 bytes, 225 lines)
+1 day, 10:02:02 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 10:15:41 INFO (95.7%, 11309 bytes, 225 lines)
+1 day, 10:15:51 INFO (95.7%, 11307 bytes, 223 lines)
+1 day, 10:16:04 INFO (95.7%, 11294 bytes, 223 lines)
+1 day, 11:26:04 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 11:26:05 INFO ===< ClangPass::local-to-global >===
+1 day, 11:26:18 INFO ===< PeepPass::c >===
+1 day, 11:26:25 INFO (95.7%, 11293 bytes, 223 lines)
+1 day, 11:26:32 INFO (95.7%, 11292 bytes, 223 lines)
+1 day, 11:26:43 INFO (95.7%, 11291 bytes, 223 lines)
+1 day, 11:26:52 INFO (95.7%, 11290 bytes, 223 lines)
+1 day, 11:26:57 INFO (95.7%, 11289 bytes, 223 lines)
+1 day, 11:27:02 INFO (95.7%, 11288 bytes, 223 lines)
+1 day, 11:27:05 INFO ===< IntsPass::a >===
+1 day, 11:27:05 INFO ===< IntsPass::b >===
+1 day, 11:27:06 INFO ===< IntsPass::c >===
+1 day, 11:27:06 INFO ===< IntsPass::d >===
+1 day, 11:27:06 INFO cache hit for HIPProg.hip
+1 day, 11:27:06 INFO ===< IntsPass::c >===
+1 day, 11:27:10 INFO ===< BalancedPass::parens-only >===
+1 day, 11:27:11 INFO ===< ClexPass::delete-string >===
+1 day, 11:27:11 INFO Termination check: size was 11483; now 11288
+1 day, 11:27:11 ERROR Skipping pass UnIfDefPass
+1 day, 11:27:11 INFO ===< ClexPass::define >===
+1 day, 11:27:11 INFO ===< IncludeIncludesPass >===
+1 day, 11:27:11 INFO ===< TernaryPass::b >===
+1 day, 11:27:11 INFO ===< TernaryPass::c >===
+1 day, 11:27:25 INFO ===< BalancedPass::curly >===
+1 day, 11:27:39 INFO ===< BalancedPass::curly2 >===
+1 day, 11:27:39 INFO ===< BalancedPass::curly3 >===
+1 day, 11:27:46 INFO ===< BalancedPass::parens >===
+1 day, 11:27:46 INFO ===< BalancedPass::angles >===
+1 day, 11:28:50 INFO ===< BalancedPass::square >===
+1 day, 11:29:03 INFO ===< BalancedPass::curly-inside >===
+1 day, 11:29:07 INFO ===< BalancedPass::parens-inside >===
+1 day, 11:29:08 INFO ===< BalancedPass::angles-inside >===
+1 day, 11:30:12 INFO ===< BalancedPass::square-inside >===
+1 day, 11:30:17 INFO ===< BalancedPass::curly-only >===
+1 day, 11:30:18 INFO ===< BalancedPass::angles-only >===
+1 day, 11:31:25 INFO ===< BalancedPass::square-only >===
+1 day, 11:31:25 INFO ===< ClangPass::remove-namespace >===
+1 day, 11:31:25 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 11:31:25 INFO ===< ClangPass::param-to-global >===
+1 day, 11:31:26 INFO ===< ClangPass::param-to-local >===
+1 day, 11:31:26 INFO ===< ClangPass::remove-nested-function >===
+1 day, 11:31:26 INFO ===< ClangPass::union-to-struct >===
+1 day, 11:31:26 INFO ===< ClangPass::return-void >===
+1 day, 11:31:26 INFO ===< ClangPass::simple-inliner >===
+1 day, 11:31:33 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 11:31:33 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 11:31:33 INFO ===< ClangPass::copy-propagation >===
+1 day, 11:31:34 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 11:31:34 INFO ===< ClangPass::replace-callexpr >===
+1 day, 11:31:35 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 11:31:35 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 11:31:34 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 11:31:35 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 11:31:35 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 11:31:35 INFO using C++ standard: c++2b with 8 transformation opportunities
+1 day, 11:31:36 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 11:31:36 INFO ===< ClangPass::simplify-if >===
+1 day, 11:31:36 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 11:31:36 INFO ===< ClangPass::reduce-array-size >===
+1 day, 11:31:36 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 11:31:36 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 11:31:36 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 11:31:36 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 11:31:36 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 11:31:36 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 11:31:45 INFO (95.7%, 11274 bytes, 221 lines)
+1 day, 11:31:57 INFO (95.7%, 11247 bytes, 219 lines)
+1 day, 11:32:07 INFO ===< ClangPass::remove-unused-field >===
+1 day, 11:32:07 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 11:32:07 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 11:32:07 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 11:32:07 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 11:32:07 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 11:32:07 INFO ===< ClangPass::class-template-to-class >===
+1 day, 11:32:07 INFO ===< ClangPass::merge-base-class >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-base-class >===
+1 day, 11:32:07 INFO ===< ClangPass::replace-derived-class >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 11:32:07 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 11:32:07 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 11:32:07 WARNING ClangPass::empty-struct-to-int has encountered a non fatal bug: pass error
+1 day, 11:32:07 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-pointer >===
+1 day, 11:32:07 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-array >===
+1 day, 11:32:07 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 11:32:07 INFO ===< ClangPass::simplify-struct >===
+1 day, 11:32:07 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 11:32:07 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 11:32:07 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 11:32:07 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 11:32:07 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 11:32:07 INFO ===< ClangPass::vector-to-array >===
+1 day, 11:32:08 INFO ===< ClangPass::remove-try-catch >===
+1 day, 11:32:08 INFO ===< ClangPass::class-to-struct >===
+1 day, 11:32:21 INFO ===< ClangPass::member-to-global >===
+1 day, 11:32:24 INFO ===< LinesPass::0 >===
+1 day, 11:33:04 INFO (95.7%, 11222 bytes, 218 lines)
+1 day, 11:33:19 INFO ===< LinesPass::1 >===
+1 day, 11:33:22 INFO ===< LinesPass::2 >===
+1 day, 11:33:22 INFO ===< LinesPass::3 >===
+1 day, 11:33:22 INFO ===< LinesPass::4 >===
+1 day, 11:33:22 INFO ===< LinesPass::6 >===
+1 day, 11:33:22 INFO ===< LinesPass::8 >===
+1 day, 11:33:22 INFO ===< LinesPass::10 >===
+1 day, 11:33:23 INFO ===< CommentsPass >===
+1 day, 11:33:23 INFO ===< SpecialPass::b >===
+1 day, 11:33:23 INFO ===< SpecialPass::c >===
+1 day, 11:33:23 INFO ===< IndentPass::regular >===
+1 day, 11:33:27 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 14:00:32 WARNING ClexHintsPass::rm-toks-1-to-16 has encountered a non fatal bug: pass got stuck
+1 day, 14:00:32 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 15:21:03 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 15:21:04 INFO ===< ClangPass::local-to-global >===
+1 day, 15:21:16 INFO ===< PeepPass::c >===
+1 day, 15:21:19 INFO ===< IntsPass::a >===
+1 day, 15:21:19 INFO ===< IntsPass::b >===
+1 day, 15:21:19 INFO ===< IntsPass::c >===
+1 day, 15:21:19 INFO ===< IntsPass::d >===
+1 day, 15:21:19 INFO cache hit for HIPProg.hip
+1 day, 15:21:19 INFO ===< IntsPass::c >===
+1 day, 15:21:23 INFO ===< BalancedPass::parens-only >===
+1 day, 15:21:24 INFO ===< ClexPass::delete-string >===
+1 day, 15:21:25 INFO Termination check: size was 11288; now 11222
+1 day, 15:21:25 ERROR Skipping pass UnIfDefPass
+1 day, 15:21:25 INFO ===< ClexPass::define >===
+1 day, 15:21:25 INFO ===< IncludeIncludesPass >===
+1 day, 15:21:25 INFO ===< TernaryPass::b >===
+1 day, 15:21:25 INFO ===< TernaryPass::c >===
+1 day, 15:21:39 INFO ===< BalancedPass::curly >===
+1 day, 15:21:53 INFO ===< BalancedPass::curly2 >===
+1 day, 15:21:53 INFO ===< BalancedPass::curly3 >===
+1 day, 15:21:59 INFO ===< BalancedPass::parens >===
+1 day, 15:21:59 INFO ===< BalancedPass::angles >===
+1 day, 15:23:03 INFO ===< BalancedPass::square >===
+1 day, 15:23:15 INFO ===< BalancedPass::curly-inside >===
+1 day, 15:23:20 INFO ===< BalancedPass::parens-inside >===
+1 day, 15:23:20 INFO ===< BalancedPass::angles-inside >===
+1 day, 15:24:24 INFO ===< BalancedPass::square-inside >===
+1 day, 15:24:29 INFO ===< BalancedPass::curly-only >===
+1 day, 15:24:30 INFO ===< BalancedPass::angles-only >===
+1 day, 15:25:34 INFO ===< BalancedPass::square-only >===
+1 day, 15:25:34 INFO ===< ClangPass::remove-namespace >===
+1 day, 15:25:34 INFO ===< ClangPass::aggregate-to-scalar >===
+1 day, 15:25:34 INFO ===< ClangPass::param-to-global >===
+1 day, 15:25:35 INFO ===< ClangPass::param-to-local >===
+1 day, 15:25:35 INFO ===< ClangPass::remove-nested-function >===
+1 day, 15:25:35 INFO ===< ClangPass::union-to-struct >===
+1 day, 15:25:35 INFO ===< ClangPass::return-void >===
+1 day, 15:25:35 INFO ===< ClangPass::simple-inliner >===
+1 day, 15:25:42 INFO ===< ClangPass::reduce-pointer-level >===
+1 day, 15:25:42 INFO ===< ClangPass::lift-assignment-expr >===
+1 day, 15:25:42 INFO ===< ClangPass::copy-propagation >===
+1 day, 15:25:43 INFO ===< ClangHintsPass::callexpr-to-value >===
+1 day, 15:25:43 INFO ===< ClangPass::replace-callexpr >===
+1 day, 15:25:44 INFO ===< ClangPass::simplify-callexpr >===
+1 day, 15:25:44 INFO ===< ClangHintsPass::remove-unused-function >===
+1 day, 15:25:44 INFO using C++ standard: c++2b with 0 transformation opportunities
+1 day, 15:25:44 INFO ===< ClangBinarySearchPass::remove-unused-enum-member >===
+1 day, 15:25:44 INFO ===< ClangPass::remove-enum-member-value >===
+1 day, 15:25:44 INFO using C++ standard: c++2b with 8 transformation opportunities
+1 day, 15:25:45 INFO ===< ClangBinarySearchPass::remove-unused-var >===
+1 day, 15:25:45 INFO ===< ClangPass::simplify-if >===
+1 day, 15:25:45 INFO ===< ClangPass::reduce-array-dim >===
+1 day, 15:25:45 INFO ===< ClangPass::reduce-array-size >===
+1 day, 15:25:45 INFO ===< ClangPass::move-definition-to-declaration >===
+1 day, 15:25:45 INFO ===< ClangPass::simplify-comma-expr >===
+1 day, 15:25:45 INFO ===< ClangPass::simplify-dependent-typedef >===
+1 day, 15:25:45 INFO ===< ClangPass::replace-simple-typedef >===
+1 day, 15:25:45 INFO ===< ClangHintsPass::replace-dependent-typedef >===
+1 day, 15:25:45 INFO ===< ClangPass::replace-one-level-typedef-type >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-unused-field >===
+1 day, 15:25:59 INFO ===< ClangPass::instantiate-template-type-param-to-int >===
+1 day, 15:25:59 INFO ===< ClangPass::instantiate-template-param >===
+1 day, 15:25:59 INFO ===< ClangPass::template-arg-to-int >===
+1 day, 15:25:59 INFO ===< ClangPass::template-non-type-arg-to-int >===
+1 day, 15:25:59 INFO ===< ClangPass::reduce-class-template-param >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-trivial-base-template >===
+1 day, 15:25:59 INFO ===< ClangPass::class-template-to-class >===
+1 day, 15:25:59 INFO ===< ClangPass::merge-base-class >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-base-class >===
+1 day, 15:25:59 INFO ===< ClangPass::replace-derived-class >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-unresolved-base >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-ctor-initializer >===
+1 day, 15:25:59 INFO ===< ClangPass::replace-class-with-base-template-spec >===
+1 day, 15:25:59 INFO ===< ClangPass::simplify-nested-class >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-unused-outer-class >===
+1 day, 15:25:59 WARNING ClangPass::empty-struct-to-int has encountered a non fatal bug: pass error
+1 day, 15:25:59 INFO ===< ClangPass::empty-struct-to-int >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-pointer >===
+1 day, 15:25:59 INFO ===< ClangPass::reduce-pointer-pairs >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-array >===
+1 day, 15:25:59 INFO ===< ClangPass::remove-addr-taken >===
+1 day, 15:25:59 INFO ===< ClangPass::simplify-struct >===
+1 day, 15:25:59 INFO ===< ClangPass::replace-undefined-function >===
+1 day, 15:25:59 INFO ===< ClangPass::replace-array-index-var >===
+1 day, 15:26:00 INFO ===< ClangPass::replace-array-access-with-index >===
+1 day, 15:26:00 INFO ===< ClangPass::replace-dependent-name >===
+1 day, 15:26:00 INFO ===< ClangPass::simplify-recursive-template-instantiation >===
+1 day, 15:26:00 INFO ===< ClangPass::vector-to-array >===
+1 day, 15:26:00 INFO ===< ClangPass::remove-try-catch >===
+1 day, 15:26:00 INFO ===< ClangPass::class-to-struct >===
+1 day, 15:26:13 INFO ===< ClangPass::member-to-global >===
+1 day, 15:26:16 INFO ===< LinesPass::0 >===
+1 day, 15:27:19 INFO ===< LinesPass::1 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< LinesPass::2 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< LinesPass::3 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< LinesPass::4 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< LinesPass::6 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< LinesPass::8 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< LinesPass::10 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< CommentsPass >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< SpecialPass::b >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< SpecialPass::c >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< IndentPass::regular >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< BalancedPass::parens-to-zero >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< ClexHintsPass::rm-toks-1-to-16 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< ClexPass::rm-tok-pattern-4 >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< ClangPass::local-to-global >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< PeepPass::c >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< IntsPass::a >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< IntsPass::b >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< IntsPass::c >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< IntsPass::d >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< IntsPass::c >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< BalancedPass::parens-only >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO ===< ClexPass::delete-string >===
+1 day, 15:27:19 INFO cache hit for HIPProg.hip
+1 day, 15:27:19 INFO Termination check: size was 11222; now 11222
+1 day, 15:27:19 INFO CLEANUP PASSES
+1 day, 15:27:19 INFO ===< ClexPass::define >===
+1 day, 15:27:22 INFO ===< ClangPass::combine-global-var >===
+1 day, 15:27:23 INFO ===< ClangPass::combine-local-var >===
+1 day, 15:27:23 INFO ===< ClangPass::simplify-struct-union-decl >===
+1 day, 15:27:23 INFO ===< ClangPass::move-global-var >===
+1 day, 15:27:23 INFO ===< ClangPass::unify-function-decl >===
+1 day, 15:27:23 INFO cache hit for HIPProg.hip
+1 day, 15:27:23 INFO ===< LinesPass::0 >===
+1 day, 15:27:23 INFO cache hit for HIPProg.hip
+1 day, 15:27:23 INFO ===< ClexPass::delete-string >===
+1 day, 15:27:32 INFO (95.8%, 11097 bytes, 218 lines)
+1 day, 15:27:42 INFO (95.8%, 10962 bytes, 218 lines)
+1 day, 15:27:43 INFO ===< BlankPass >===
+1 day, 15:27:44 INFO ===< BlankPass >===
+1 day, 15:27:44 INFO ===================== done ====================
+===< PASS statistics >===
+  pass name                                                     bytes reduced time (s) time (%)   worked   failed  total executed
+  TreeSitterPass::remove-function                                      185062    31.02     0.02        4      154             158
+  LinesPass::4                                                          14039    86.37     0.06       14       35              49
+  CommentsPass                                                          10106    76.97     0.05       12      503             515
+  LinesPass::3                                                           9118    82.71     0.06       14       41              55
+  BalancedPass::curly-inside                                             8557  1053.26     0.74       29      867             896
+  LinesPass::1                                                           4815  2890.66     2.03       40     7756            7796
+  BalancedPass::curly                                                    3750   319.39     0.22        3     1014            1017
+  BalancedPass::curly3                                                   3042   310.73     0.22       14       79              93
+  ClangHintsPass::callexpr-to-value                                      2168   183.19     0.13       39      219             258
+  LinesPass::None                                                        1833  3642.47     2.56       23    10735           10758
+  ClangPass::remove-unused-field                                         1637   385.06     0.27       48      692             740
+  LinesPass::0                                                           1016   329.53     0.23        7     1181            1188
+  BalancedPass::parens-to-zero                                            872   762.44     0.54       31     3134            3165
+  LinesPass::6                                                            664     5.01     0.00        1        0               1
+  BlankPass                                                               533   201.99     0.14       15      412             427
+  LinesPass::2                                                            505   822.62     0.58       24     2019            2043
+  ClexHintsPass::rm-toks-1-to-4                                           449 17047.37    12.00       89    62532           62621
+  BalancedPass::curly-only                                                364   285.98     0.20       13      905             918
+  IntsPass::b                                                             346  1703.42     1.20      173     1761            1934
+  IntsPass::a                                                             297  2388.50     1.68      297     1539            1836
+  BalancedPass::curly2                                                    268   847.02     0.60        8     2091            2099
+  IntsPass::c                                                             220  1796.20     1.26      203     1029            1232
+  ClexHintsPass::rm-toks-5-to-8                                           212 16545.18    11.65       17    62262           62279
+  ClexHintsPass::rm-toks-9-to-12                                          199 16607.49    11.69       48    62119           62167
+  ClexHintsPass::rm-toks-13-to-16                                         169 16255.47    11.44        7    62137           62144
+  BalancedPass::square                                                     99  2967.56     2.09       26     9317            9343
+  BalancedPass::parens-only                                                96   675.47     0.48       49     2847            2896
+  ClexHintsPass::rm-toks-1-to-16                                           66 26375.61    18.57        5   156492          156497
+  ClexPass::rm-tok-pattern-4                                               27 14586.81    10.27        4    84791           84795
+  IntsPass::d                                                               7    36.53     0.03        7       35              42
+  ClangPass::remove-pointer                                                 5    10.82     0.01        5       31              36
+  BalancedPass::square-only                                                 4  3078.22     2.17       17     9333            9350
+  ClangPass::reduce-pointer-level                                           2    36.57     0.03        2      213             215
+  InlineIncludesPass                                                        0     0.00     0.00        0        0               0
+  RmUnusedFilesPass                                                         0     0.00     0.00        0        0               0
+  SpecialPass::c                                                            0     0.01     0.00        0        0               0
+  SpecialPass::b                                                            0     0.01     0.00        0        0               0
+  IndentPass::final                                                         0     0.02     0.00        0        1               1
+  IncludeIncludesPass                                                       0     0.02     0.00        0       16              16
+  ClangPass::unify-function-decl                                            0     0.02     0.00        0        4               4
+  ClangPass::move-global-var                                                0     0.03     0.00        0        4               4
+  LinesPass::10                                                             0     0.03     0.00        0        0               0
+  ClangPass::simplify-struct-union-decl                                     0     0.03     0.00        0        4               4
+  LineMarkersPass                                                           0     0.04     0.00        0        0               0
+  TernaryPass::c                                                            0     0.05     0.00        0        0               0
+  IndentPass::regular                                                       0     0.06     0.00        0        3               3
+  TernaryPass::b                                                            0     0.06     0.00        0        0               0
+  ClangPass::remove-addr-taken                                              0     0.10     0.00        0       16              16
+  ClangPass::simplify-struct                                                0     0.10     0.00        0       16              16
+  ClangPass::merge-base-class                                               0     0.10     0.00        0       16              16
+  ClangPass::remove-base-class                                              0     0.10     0.00        0       16              16
+  ClangPass::reduce-array-size                                              0     0.11     0.00        0       16              16
+  ClangPass::remove-ctor-initializer                                        0     0.11     0.00        0       16              16
+  ClangPass::replace-dependent-name                                         0     0.11     0.00        0       16              16
+  ClangPass::vector-to-array                                                0     0.11     0.00        0       16              16
+  ClangPass::remove-try-catch                                               0     0.11     0.00        0       16              16
+  ClangPass::remove-trivial-base-template                                   0     0.11     0.00        0       16              16
+  ClangPass::copy-propagation                                               0     0.11     0.00        0       16              16
+  ClangPass::remove-unresolved-base                                         0     0.11     0.00        0       16              16
+  ClangPass::replace-array-access-with-index                                0     0.11     0.00        0       16              16
+  ClangPass::remove-array                                                   0     0.11     0.00        0       16              16
+  ClangPass::class-to-struct                                                0     0.11     0.00        0       16              16
+  ClangPass::replace-one-level-typedef-type                                 0     0.11     0.00        0       16              16
+  ClangPass::simplify-recursive-template-instantiation                      0     0.11     0.00        0       16              16
+  ClangPass::remove-unused-outer-class                                      0     0.11     0.00        0       16              16
+  ClangPass::replace-undefined-function                                     0     0.11     0.00        0       16              16
+  ClangPass::replace-class-with-base-template-spec                          0     0.11     0.00        0       16              16
+  ClangPass::replace-simple-typedef                                         0     0.11     0.00        0       16              16
+  ClangPass::class-template-to-class                                        0     0.11     0.00        0       16              16
+  ClangPass::move-definition-to-declaration                                 0     0.11     0.00        0       16              16
+  ClangPass::replace-derived-class                                          0     0.11     0.00        0       16              16
+  ClangPass::instantiate-template-type-param-to-int                         0     0.11     0.00        0       16              16
+  ClangPass::simplify-nested-class                                          0     0.11     0.00        0       16              16
+  ClangPass::replace-array-index-var                                        0     0.11     0.00        0       16              16
+  TreeSitterPass::erase-namespace                                           0     0.11     0.00        0        0               0
+  ClangPass::reduce-class-template-param                                    0     0.11     0.00        0       16              16
+  ClangPass::simplify-dependent-typedef                                     0     0.11     0.00        0       16              16
+  ClangPass::reduce-array-dim                                               0     0.11     0.00        0       16              16
+  ClangPass::template-non-type-arg-to-int                                   0     0.11     0.00        0       16              16
+  ClangPass::reduce-pointer-pairs                                           0     0.11     0.00        0       16              16
+  ClangPass::lift-assignment-expr                                           0     0.11     0.00        0       16              16
+  ClangPass::simplify-if                                                    0     0.11     0.00        0       16              16
+  ClangPass::simplify-comma-expr                                            0     0.12     0.00        0       16              16
+  ClangPass::instantiate-template-param                                     0     0.12     0.00        0       16              16
+  ClangPass::simple-inliner                                                 0     0.12     0.00        0       16              16
+  ClangPass::template-arg-to-int                                            0     0.12     0.00        0       16              16
+  ClangHintsPass::replace-dependent-typedef                                 0     0.16     0.00        0        0               0
+  ClangModuleMapPass                                                        0     0.16     0.00        0        0               0
+  ClangPass::remove-enum-member-value                                       0     0.16     0.00        0       20              20
+  ClangPass::replace-callexpr                                               0     0.17     0.00        0       20              20
+  ClangPass::empty-struct-to-int                                            0     0.18     0.00        0       16              16
+  ClangPass::param-to-global                                                0     0.21     0.00        0       16              16
+  ClangPass::remove-nested-function                                         0     0.22     0.00        0       16              16
+  MakefilePass                                                              0     0.22     0.00        0        0               0
+  ClangPass::combine-local-var                                              0     0.23     0.00        0        7               7
+  ClangPass::remove-namespace                                               0     0.25     0.00        0       16              16
+  ClangHintsPass::replace-function-def-with-decl (30 T)                     0     0.30     0.00        0        3               3
+  ClangHintsPass::remove-unused-function (30 T)                             0     0.34     0.00        0        1               1
+  ClexPass::define                                                          0     0.51     0.00        0       12              12
+  SpecialPass::a                                                            0     0.59     0.00        0        2               2
+  ClangPass::return-void                                                    0     0.80     0.00        0       16              16
+  ClangPass::param-to-local                                                 0     0.84     0.00        0       16              16
+  IncludesPass                                                              0     0.86     0.00        0        4               4
+  ClangBinarySearchPass::remove-unused-enum-member                          0     0.92     0.00        0        0               0
+  ClexPass::delete-string                                                   0     1.01     0.00        0       12              12
+  ClangPass::combine-global-var                                             0     1.36     0.00        0        4               4
+  ClangIncludeGraphPass                                                     0     1.46     0.00        0        0               0
+  ClangPass::simplify-callexpr                                              0     1.87     0.00        0       65              65
+  ClangPass::local-to-global                                                0     3.27     0.00        0       48              48
+  LinesPass::8                                                              0     5.69     0.00        1        0               1
+  ClangHintsPass::remove-unused-function                                    0     6.12     0.00        0       52              52
+  ClangHintsPass::replace-function-def-with-decl                            0     7.32     0.01        0      150             150
+  ClangBinarySearchPass::remove-unused-var                                  0     7.38     0.01        0       78              78
+  PeepPass::c                                                               0    27.06     0.02        0    34863           34863
+  TreeSitterPass::replace-function-def-with-decl                            0    46.03     0.03        4      183             187
+  ClangPass::member-to-global                                               0    54.24     0.04        0      323             323
+  BalancedPass::angles-inside                                               0   116.70     0.08        0      456             456
+  BalancedPass::angles-only                                                 0   117.70     0.08        0      446             446
+  BalancedPass::angles                                                      0   122.96     0.09        0      489             489
+  BalancedPass::parens-inside                                               0   510.77     0.36        0     2774            2774
+  BalancedPass::parens                                                      0   626.62     0.44        1     3146            3147
+  BalancedPass::square-inside                                               0  2982.03     2.10        2     9716            9718
+  ClangPass::union-to-struct                                               -1     1.40     0.00        1       19              20
+  ClangPass::aggregate-to-scalar                                          -50     9.38     0.01        3       25              28
+  Folding (merging transformations from other passes)                  247027  1610.77     1.13      419       81             500
+
+Runtime: 142064 seconds
+Reduced test-cases:
+
+--- HIPProg.hip ---
+#include <hip/hip_runtime.h>
+#include "HIPSmith.h"
+#include "safe_math_macros.h"
+#define transparent_crc(X, Y, Z) transparent_crc_(&crc64_context, X, , )
+struct U0 {
+   unsigned f0 ;
+};
+struct S1 {
+    int32_t g_15;
+    int32_t g_34;
+    uint8_t g_105;
+    uint16_t g_113[8];
+    uint32_t g_131;
+    uint32_t *g_182;
+    uint64_t g_187[4][3][8];
+    int16_t **g_376[9];
+    int16_t ***g_375;
+    uint8_t *g_410;
+    uint8_t **g_409;
+    uint64_t *g_417;
+    uint32_t **g_689;
+    uint64_t ***g_716[9][5];
+    uint64_t ****g_715;
+    uint8_t ***g_960;
+    uint8_t ****g_959;
+    int8_t g_1230;
+    int8_t *g_1263;
+    int8_t **g_1262;
+    uint16_t g_1438[7][2][4];
+    int8_t g_1905[6][9][3];
+    uint16_t *g_1994;
+    uint16_t **g_1993;
+    uint16_t ***g_1992;
+    uint64_t g_2000;
+    int32_t g_2055;
+    uint32_t g_2183;
+    int32_t *g_2195;
+    uint32_t ***g_2279;
+    uint32_t ****g_2278;
+    uint32_t *****g_2313[2][2][10];
+    uint32_t *****g_2314[6];
+    int64_t g_2390;
+    int16_t g_2462[3];
+    uint32_t g_2494;
+    uint64_t ****g_2879[3];
+    int32_t g_2898;
+    uint32_t g_3152;
+    int32_t g_3222[7];
+    int32_t g_3233;
+    int8_t ***g_3261;
+    int8_t ****g_3260[9];
+    int8_t *****g_3259[3];
+    int32_t *g_3275;
+    U0 *****g_3744;
+    uint16_t ****g_3757[7];
+    uint16_t *****g_3756[8][6][5];
+    uint8_t g_3823;
+    uint32_t g_3954;
+    U0 g_3991[5][6];
+    int32_t *g_4047;
+    uint8_t g_4131;
+    int16_t ****g_4392;
+    int16_t *****g_4391;
+    int64_t *g_4501;
+    uint64_t g_4538;
+    uint16_t g_4697;
+    uint32_t g_4747;
+    uint8_t g_4783;
+    uint32_t g_4820;
+    uint16_t g_4863;
+    int32_t g_4999;
+    int16_t *****g_5222;
+    int32_t g_5327;
+    int32_t *g_5409;
+    int8_t g_5530;
+    int32_t g_5644;
+    int8_t g_5871;
+    int8_t g_5877;
+    uint64_t *****g_5902;
+    uint32_t g_5923;
+    int16_t g_5981;
+    int32_t g_6010;
+    int32_t g_6011;
+    int64_t g_6024;
+    uint16_t *g_6037;
+};
+__device__ int32_t * func_56(int32_t * , S1 * );
+__device__ int32_t  func_1(S1 * p_6098)
+{
+        func_56(0, p_6098);
+    return 0;
+}
+__device__ int32_t * func_56(int32_t * , S1 * p_6098)
+{
+    uint8_t *l_3714 = &p_6098->g_105;
+        *p_6098->g_417 |= safe_add_func_int8_t_s_s(l_3714 == ***p_6098->g_959, 138) ;
+    return 0;
+}
+__global__ void hipsmith_kernel(uint64_t *results) {
+    S1 c_6099;
+    S1* p_6098 = &c_6099;
+    U0 ****p_6098_62;
+    S1 c_6100 {
+        0, 
+        4, 
+        8, 
+        {}, 
+        4, 
+        &p_6098->g_131, 
+        {}, 
+        {}, 
+        &p_6098->g_376[5], 
+        &p_6098->g_105, 
+        &p_6098->g_410, 
+        &p_6098->g_187[3][0][4], 
+        &p_6098->g_182, 
+        {}, 
+        &p_6098->g_716[5][2], 
+        &p_6098->g_409, 
+        &p_6098->g_960, 
+        2, 
+        &p_6098->g_1230, 
+        &p_6098->g_1263, 
+        {}, 
+        7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 7, 0, 7, 
+        &p_6098->g_1438[2][1][2], 
+        &p_6098->g_1994, 
+        &p_6098->g_1993, 
+        2, 
+        1, 
+        1, 
+        &p_6098->g_15, 
+        &p_6098->g_689, 
+        &p_6098->g_2279, 
+        nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, nullptr, &p_6098->g_2278, nullptr, nullptr, &p_6098->g_2278, 
+        &p_6098->g_2278, nullptr, &p_6098->g_2278, nullptr, &p_6098->g_2278, nullptr, 
+        1, 
+        0, 0, 0, 
+        3, 
+        &p_6098->g_716[5][2], &p_6098->g_716[5][2], &p_6098->g_716[5][2], 
+        5, 
+        8, 
+        0, 0, 0, 0, 0, 0, 0, 
+        0, 
+        &p_6098->g_1262, 
+        &p_6098->g_3261, &p_6098->g_3261, &p_6098->g_3261, &p_6098->g_3261, &p_6098->g_3261, &p_6098->g_3261, &p_6098->g_3261, &p_6098->g_3261, &p_6098->g_3261, 
+        &p_6098->g_3260[5], &p_6098->g_3260[5], &p_6098->g_3260[5], 
+        nullptr, 
+        &p_6098_62, 
+        &p_6098->g_1992, &p_6098->g_1992, &p_6098->g_1992, &p_6098->g_1992, &p_6098->g_1992, &p_6098->g_1992, &p_6098->g_1992, 
+        &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], &p_6098->g_3757[5], nullptr, &p_6098->g_3757[3], &p_6098->g_3757[3], &p_6098->g_3757[0], 7, 1, 7, 4, 7, 4, 7, 1, 7, 4, 7, 4, 7, 1, {}, {}, {}, 
+        &p_6098->g_34, 
+        2, 
+        &p_6098->g_375, 
+        &p_6098->g_4392, 
+        nullptr, 
+        {}, 
+        4, 
+        2, 
+        5, 
+        {}, 
+        3, 
+        0, 
+        &p_6098->g_4392, 
+        0, 
+        nullptr, 
+        1, 
+        4, 
+        1, 
+        9, 
+        &p_6098->g_715, 
+        2, 
+        0, 
+        {}, 
+        0, 
+        {}, 
+        &p_6098->g_113[4]};
+    c_6099 = c_6100;
+    func_1(p_6098);
+    uint64_t crc64_context = 0xFFFFFFFFFFFFFFFFUL;
+    for (int i = 0; i < 4; i++)
+        for (int j = 0; j < 3; j++)
+            for (int k = 0; k < 8; k++)
+                transparent_crc(p_6098->g_187[i][j][k], , );
+    int tid = threadIdx.x + blockIdx.x * blockDim.x;
+    results[tid] = (crc64_context ^ 0xFFFFFFFFFFFFFFFFUL);
+}
+// ------------------------------------------------------------------
+// Host Main
+// ------------------------------------------------------------------
+int main(int argc, const char* argv[]) {
+    // Config
+    const unsigned int num_threads = 4;
+    const unsigned int block_size = 4;
+    // Host Alloc
+    std::vector<uint64_t> h_results(num_threads);
+    const size_t results_bytes = sizeof(uint64_t) * h_results.size();
+    // Device Alloc
+    uint64_t *d_results;
+    HIP_CHECK(hipMalloc((void**)&d_results, results_bytes));
+    HIP_CHECK(hipMemset(d_results, 0, results_bytes));
+    // Dimensions
+    const dim3 block_dim(block_size);
+    const dim3 grid_dim((num_threads + block_size - 1) / block_size);
+    // Launch
+    hipLaunchKernelGGL(hipsmith_kernel, grid_dim, block_dim, 0, 0, d_results);
+    HIP_CHECK(hipGetLastError());
+    HIP_CHECK(hipDeviceSynchronize());
+    // Copy Back
+    HIP_CHECK(hipMemcpy(h_results.data(), d_results, results_bytes, hipMemcpyDeviceToHost));
+    // Free
+    HIP_CHECK(hipFree(d_results));
+    // Output
+    for (size_t i = 0; i < h_results.size(); ++i) {
+        printf("Thread %zu CRC: %lu\n", i, h_results[i]);
+    }
+    return 0;
+}
+

@@ -1,0 +1,14 @@
+--- Compiling (HIP variants) ---
+--- Running Reference (-O0) & Variants ---
+>> -O0 Reference Value (T0): 3722947510715625172
+>> 4 threads parsed in total.
+
+============================================================
+VARIANT         | STATUS       | DETAILS
+------------------------------------------------------------
+HIP -O0         | PASS         | Reference Baseline
+HIP -O1         | MISMATCH     | Diff: T0:3722947506420657876, T1:3722947506420657876, T2:3722947506420657876...
+HIP -O2         | PASS         | 
+HIP -O3         | PASS         | 
+============================================================
+>> RESULT: MISMATCH

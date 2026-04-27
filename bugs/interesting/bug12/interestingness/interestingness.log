@@ -38350,3 +38350,7 @@
 [2026-04-17 14:32:35] REJECTED | Bug -O1 Runtime Fail/UB
 [2026-04-17 14:52:12] REJECTED | Bug -O1 Runtime Fail/UB
 [2026-04-17 16:17:53] REJECTED | Bug -O1 Runtime Fail/UB
+[2026-04-19 16:59:20] INTERESTING | Clean Mismatch Found!
+[2026-04-24 10:35:11] INTERESTING | Clean Mismatch Found!
+[2026-04-26 12:05:15] INTERESTING | Clean Mismatch Found!
+[2026-04-27 10:50:58] INTERESTING | Clean Mismatch Found!
