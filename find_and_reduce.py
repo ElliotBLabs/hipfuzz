@@ -21,9 +21,9 @@ BUGS_DIR = "temp_bugs"
 
 TOTAL_CORES = 16
 CREDUCE_THREADS = 4
-MAX_CONCURRENT_REDUCTIONS = 5
+MAX_CONCURRENT_REDUCTIONS = 0
 
-MAX_CONCURRENT_FUZZERS = 0
+MAX_CONCURRENT_FUZZERS = 16
 
 # SCRIPT_DIR is your root directory (/hipfuzz/)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -152,8 +152,8 @@ def run_fuzz_cycle(run_id):
         elif "MISMATCH" in output:
             result["status"] = "mismatch"
             result["bad_flag"], result["good_flag"] = parse_mismatch_details(output)
-        elif "GENERATOR FAILED" in output: result["status"] = "err_gen"
-        elif "No HIP variants compiled" in output: result["status"] = "err_compile"
+        elif "GENERATION FAILED" in output: result["status"] = "err_gen"
+        elif "failed to execute:" in output: result["status"] = "err_compile"
         elif "TIMEOUT" in output: result["status"] = "timeout"
         elif "PASS" in output or "MATCH" in output: result["status"] = "match"
         else: result["status"] = "err_other"

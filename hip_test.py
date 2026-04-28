@@ -3,7 +3,7 @@ import os
 import sys
 
 RESULTS_FILE = "results.txt"
-CMD_GENERATE = ["./HIPSmith"]
+CMD_GENERATE = ["./HIPSmith", "--vectors"]
 BASE_SRC_HIP = "HIPProg.hip"
 
 OPT_LEVELS = ["-O0", "-O1", "-O2", "-O3"]
@@ -18,14 +18,20 @@ def get_compile_cmd_hip(opt_level):
     ]
     return cmd, exe_name
 
-def run_command(command):
+def run_command(command, err_msg):
     """Runs a command and returns (stdout, stderr, returncode)."""
     try:
         result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=10)
         return result.stdout.strip(), result.stderr.strip(), result.returncode
+    
     except subprocess.CalledProcessError as e:
-        print(f"FAILED COMMAND: {' '.join(command)}")
-        print(f"Error Output:\n{e.stderr}")
+        # the idea of this is its a flag to give info to the main fuzzer to say what went wrong
+        print(err_msg)      
+        print(f"Error Output:\n{e.stderr}\n{e.stdout}")
+        sys.exit(1)
+        
+    except subprocess.TimeoutExpired:
+        print("TIMEOUT")
         sys.exit(1)
 
 def parse_hip_output(output_str):
@@ -46,7 +52,7 @@ def main():
         log_lines.append(text)
 
     # 1. GENERATE
-    run_command(CMD_GENERATE)
+    run_command(CMD_GENERATE, "GENERATION FAILED")
 
     # 2. COMPILE
     log("--- Compiling (HIP variants) ---")
@@ -54,7 +60,7 @@ def main():
     hip_executables = {}
     for opt in OPT_LEVELS:
         cmd, exe = get_compile_cmd_hip(opt)
-        run_command(cmd)
+        run_command(cmd, "")
         hip_executables[opt] = exe
 
     # 3. RUN HIP VARIANTS
@@ -62,7 +68,7 @@ def main():
     
     parsed_outputs = {}
     for opt in OPT_LEVELS:
-        stdout, _, _ = run_command([f"./{hip_executables[opt]}"])
+        stdout, _, _ = run_command([f"./{hip_executables[opt]}"], "")
         parsed_outputs[opt] = parse_hip_output(stdout)
 
     baseline_vals = parsed_outputs[BASELINE_OPT]
