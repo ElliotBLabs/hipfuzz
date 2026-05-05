@@ -17,8 +17,8 @@ MSAN_IGNORE_LIST = os.path.join(SCRIPT_DIR, "msan_ignore_list.txt")
 PROJECT_INCLUDE = os.path.join(BUG_DIR, "include")
 
 # --- Timeouts & Injected Compilation Flags ---
-COMPILE_TIMEOUT = 25
-RUN_TIMEOUT = 10
+COMPILE_TIMEOUT = 10
+RUN_TIMEOUT = 30
 
 # SINGLE braces here because we are injecting these from the parent script
 BUG_FLAG = "{bad_flag}"
@@ -150,7 +150,7 @@ def main():
     try:
         CMD_BASE = [
             "hipcc", "-x", "hip", SOURCE, "-I", PROJECT_INCLUDE, 
-            "-Werror=uninitialized", "-Werror=missing-field-initializers", 
+            "-Werror=uninitialized", "-Werror=c99-designator", "-Wno-c++20-designator",
             "-Werror=array-bounds", "-Werror=zero-length-array", 
             "-fno-strict-aliasing", "-Wno-c++11-narrowing", "-Wno-unused-value",
             "--offload-arch=native"

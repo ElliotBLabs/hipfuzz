@@ -1,6 +1,7 @@
 import subprocess
 import os
 import sys
+import time
 
 RESULTS_FILE = "results.txt"
 CMD_GENERATE = ["./HIPSmith", "--vectors"]
@@ -19,19 +20,37 @@ def get_compile_cmd_hip(opt_level):
     return cmd, exe_name
 
 def run_command(command, err_msg):
-    """Runs a command and returns (stdout, stderr, returncode)."""
+    """Runs a command, times it, and returns (stdout, stderr, returncode)."""
+    start_t = time.time()
+    
+    # Grab a short name for the log (e.g., "./HIPSmith --vectors" or "hipcc -O3")
+    cmd_short_name = " ".join(command[:2]) if len(command) > 1 else command[0]
+    
     try:
-        result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=10)
+        # Running the command...
+        # we give 15s
+        result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=15)
+        
+        # Calculate how long it took
+        elapsed = time.time() - start_t
+        print(f"[TIMER] {cmd_short_name:<25} | Took: {elapsed:>5.2f}s")
+        
         return result.stdout.strip(), result.stderr.strip(), result.returncode
     
     except subprocess.CalledProcessError as e:
-        # the idea of this is its a flag to give info to the main fuzzer to say what went wrong
+        elapsed = time.time() - start_t
+        print(f"[TIMER-FAIL] {cmd_short_name:<20} | Crashed after {elapsed:.2f}s")
         print(err_msg)      
         print(f"Error Output:\n{e.stderr}\n{e.stdout}")
         sys.exit(1)
         
-    except subprocess.TimeoutExpired:
+    except subprocess.TimeoutExpired as e:
+        partial_stdout = e.stdout if e.stdout else "<No stdout captured>"
+        partial_stderr = e.stderr if e.stderr else "<No stderr captured>"
+        print(f"[TIMER-TIMEOUT] {cmd_short_name:<17} | Killed at 45.00s")
         print("TIMEOUT")
+        print(f"--- STDOUT ---\n{partial_stdout}")
+        print(f"--- STDERR ---\n{partial_stderr}")
         sys.exit(1)
 
 def parse_hip_output(output_str):

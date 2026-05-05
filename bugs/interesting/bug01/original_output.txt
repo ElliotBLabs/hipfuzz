@@ -1,0 +1,23 @@
+[TIMER] ./HIPSmith --vectors      | Took:  4.54s
+[TIMER] hipcc -O0                 | Took:  6.17s
+[TIMER] hipcc -O1                 | Took:  3.64s
+[TIMER] hipcc -O2                 | Took:  3.81s
+[TIMER] hipcc -O3                 | Took:  3.74s
+[TIMER] ./HIPProg-O0              | Took:  0.27s
+[TIMER] ./HIPProg-O1              | Took:  0.23s
+[TIMER] ./HIPProg-O2              | Took:  0.22s
+[TIMER] ./HIPProg-O3              | Took:  0.21s
+--- Compiling (HIP variants) ---
+--- Running Reference (-O0) & Variants ---
+>> -O0 Reference Value (T0): 3499365956005342719
+>> 4 threads parsed in total.
+
+============================================================
+VARIANT         | STATUS       | DETAILS
+------------------------------------------------------------
+HIP -O0         | PASS         | Reference Baseline
+HIP -O1         | MISMATCH     | Diff: T0:3499365956005334641, T1:3499365956005334641, T2:3499365956005334641...
+HIP -O2         | MISMATCH     | Diff: T0:3499365956005334641, T1:3499365956005334641, T2:3499365956005334641...
+HIP -O3         | MISMATCH     | Diff: T0:3499365956005334641, T1:3499365956005334641, T2:3499365956005334641...
+============================================================
+>> RESULT: MISMATCH

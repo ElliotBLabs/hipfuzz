@@ -21,9 +21,9 @@ BUGS_DIR = "temp_bugs"
 
 TOTAL_CORES = 16
 CREDUCE_THREADS = 4
-MAX_CONCURRENT_REDUCTIONS = 0
+MAX_CONCURRENT_REDUCTIONS = 2
 
-MAX_CONCURRENT_FUZZERS = 16
+MAX_CONCURRENT_FUZZERS = 0
 
 # SCRIPT_DIR is your root directory (/hipfuzz/)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
