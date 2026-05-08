@@ -18,7 +18,8 @@ STATE_FILE = "fuzzer_state.json"
 
 REDUCTION_DIR = "reductions"  
 BUGS_DIR = "temp_bugs"            
-
+COMPILER_ERRORS_DIR = "compiler_errors"
+ERR_OTHER_DIR = "other_errors"
 TOTAL_CORES = 16
 CREDUCE_THREADS = 4
 MAX_CONCURRENT_REDUCTIONS = 2
@@ -113,9 +114,16 @@ def setup_isolated_env(run_id):
     work_dir = os.path.join(TEMP_WORK_DIR, f"job_{run_id}_{int(time.time()*1000)}")
     if os.path.exists(work_dir): safe_cleanup(work_dir)
     os.makedirs(work_dir)
-    for filename in REQUIRED_FUZZING_FILES:
-        if os.path.exists(filename):
-            shutil.copy(filename, work_dir)
+    
+    hipsmith_source_dir = os.path.join(SCRIPT_DIR, "HIPSmith")
+    if os.path.exists(hipsmith_source_dir):
+        for item in os.listdir(hipsmith_source_dir):
+            s = os.path.join(hipsmith_source_dir, item)
+            d = os.path.join(work_dir, item)
+            if os.path.isdir(s):
+                shutil.copytree(s, d)
+            else:
+                shutil.copy2(s, d) 
     return work_dir
 
 def parse_mismatch_details(output):
@@ -124,8 +132,6 @@ def parse_mismatch_details(output):
     if not fail_match or not pass_match: return "unknown", "unknown"
     return fail_match.group(1).strip(), pass_match.group(1).strip()
 
-
-# --- FUZZER WORKER ---
 
 def run_fuzz_cycle(run_id):
     work_dir = setup_isolated_env(run_id)
@@ -153,7 +159,7 @@ def run_fuzz_cycle(run_id):
             result["status"] = "mismatch"
             result["bad_flag"], result["good_flag"] = parse_mismatch_details(output)
         elif "GENERATION FAILED" in output: result["status"] = "err_gen"
-        elif "failed to execute:" in output: result["status"] = "err_compile"
+        elif "InternalCompilerError" in output: result["status"] = "err_compile"
         elif "TIMEOUT" in output: result["status"] = "timeout"
         elif "PASS" in output or "MATCH" in output: result["status"] = "match"
         else: result["status"] = "err_other"
@@ -181,7 +187,7 @@ def generate_interestingness_test(work_dir, good_flag, bad_flag):
     headers_dir = os.path.join(os.path.abspath(work_dir), "include")
     
     # Read the template from your root directory (hipfuzz)
-    template_path = os.path.join(SCRIPT_DIR, "template_interesting.py")
+    template_path = os.path.join(work_dir, "interestingness", "template_interesting.py")
     
     with open(template_path, "r", encoding="utf-8") as f:
         template_content = f.read()
@@ -210,36 +216,25 @@ def run_reduction_task(job_name, work_dir, bad_flag, good_flag, status_dict):
 
     with open(log_file, "a") as log_f:
         try:
-            # 1. FORCE refresh the 'include' folder from the root
-            root_include_dir = os.path.join(SCRIPT_DIR, "include")
-            work_include_dir = os.path.join(abs_work_dir, "include")
+            src_interesting = os.path.join(SCRIPT_DIR, "interestingness")
+            dest_interesting = os.path.join(abs_work_dir, "interestingness")
+            if os.path.exists(dest_interesting): safe_cleanup(dest_interesting)
+            shutil.copytree(src_interesting, dest_interesting)
+
+            # 2. Compile drivers using the GENERATED driver and local headers
+            driver_src = os.path.join(abs_work_dir, "HIP-driver.cpp") 
+            driver_gpu_o = os.path.join(abs_work_dir, "driver_gpu.o")
+            driver_cpu_o = os.path.join(abs_work_dir, "driver_cpu.o")
             
-            if os.path.exists(root_include_dir):
-                # If an old, stale include folder exists, wipe it out
-                if os.path.exists(work_include_dir):
-                    shutil.rmtree(work_include_dir)
-                
-                # Copy the fresh, fixed headers into the workspace
-                shutil.copytree(root_include_dir, work_include_dir)
+            hip_cpu_include = os.path.join(dest_interesting, "hip-cpu", "include") 
+            
+            cmd_gpu = ["hipcc", "-c", driver_src, "-o", driver_gpu_o, "--offload-arch=native"]
+            cmd_cpu = ["clang++", "-c", driver_src, "-o", driver_cpu_o, f"-I{hip_cpu_include}"]
+            
+            subprocess.run(cmd_gpu, stdout=log_f, stderr=log_f, check=True)
+            subprocess.run(cmd_cpu, stdout=log_f, stderr=log_f, check=True)
 
-            # 2. FORCE refresh the 'interestingness' folder from reduce-scripts
-            # (Adding this for safety so your template_interesting is always fresh)
-            reduce_scripts_dir = os.path.join(SCRIPT_DIR, "reduce-scripts")
-            if os.path.exists(reduce_scripts_dir):
-                for item in os.listdir(reduce_scripts_dir):
-                    s = os.path.join(reduce_scripts_dir, item)
-                    d = os.path.join(abs_work_dir, item)
-                    # Use shutil.rmtree if d is a directory to ensure it's clean
-                    if os.path.exists(d):
-                        if os.path.isdir(d): shutil.rmtree(d)
-                        else: os.remove(d)
-                    
-                    if os.path.isdir(s):
-                        shutil.copytree(s, d)
-                    else:
-                        shutil.copy2(s, d)
-
-            # 3. Now generate the script...
+            # 3. Generate interesting.py from the copied template
             generate_interestingness_test(abs_work_dir, good_flag, bad_flag)
 
             # 4. Sanity check: Call the script from its new path
@@ -404,15 +399,11 @@ def main():
                         if st == "mismatch":
                             state["mismatches"] += 1
                             
-                            # 1. Create a fresh, clean directory for the mismatch
                             job_name = f"job_{data['run_id']}_{int(time.time()*1000)}_mismatch"
                             saved_dir = os.path.join(REDUCTION_DIR, job_name)
-                            os.makedirs(saved_dir, exist_ok=True)
                             
-                            # 2. Only copy the essential artifacts from the fuzzer
-                            shutil.copy2(os.path.join(data["work_dir"], "HIPProg.hip"), saved_dir)
-                            if os.path.exists(os.path.join(data["work_dir"], "original_output.txt")):
-                                shutil.copy2(os.path.join(data["work_dir"], "original_output.txt"), saved_dir)
+                            # move entire dir
+                            shutil.move(data["work_dir"], saved_dir)
                             
                             # 3. Write metadata
                             meta_info = {
@@ -435,9 +426,32 @@ def main():
                         elif st == "match": state["matches"] += 1; safe_cleanup(data["work_dir"])
                         elif st == "timeout": state["timeouts"] += 1; safe_cleanup(data["work_dir"])
                         elif st == "err_gen": state["err_gen"] += 1; safe_cleanup(data["work_dir"])
-                        elif st == "err_compile": state["err_compile"] += 1; safe_cleanup(data["work_dir"])
+                        elif st == "err_compile":
+                            state["err_compile"] += 1
+                            
+                            # 1. Create a safe place for the evidence
+                            job_name = f"job_{data['run_id']}_{int(time.time()*1000)}_err_gen"
+                            saved_dir = os.path.join(COMPILER_ERRORS_DIR, job_name)
+                            
+                            # 2. Move the directory instead of destroying it
+                            shutil.move(data["work_dir"], saved_dir)
+                            
+                            # 3. Explicitly write the Python error output to a log file
+                            with open(os.path.join(saved_dir, "CRASH_LOG.txt"), "w") as f:
+                                f.write(data["output"])
+
                         elif st == "err_memory": state["err_memory"] += 1; safe_cleanup(data["work_dir"])
-                        else: state["err_other"] += 1; safe_cleanup(data["work_dir"])
+                        else:
+                            state["err_other"] += 1
+                            job_name = f"job_{data['run_id']}_{int(time.time()*1000)}_err_gen"
+                            saved_dir = os.path.join(ERR_OTHER_DIR, job_name)
+                            
+                            # 2. Move the directory instead of destroying it
+                            shutil.move(data["work_dir"], saved_dir)
+                            
+                            # 3. Explicitly write the Python error output to a log file
+                            with open(os.path.join(saved_dir, "CRASH_LOG.txt"), "w") as f:
+                                f.write(data["output"])
                     except Exception as e:
                         pass
                     save_state()
