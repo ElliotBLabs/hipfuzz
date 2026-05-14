@@ -22,7 +22,7 @@ COMPILER_ERRORS_DIR = "compiler_errors"
 ERR_OTHER_DIR = "other_errors"
 TOTAL_CORES = 16
 CREDUCE_THREADS = 4
-MAX_CONCURRENT_REDUCTIONS = 2
+MAX_CONCURRENT_REDUCTIONS =2
 
 MAX_CONCURRENT_FUZZERS = 0
 
@@ -165,7 +165,7 @@ def run_fuzz_cycle(run_id):
         else: result["status"] = "err_other"
 
     except subprocess.TimeoutExpired as e:
-        result["output"] += f"\n[!] Process killed after 10 seconds: {str(e)}"
+        result["output"] += f"\n[!] Process killed after 20 seconds: {str(e)}"
         result["status"] = "timeout"
 
     except Exception as e:

@@ -1,0 +1,40 @@
+hipcc -x hip HIPProg_crash_3.hip
+
+
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace, preprocessed source, and associated run script.
+Stack dump:
+0.      Program arguments: /homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/clang-23 -cc1 -triple x86_64-unknown-linux-gnu -aux-triple amdgcn-amd-amdhsa -O3 -emit-obj -dumpdir a- -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name HIPProg_crash_3.hip -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=none -fmath-errno -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/homes/eb522/imperial/fyp/hipfuzz/bugs/interesting/hip-managed-seg-fault -fcoverage-compilation-dir=/homes/eb522/imperial/fyp/hipfuzz/bugs/interesting/hip-managed-seg-fault -resource-dir /homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/lib/clang/23 -internal-isystem /homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/lib/clang/23/include/cuda_wrappers -idirafter /homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/include -include __clang_hip_runtime_wrapper.h -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/x86_64-linux-gnu/c++/14 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/x86_64-linux-gnu/c++/14 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/backward -internal-isystem /homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/lib/clang/23/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/lib/clang/23/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fhip-new-launch-api -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -vectorize-loops -vectorize-slp -fcuda-include-gpubinary /tmp/HIPProg_crash_3-836ee0.hipfb -cuid=f819dd747e8cc7c4 -fcuda-allow-variadic-functions -faddrsig -fdwarf2-cfi-asm -o /tmp/HIPProg_crash_3-d53049.o -x hip HIPProg_crash_3.hip
+1.      <eof> parser at end of file
+2.      Per-file LLVM IR generation
+ #0 0x00007207cbec241b llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libLLVM.so.23.0git+0x91341b)
+ #1 0x00007207cbebf17f SignalHandler(int, siginfo_t*, void*) Signals.cpp:0:0
+ #2 0x00007207cbebf238 SignalHandlerTerminate(int, siginfo_t*, void*) Signals.cpp:0:0
+ #3 0x00007207cae45330 (/lib/x86_64-linux-gnu/libc.so.6+0x45330)
+ #4 0x00007207cbf455a8 llvm::SymbolTableListTraits<llvm::Instruction, llvm::ilist_iterator_bits<true>, llvm::ilist_parent<llvm::BasicBlock>>::addNodeToList(llvm::Instruction*) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libLLVM.so.23.0git+0x9965a8)
+ #5 0x00007207cc068f32 llvm::Instruction::Instruction(llvm::Type*, unsigned int, llvm::User::AllocInfo, llvm::InsertPosition) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libLLVM.so.23.0git+0xab9f32)
+ #6 0x00007207cc074021 llvm::LoadInst::LoadInst(llvm::Type*, llvm::Value*, llvm::Twine const&, bool, llvm::Align, llvm::InsertPosition) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libLLVM.so.23.0git+0xac5021)
+ #7 0x00007207d4d5c82b (anonymous namespace)::CGNVCUDARuntime::finalizeModule() CGCUDANV.cpp:0:0
+ #8 0x00007207d5164166 clang::CodeGen::CodeGenModule::Release() (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libclang-cpp.so.23.0git+0x2741166)
+ #9 0x00007207d51f1cfd (anonymous namespace)::CodeGeneratorImpl::HandleTranslationUnit(clang::ASTContext&) ModuleBuilder.cpp:0:0
+#10 0x00007207d50ed495 clang::BackendConsumer::HandleTranslationUnit(clang::ASTContext&) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libclang-cpp.so.23.0git+0x26ca495)
+#11 0x00007207d35bfa7c clang::ParseAST(clang::Sema&, bool, bool) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libclang-cpp.so.23.0git+0xb9ca7c)
+#12 0x00007207d5b2028a clang::FrontendAction::Execute() (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libclang-cpp.so.23.0git+0x30fd28a)
+#13 0x00007207d5a9ccf3 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libclang-cpp.so.23.0git+0x3079cf3)
+#14 0x00007207d5bcbbea clang::ExecuteCompilerInvocation(clang::CompilerInstance*) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/../lib/libclang-cpp.so.23.0git+0x31a8bea)
+#15 0x000000000041396d cc1_main(llvm::ArrayRef<char const*>, char const*, void*) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/clang-23+0x41396d)
+#16 0x000000000040b1ca ExecuteCC1Tool(llvm::SmallVectorImpl<char const*>&, llvm::ToolContext const&, llvm::IntrusiveRefCntPtr<llvm::vfs::FileSystem>) driver.cpp:0:0
+#17 0x000000000040f390 clang_main(int, char**, llvm::ToolContext const&) (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/clang-23+0x40f390)
+#18 0x000000000040abe9 main (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/clang-23+0x40abe9)
+#19 0x00007207cae2a1ca __libc_start_call_main ./csu/../sysdeps/nptl/libc_start_call_main.h:74:3
+#20 0x00007207cae2a28b call_init ./csu/../csu/libc-start.c:128:20
+#21 0x00007207cae2a28b __libc_start_main ./csu/../csu/libc-start.c:347:5
+#22 0x000000000040ac2e _start (/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/clang-23+0x40ac2e)
+clang++: error: unable to execute command: Segmentation fault (core dumped)
+clang++: error: clang frontend command failed with exit code -2 (use -v to see invocation)
+AMD clang version 23.0.0git (https://github.com/ROCm/llvm-project.git 43215c73116c407735c85a180d174f718798c328+PATCHED:2506c552d8428e2cc1778bef048b20f818e06bb3)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin
+clang++: note: diagnostic msg: Error generating preprocessed source(s).
+Aborted (core dumped)
+failed to execute:/homes/eb522/local-rocm-nightly/lib/python3.12/site-packages/_rocm_sdk_core/lib/llvm/bin/clang++  --offload-arch=gfx1103 -O3 --driver-mode=g++ -O3 --hip-link  -x hip HIPProg_crash_3.hip

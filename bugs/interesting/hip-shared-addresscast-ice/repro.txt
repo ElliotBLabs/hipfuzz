@@ -1,0 +1,11 @@
+hipcc -x hip HIPProg_crash_271.hip --offload-arch=native
+
+fatal error: error in backend: Unsupported expression in static initializer: addrspacecast (ptr addrspace(3) @_ZZ6func_1P2S1E6l_1069 to ptr)
+clang++: error: clang frontend command failed with exit code 70 (use -v to see invocation)
+AMD clang version 20.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-7.1.0 25425 1b0eada6b0ee93e2e694c8c146d23fca90bc11c5)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-7.1.0/lib/llvm/bin
+Configuration file: /opt/rocm-7.1.0/lib/llvm/bin/clang++.cfg
+clang++: note: diagnostic msg: Error generating preprocessed source(s).
+failed to execute:/opt/rocm-7.1.0/lib/llvm/bin/clang++ --offload-arch=native -O3 --driver-mode=g++ -O3 --hip-link -x hip HIPProg_crash_271.hip -I/homes/eb522/imperial/fyp/HIPSmith/
